@@ -149,7 +149,7 @@
                                                        <tbody>
                                                             <tr>
                                                                  <td>
-                                                                      #583488/80
+                                                                      #5
                                                                  </td>
                                                                  <td>Apr 23 , 2024</td>
                                                                  <td>
@@ -157,10 +157,10 @@
                                                                  </td>
                                                                  
                                                                  <td> $1,230.00</td>
-                                                                 <td> <span class="badge bg-light text-dark  px-2 py-1 fs-13">Unpaid</span></td>
+                                                                 <td> <span class="badge bg-light text-dark  px-2 py-1 fs-7">Thanh toán khi nhận hàng</span></td>
                                                                  <td> 4</td>
                                                                  <td> -ghi chú-</td>
-                                                                 <td> <span class="badge border border-secondary text-secondary  px-2 py-1 fs-13">Draft</span></td>
+                                                                 <td> <span class="badge border border-secondary text-secondary  px-2 py-1 fs-7">Chờ duyệt</span></td>
                                                                  <td>
                                                                       <div class="d-flex gap-2">
                                                                            <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
@@ -172,7 +172,7 @@
 
                                                             <tr>
                                                                  <td>
-                                                                      #456754/80
+                                                                      #6
                                                                  </td>
                                                                  <td>Apr 20 , 2024</td>
                                                                  <td>
@@ -180,10 +180,10 @@
                                                                  </td>
                                                                  <td> $1,230.00</td>
                                                                  
-                                                                 <td> <span class="badge bg-success text-light  px-2 py-1 fs-13">Paid</span></td>
+                                                                 <td> <span class="badge bg-success text-light  px-2 py-1 fs-7">Thanh toán chuyển khoản</span></td>
                                                                  <td> 2</td>
                                                                  <td> -ghi chú 2- </td>
-                                                                 <td> <span class="badge border border-warning text-warning  px-2 py-1 fs-13">Packaging</span></td>
+                                                                 <td> <span class="badge border border-warning text-warning  px-2 py-1 fs-7">Đang xử lý</span></td>
                                                                  <td>
                                                                       <div class="d-flex gap-2">
                                                                            <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
@@ -194,7 +194,7 @@
                                                             </tr>
                                                             <tr>
                                                                  <td>
-                                                                      #578246/80
+                                                                      #7
                                                                  </td>
                                                                  <td>Apr 19 , 2024</td>
                                                                  <td>
@@ -202,10 +202,33 @@
                                                                  </td>
                                                                  <td> $1,230.00</td>
                                                                 
-                                                                 <td> <span class="badge  bg-success text-light px-2 py-1 fs-13">Paid</span></td>
+                                                                 <td> <span class="badge  bg-success text-light px-2 py-1 fs-7">Thanh toán chuyển khoản</span></td>
                                                                  <td> 5</td>
                                                                  <td> ghi chú 1</td>
-                                                                 <td> <span class="badge border border-success text-success  px-2 py-1 fs-13">Completed</span></td>
+                                                                 <td> <span class="badge border border-info text-info  px-2 py-1 fs-7">Đang giao</span></td>
+                                                                 <td>
+                                                                      <div class="d-flex gap-2">
+                                                                           <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                                           <a href="#!" class="btn btn-soft-primary btn-sm"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                                           <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                                      </div>
+                                                                 </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                 <td>
+                                                                      #7
+                                                                 </td>
+                                                                 <td>Apr 19 , 2024</td>
+                                                                 <td>
+                                                                      <a href="#!" class="link-primary fw-medium">David A. Arnold</a>
+                                                                 </td>
+                                                                 <td> $1,230.00</td>
+                                                                
+                                                                 <td> <span class="badge  bg-success text-light px-2 py-1 fs-7">Thanh toán chuyển khoản</span></td>
+                                                                 <td> 5</td>
+                                                                 <td> ghi chú 1</td>
+                                                                 <td> <span class="badge border border-success text-success  px-2 py-1 fs-7">Đã giao</span></td>
                                                                  <td>
                                                                       <div class="d-flex gap-2">
                                                                            <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>

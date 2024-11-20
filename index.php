@@ -6,7 +6,7 @@
     require_once "./src/commons/env.php";
 
 ?>
-
+<!-- cập nhật ở đây -->
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once "./config/head.php" ?>

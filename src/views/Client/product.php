@@ -40,6 +40,7 @@
                                     <div class="select-custom">
                                         <select name="orderby" class="form-control">
 											<option value="" disabled selected hidden>Sắp xếp</option>
+											<option value="">Tất cả</option>
 											<option value="">Mới nhất</option>
 											<option value="">Cũ nhất</option>
 											<option value="">Giá cao nhất</option>
@@ -94,8 +95,8 @@
                                             <!-- End .product-container -->
 
                                             <div class="price-box">
-                                                <span class="old-price"><?=$product['gia_san_pham']?></span>
-                                                <span class="product-price"><?=$product['gia_san_pham']-$product['gia_san_pham']*($product['khuyen_mai']/100)?>VND</span>
+                                                <span class="old-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> </span>
+                                                <span class="product-price"><?= number_format($product['gia_san_pham']-$product['gia_san_pham']*($product['khuyen_mai']/100), 0, ',', '.') ?>VND</span>
                                             </div>
                                             <!-- End .price-box -->
 
@@ -155,7 +156,7 @@
                         <div class="sidebar-wrapper">
                             <div class="widget">
                                 <h3 class="widget-title">
-                                    <a data-toggle="collapse" href="#widget-body-2" role="button" aria-expanded="true" aria-controls="widget-body-2">Danh mục</a>
+                                    <a data-toggle="collapse" href="<?=BASE_URL?>/product" role="button" aria-expanded="true" aria-controls="widget-body-2">Danh mục</a>
                                 </h3>
 
                                 <?php foreach($allCategory as $category): ?>
@@ -169,8 +170,11 @@
                                                     </a>
                                                     <div class="collapse show" id="widget-category-<?=$category['id']+1?>">
                                                         <ul class="cat-sublist">
-                                                            <li>danh mục nhỏ 1</li>
-                                                            <li>danh mục nhỏ 2</li>
+                                                            <?php foreach($allCategorySmall as $categorySM):?>
+                                                                <?php if($category['id']==$categorySM['id_danh_muc']): ?>
+                                                                    <li><a href="<?=BASE_URL?>/product?idSM=<?=$categorySM['id']?>"><?=$categorySM['ten_danh_muc']?></a></li>
+                                                                <?php endif ?>
+                                                            <?php endforeach ?>
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -192,7 +196,7 @@
 
                                 <div class="collapse show" id="widget-body-3">
                                     <div class="widget-body pb-0">
-                                        <form action="#">
+                                        <form action="" method="get">
                                             <div class="price-slider-wrapper">
                                                 <div id="price-slider"></div>
                                                 <!-- End #price-slider -->
@@ -207,7 +211,7 @@
                                                 <!-- End .filter-price-text -->
 
                                                 <from class="input-group mb-3">
-                                                    <input type="text" class="form-control" placeholder="Nhập giá" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                    <input type="text" class="form-control" placeholder="Nhập giá" aria-label="Recipient's username" aria-describedby="basic-addon2" name="priceProduct">
                                                     <button class="input-group-text btn btn-primary" id="basic-addon2">Lọc</button>
                                                 </from>
                                             </div>
@@ -223,173 +227,42 @@
                             
 
                             <div class="widget widget-featured">
-                                <h3 class="widget-title">Sản phẩm Hot</h3>
+                                <h3 class="widget-title">Sản phẩm Mới</h3>
 
                                 <div class="widget-body">
                                     <div class="owl-carousel widget-featured-products">
                                         <div class="featured-col">
-                                            <div class="product-default left-details product-widget">
-                                                <figure>
-                                                    <a href="<?=BASE_URL?>/detailProduct">
-                                                        <img src="assets/images/products/small/product-4.jpg" width="75" height="75" alt="product" />
-                                                        <img src="assets/images/products/small/product-4-2.jpg" width="75" height="75" alt="product" />
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct">Blue Backpack for
-															the Young - S</a> </h3>
-                                                    <div class="ratings-container">
-                                                        <div class="product-ratings">
-                                                            <span class="ratings" style="width:100%"></span>
-                                                            <!-- End .ratings -->
-                                                            <span class="tooltiptext tooltip-top"></span>
+                                            <?php foreach($productNews as $productNew): ?>
+                                                <div class="product-default left-details product-widget">
+                                                    <figure>
+                                                        <a href="<?=BASE_URL?>/detailProduct">
+                                                            <img src="<?=$productNew['hinh_anh_1']?>" width="75" height="75" alt="product" />
+                                                            <img src="<?=$productNew['hinh_anh_2']?>" width="75" height="75" alt="product" />
+                                                        </a>
+                                                    </figure>
+                                                    <div class="product-details">
+                                                        <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct"><?=$productNew['ten_san_pham']?></a> </h3>
+                                                        <div class="ratings-container">
+                                                            <div class="product-ratings">
+                                                                <span class="ratings" style="width:100%"></span>
+                                                                <!-- End .ratings -->
+                                                                <span class="tooltiptext tooltip-top"></span>
+                                                            </div>
+                                                            <!-- End .product-ratings -->
                                                         </div>
-                                                        <!-- End .product-ratings -->
-                                                    </div>
-                                                    <!-- End .product-container -->
-                                                    <div class="price-box">
-                                                        <span class="product-price">$49.00</span>
-                                                    </div>
-                                                    <!-- End .price-box -->
-                                                </div>
-                                                <!-- End .product-details -->
-                                            </div>
-                                            <div class="product-default left-details product-widget">
-                                                <figure>
-                                                    <a href="<?=BASE_URL?>/detailProduct">
-                                                        <img src="assets/images/products/small/product-5.jpg" width="75" height="75" alt="product" />
-                                                        <img src="assets/images/products/small/product-5-2.jpg" width="75" height="75" alt="product" />
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct">Casual Spring Blue
-															Shoes</a> </h3>
-                                                    <div class="ratings-container">
-                                                        <div class="product-ratings">
-                                                            <span class="ratings" style="width:100%"></span>
-                                                            <!-- End .ratings -->
-                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        <!-- End .product-container -->
+                                                        <div class="price-box">
+                                                            <span class="product-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> VND</span>
                                                         </div>
-                                                        <!-- End .product-ratings -->
+                                                        <!-- End .price-box -->
                                                     </div>
-                                                    <!-- End .product-container -->
-                                                    <div class="price-box">
-                                                        <span class="product-price">$49.00</span>
-                                                    </div>
-                                                    <!-- End .price-box -->
+                                                    <!-- End .product-details -->
                                                 </div>
-                                                <!-- End .product-details -->
-                                            </div>
-                                            <div class="product-default left-details product-widget">
-                                                <figure>
-                                                    <a href="<?=BASE_URL?>/detailProduct">
-                                                        <img src="assets/images/products/small/product-6.jpg" width="75" height="75" alt="product" />
-                                                        <img src="assets/images/products/small/product-6-2.jpg" width="75" height="75" alt="product" />
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct">Men Black Gentle
-															Belt</a> </h3>
-                                                    <div class="ratings-container">
-                                                        <div class="product-ratings">
-                                                            <span class="ratings" style="width:100%"></span>
-                                                            <!-- End .ratings -->
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                        <!-- End .product-ratings -->
-                                                    </div>
-                                                    <!-- End .product-container -->
-                                                    <div class="price-box">
-                                                        <span class="product-price">$49.00</span>
-                                                    </div>
-                                                    <!-- End .price-box -->
-                                                </div>
-                                                <!-- End .product-details -->
-                                            </div>
+                                            <?php endforeach ?>
                                         </div>
                                         <!-- End .featured-col -->
 
-                                        <div class="featured-col">
-                                            <div class="product-default left-details product-widget">
-                                                <figure>
-                                                    <a href="<?=BASE_URL?>/detailProduct">
-                                                        <img src="assets/images/products/small/product-1.jpg" width="75" height="75" alt="product" />
-                                                        <img src="assets/images/products/small/product-1-2.jpg" width="75" height="75" alt="product" />
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct">Ultimate 3D
-															Bluetooth Speaker</a> </h3>
-                                                    <div class="ratings-container">
-                                                        <div class="product-ratings">
-                                                            <span class="ratings" style="width:100%"></span>
-                                                            <!-- End .ratings -->
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                        <!-- End .product-ratings -->
-                                                    </div>
-                                                    <!-- End .product-container -->
-                                                    <div class="price-box">
-                                                        <span class="product-price">$49.00</span>
-                                                    </div>
-                                                    <!-- End .price-box -->
-                                                </div>
-                                                <!-- End .product-details -->
-                                            </div>
-                                            <div class="product-default left-details product-widget">
-                                                <figure>
-                                                    <a href="<?=BASE_URL?>/detailProduct">
-                                                        <img src="assets/images/products/small/product-2.jpg" width="75" height="75" alt="product" />
-                                                        <img src="assets/images/products/small/product-2-2.jpg" width="75" height="75" alt="product" />
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct">Brown Women Casual
-															HandBag</a> </h3>
-                                                    <div class="ratings-container">
-                                                        <div class="product-ratings">
-                                                            <span class="ratings" style="width:100%"></span>
-                                                            <!-- End .ratings -->
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                        <!-- End .product-ratings -->
-                                                    </div>
-                                                    <!-- End .product-container -->
-                                                    <div class="price-box">
-                                                        <span class="product-price">$49.00</span>
-                                                    </div>
-                                                    <!-- End .price-box -->
-                                                </div>
-                                                <!-- End .product-details -->
-                                            </div>
-                                            <div class="product-default left-details product-widget">
-                                                <figure>
-                                                    <a href="<?=BASE_URL?>/detailProduct">
-                                                        <img src="assets/images/products/small/product-3.jpg" width="75" height="75" alt="product" />
-                                                        <img src="assets/images/products/small/product-3-2.jpg" width="75" height="75" alt="product" />
-                                                    </a>
-                                                </figure>
-                                                <div class="product-details">
-                                                    <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct">Circled Ultimate
-															3D Speaker</a> </h3>
-                                                    <div class="ratings-container">
-                                                        <div class="product-ratings">
-                                                            <span class="ratings" style="width:100%"></span>
-                                                            <!-- End .ratings -->
-                                                            <span class="tooltiptext tooltip-top"></span>
-                                                        </div>
-                                                        <!-- End .product-ratings -->
-                                                    </div>
-                                                    <!-- End .product-container -->
-                                                    <div class="price-box">
-                                                        <span class="product-price">$49.00</span>
-                                                    </div>
-                                                    <!-- End .price-box -->
-                                                </div>
-                                                <!-- End .product-details -->
-                                            </div>
-                                        </div>
-                                        <!-- End .featured-col -->
+                                        
                                     </div>
                                     <!-- End .widget-featured-slider -->
                                 </div>
