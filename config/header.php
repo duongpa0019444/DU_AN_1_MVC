@@ -15,7 +15,7 @@
                     </a>
                 </div>
                 <!-- End .header-left -->
-
+                    
                 <div class="header-right w-lg-max">
                     <div class="header-icon header-search header-search-inline header-search-category w-lg-max text-right mt-0">
                         <a href="#" class="search-toggle" role="button"><i class="icon-search-3"></i></a>
@@ -61,105 +61,11 @@
                     <a href="#" class="header-icon" title="wishlist"><i class="icon-wishlist-2"></i></a>
 
                     <div class="dropdown cart-dropdown">
-                        <a href="#" title="Cart" class="dropdown-toggle dropdown-arrow cart-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                        <a href="<?=BASE_URL?>/cart" title="Cart" class="dropdown-toggle dropdown-arrow cart-toggle">
                             <i class="minicart-icon"></i>
                             <span class="cart-count badge-circle">3</span>
                         </a>
 
-                        <div class="cart-overlay"></div>
-
-                        <div class="dropdown-menu mobile-cart">
-                            <a href="#" title="Close (Esc)" class="btn-close">×</a>
-
-                            <div class="dropdownmenu-wrapper custom-scrollbar">
-                                <div class="dropdown-cart-header">Giỏ hàng</div>
-                                <!-- End .dropdown-cart-header -->
-
-                                <div class="dropdown-cart-products">
-                                    <div class="product">
-                                        <div class="product-details">
-                                            <h4 class="product-title">
-                                                <a href="product.html">Ultimate 3D Bluetooth Speaker</a>
-                                            </h4>
-
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span> × $99.00
-                                            </span>
-                                        </div>
-                                        <!-- End .product-details -->
-
-                                        <figure class="product-image-container">
-                                            <a href="product.html" class="product-image">
-                                                <img src="<?=BASE_URL?>/assets/Client/images/products/product-1.jpg" alt="product" width="80" height="80">
-                                            </a>
-
-                                            <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                        </figure>
-                                    </div>
-                                    <!-- End .product -->
-
-                                    <div class="product">
-                                        <div class="product-details">
-                                            <h4 class="product-title">
-                                                <a href="product.html">Brown Women Casual HandBag</a>
-                                            </h4>
-
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span> × $35.00
-                                            </span>
-                                        </div>
-                                        <!-- End .product-details -->
-
-                                        <figure class="product-image-container">
-                                            <a href="product.html" class="product-image">
-                                                <img src="<?=BASE_URL?>/assets/Client/images/products/product-2.jpg" alt="product" width="80" height="80">
-                                            </a>
-
-                                            <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                        </figure>
-                                    </div>
-                                    <!-- End .product -->
-
-                                    <div class="product">
-                                        <div class="product-details">
-                                            <h4 class="product-title">
-                                                <a href="product.html">Circled Ultimate 3D Speaker</a>
-                                            </h4>
-
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span> × $35.00
-                                            </span>
-                                        </div>
-                                        <!-- End .product-details -->
-
-                                        <figure class="product-image-container">
-                                            <a href="product.html" class="product-image">
-                                                <img src="<?=BASE_URL?>/assets/Client/images/products/product-3.jpg" alt="product" width="80" height="80">
-                                            </a>
-                                            <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                        </figure>
-                                    </div>
-                                    <!-- End .product -->
-                                </div>
-                                <!-- End .cart-product -->
-
-                                <div class="dropdown-cart-total">
-                                    <span>Tổng:</span>
-
-                                    <span class="cart-total-price float-right">$134.00</span>
-                                </div>
-                                <!-- End .dropdown-cart-total -->
-
-                                <div class="dropdown-cart-action">
-                                    <a href="<?=BASE_URL?>/cart" class="btn btn-gray btn-block view-cart">Xem Giỏ hàng
-                                        </a>
-                                  
-                                </div>
-                                <!-- End .dropdown-cart-total -->
-                            </div>
-                            <!-- End .dropdownmenu-wrapper -->
-                        </div>
-                        <!-- End .dropdown-menu -->
                     </div>
                     <!-- End .dropdown -->
                 </div>

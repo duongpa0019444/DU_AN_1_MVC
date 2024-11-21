@@ -235,7 +235,7 @@
                                             <?php foreach($productNews as $productNew): ?>
                                                 <div class="product-default left-details product-widget">
                                                     <figure>
-                                                        <a href="<?=BASE_URL?>/detailProduct">
+                                                        <a href="<?=BASE_URL?>/detailProduct?id=<?=$productNew['id']?>">
                                                             <img src="<?=$productNew['hinh_anh_1']?>" width="75" height="75" alt="product" />
                                                             <img src="<?=$productNew['hinh_anh_2']?>" width="75" height="75" alt="product" />
                                                         </a>

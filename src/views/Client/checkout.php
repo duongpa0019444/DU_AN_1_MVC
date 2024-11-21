@@ -83,25 +83,25 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <form action="" method="post" class="row">
                     <div class="col-lg-7">
                         <ul class="checkout-steps">
                             <li>
                                 <h2 class="step-title">Chi Tiết Thanh Toán</h2>
 
-                                <form action="#" id="checkout-form">
+                                <div action="#" id="checkout-form">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Họ và Tên
                                                     <abbr class="required" title="required">*</abbr>
                                                 </label>
-                                                <input type="text" class="form-control" required />
+                                                <input type="text" class="form-control" required name="ho_va_ten" />
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Số Điện Thoại <abbr class="required" title="required">*</abbr></label>
-                                        <input type="tel" class="form-control" required />
+                                        <input type="tel" class="form-control" required name="so_dien_thoai" />
                                     </div>
                                         
                                     </div>
@@ -152,14 +152,16 @@
                                     <div class="form-group mb-1 pb-2">
                                         <label>Địa chỉ cụ thể
                                             <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text" class="form-control" placeholder="Số nhà" required />
+                                        <input type="text" class="form-control" placeholder="Số nhà" required name="chi_tiet_dia_chi" />
                                     </div>
 
                                     <div class="form-group">
                                         <label class="order-comments">Ghi chú đơn hàng (optional)</label>
-                                        <textarea class="form-control" placeholder="Notes about your order, e.g. special notes for delivery." required></textarea>
+                                        <textarea class="form-control" placeholder="Notes about your order, e.g. special notes for delivery." required name="ghi_chu"></textarea>
                                     </div>
-                                </form>
+
+                                    
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -176,41 +178,25 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="product-col">
-                                            <h3 class="product-title">
-                                                Circled Ultimate 3D Speaker ×
-                                                <span class="product-qty">4</span>
-                                            </h3>
-                                        </td>
+                                    <?php foreach($checkOrders as $checkOrder): ?>
+                                        <tr>
+                                            <td class="product-col">
+                                                <h3 class="product-title">
+                                                    <?=$checkOrder['ten_san_pham']?> ×
+                                                    <span class="product-qty"><?=$checkOrder['so_luong']?></span>
+                                                </h3>
+                                            </td>
 
-                                        <td class="price-col">
-                                            <span>$1,040.00</span>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="product-col">
-                                            <h3 class="product-title">
-                                                Fashion Computer Bag ×
-                                                <span class="product-qty">2</span>
-                                            </h3>
-                                        </td>
-
-                                        <td class="price-col">
-                                            <span>$418.00</span>
-                                        </td>
-                                    </tr>
+                                            <td class="price-col">
+                                                <span><?= number_format($checkOrder['tong_phu'], 0, ',', '.') ?> VND</span>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach ?>
+                                    
                                 </tbody>
                                 <tfoot>
-                                    <tr class="cart-subtotal">
-                                        <td>
-                                            <h4>Tổng</h4>
-                                        </td>
-
-                                        <td class="price-col">
-                                            <span>$1,458.00</span>
-                                        </td>
+                                    <tr class="cart-subtotal ">
+                                        
                                     </tr>
                                     <tr class="order-shipping">
                                         <td class="text-left" colspan="2">
@@ -218,7 +204,7 @@
 
                                             <div class="form-group form-group-custom-control">
                                                 <div class="custom-control custom-radio d-flex">
-                                                    <input type="radio" class="custom-control-input" name="radio" checked />
+                                                    <input type="radio" class="custom-control-input" name="id_thanh_toan" value="1" checked  />
                                                     <label class="custom-control-label">Thanh toán khi nhận hàng</label>
                                                 </div>
                                                 <!-- End .custom-checkbox -->
@@ -227,7 +213,7 @@
 
                                             <div class="form-group form-group-custom-control mb-0">
                                                 <div class="custom-control custom-radio d-flex mb-0">
-                                                    <input type="radio" name="radio" class="custom-control-input">
+                                                    <input type="radio" name="id_thanh_toan" class="custom-control-input" value="2">
                                                     <label class="custom-control-label">Thanh toán chuyển khoản</label>
                                                 </div>
                                                 <!-- End .custom-checkbox -->
@@ -242,7 +228,8 @@
                                             <h4>Tổng hóa đơn:</h4>
                                         </td>
                                         <td>
-                                            <b class="total-price"><span>$1,603.80</span></b>
+                                            <b class="total-price "><span><?=number_format($tong_tien, 0 , ',' , '.')?> VND</span></b>
+                                            
                                         </td>
                                     </tr>
                                 </tfoot>
@@ -250,14 +237,14 @@
 
                             
 
-                            <button type="submit" class="btn btn-dark btn-place-order" form="checkout-form">
+                            <button type="submit" class="btn btn-dark btn-place-order">
                                 Xác nhận đơn hàng
                             </button>
                         </div>
                         <!-- End .cart-summary -->
                     </div>
                     <!-- End .col-lg-4 -->
-                </div>
+                </form>
                 <!-- End .row -->
             </div>
             <!-- End .container -->

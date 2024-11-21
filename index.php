@@ -4,7 +4,7 @@
     require_once "./src/commons/baseModel.php";
     require_once "./src/commons/function.php";
     require_once "./src/commons/env.php";
-
+    
 ?>
 <!-- cập nhật ở đây -->
 <!DOCTYPE html>
@@ -12,6 +12,7 @@
 <?php require_once "./config/head.php" ?>
 <body>
     <div class="page-wrapper">
+
         <?php require_once "./config/header.php" ?>
 
         <?php require_once "./router/index.php" ?>
