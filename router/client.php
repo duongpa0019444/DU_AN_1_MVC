@@ -7,13 +7,23 @@
     $router->add("GET", "client", "/dangxuat", "acoutController@dangxuat");
     
     $router->add("GET", "client", "/product", "productController@index");
+
     $router->add("GET", "client", "/blog", "blogController@index");
+
     $router->add("GET", "client", "/about", "aboutController@index");
+
     $router->add("GET", "client", "/contact", "contactController@index");
+
     $router->add("GET", "client", "/acout", "acoutController@index");
     $router->add("POST", "client", "/acout", "acoutController@index");
+
     $router->add("GET", "client", "/cart", "cartController@index");
+
+    $router->add("GET", "client", "/completedOrder", "completedController@index");
+
     $router->add("GET", "client", "/checkout", "checkoutController@index");
+    $router->add("POST", "client", "/checkout", "checkoutController@index");
+
     $router->add("POST", "client", "/checkout", "checkoutController@index");
     $router->add("GET", "client", "/detailProduct", "detailProductController@index");
     $router->add("GET", "client", "/single", "singleController@index");

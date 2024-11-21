@@ -7437,6 +7437,20 @@ figure .porto-loading-icon {
   left: 2.4rem;
 }
 
+
+
+
+.confirmation {
+  text-align: center;
+  margin-top: 50px;
+}
+.confirmation .checkmark {
+  font-size: 50px;
+  color: green;
+}
+
+
+
 .product-slider-tab .tab-content {
   position: relative;
 }

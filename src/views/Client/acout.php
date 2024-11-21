@@ -130,17 +130,25 @@
 												<th class="order-date">Ngày đặt</th>
 												<th class="order-price">Tổng đơn</th>
 												<th class="order-status">Trạng thái</th>
+												<th class="order-status">ghi chú</th>
+												<th class="order-status">Phương thức</th>
+												<th class="order-status" colspan="2">Thao tác</th>
+
 
 												<!-- <th class="order-action">ACTIONS</th> -->
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td class="text-center p-0" colspan="5">
-													<p class="mb-5 mt-5">
-														No Order has been made yet.
-													</p>
-												</td>
+												<td class="text-center p-2">#293</td>
+												<td class="text-center p-2">2024-11-21</td>
+												<td class="text-center p-2">30,000,000 VND</td>
+												<td class="text-center p-2"><span class="badge bg-light border border-secondary text-secondary  px-2 py-1 fs-7">Đang Chờ duyệt</span></td>
+												<td class="text-center p-2">Ghi chú 1</td>
+												<td class="text-center p-2"><span class="badge bg-success text-white  px-2 py-1 fs-7">Thanh toán khi nhận hàng</span></td>
+												<td class="text-center p-2"><button type="button" class="btn btn-light rounded">Hủy</button></td>
+												<td class="text-center p-2"><a href="#detailProduct" class="link-to-tab"><button type="button" class="btn btn-primary rounded">Chi tiết</button></a></td>
+												
 											</tr>
 										</tbody>
 									</table>
@@ -295,9 +303,9 @@
 						</div><!-- End .tab-pane -->
 
 
-						<div class="tab-pane fade" id="billing" role="tabpanel">
+						<div class="tab-pane fade" id="detailProduct" role="tabpanel">
 							<div class="address account-content mt-0 pt-2">
-								<h4 class="title">Billing address</h4>
+								<h4 class="title mb-3">Chi tiết đơn hàng</h4>
 
 								<form class="mb-2" action="#">
 									<div class="row">
@@ -355,17 +363,6 @@
 									<div class="form-group">
 										<label>Postcode / ZIP <span class="required">*</span></label>
 										<input type="text" class="form-control" required />
-									</div>
-
-									<div class="form-group mb-3">
-										<label>Phone <span class="required">*</span></label>
-										<input type="number" class="form-control" required />
-									</div>
-
-									<div class="form-group mb-3">
-										<label>Email address <span class="required">*</span></label>
-										<input type="email" class="form-control" placeholder="editor@gmail.com"
-											required />
 									</div>
 
 									<div class="form-footer mb-0">
@@ -451,6 +448,7 @@
 								</form>
 							</div>
 						</div><!-- End .tab-pane -->
+
 					</div><!-- End .tab-content -->
 				</div><!-- End .row -->
 			</div><!-- End .container -->

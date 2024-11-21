@@ -5,6 +5,7 @@ use models\client\checkOut;
 use models\client\donHang;
 
     class checkoutController{
+        public $Base_url = BASE_URL;
         public function index(){
             $id_user = $_SESSION['user_id'];
             $checkOrders = (new checkOut())->check([$id_user]);
@@ -37,7 +38,7 @@ use models\client\donHang;
                 (new checkOut())->insertDiachi($diachi);
                 (new donHang())->insertDonHang($donhang);
 
-
+                header("location: $this->Base_url/completedOrder");
             }
 
 
