@@ -1,5 +1,5 @@
 
-        <main class="main">
+<main class="main">
             <div class="container">
                 <nav aria-label="breadcrumb" class="breadcrumb-nav">
                     <ol class="breadcrumb">
@@ -10,7 +10,7 @@
 
                 <div class="product-single-container product-single-default">
                     <div class="cart-message d-none">
-                        <strong class="single-cart-notice">“Men Black Sports Shoes”</strong>
+                        <strong class="single-cart-notice"></strong>
                         <span>has been added to your cart.</span>
                     </div>
 
@@ -21,25 +21,25 @@
                                     <div class="product-label label-hot">HOT</div>
 
                                     <div class="product-label label-sale">
-                                        -16%
+                                    -<?= $product['khuyen_mai'] ?> %
                                     </div>
                                 </div>
 
                                 <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                                     <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-1-big.jpg" data-zoom-image="assets/images/products/zoom/product-1-big.jpg" width="468" height="468" alt="product" />
+                                        <img class="product-single-image" src="<?= $product['hinh_anh_1'] ?>" data-zoom-image="<?= $product['hinh_anh_1'] ?>" width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-2-big.jpg" data-zoom-image="assets/images/products/zoom/product-2-big.jpg" width="468" height="468" alt="product" />
+                                        <img class="product-single-image" src="<?= $product['hinh_anh_2'] ?>" data-zoom-image="<?= $product['hinh_anh_2'] ?>" width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-3-big.jpg" data-zoom-image="assets/images/products/zoom/product-3-big.jpg" width="468" height="468" alt="product" />
+                                        <img class="product-single-image" src="<?= $product['hinh_anh_3'] ?>" data-zoom-image="<?= $product['hinh_anh_3'] ?>" width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-4-big.jpg" data-zoom-image="assets/images/products/zoom/product-4-big.jpg" width="468" height="468" alt="product" />
+                                        <img class="product-single-image" src="<?= $product['hinh_anh_4'] ?>" data-zoom-image="<?= $product['hinh_anh_4'] ?>" width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-5-big.jpg" data-zoom-image="assets/images/products/zoom/product-5-big.jpg" width="468" height="468" alt="product" />
+                                        <img class="product-single-image" src="<?= $product['hinh_anh_1'] ?>" data-zoom-image="<?= $product['hinh_anh_1'] ?>" width="468" height="468" alt="product" />
                                     </div>
                                 </div>
                                 <!-- End .product-single-carousel -->
@@ -50,26 +50,26 @@
 
                             <div class="prod-thumbnail owl-dots">
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-1.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="<?= $product['hinh_anh_2'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-2.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="<?= $product['hinh_anh_2'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-3.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="<?= $product['hinh_anh_3'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-4.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="<?= $product['hinh_anh_4'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-5.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="<?= $product['hinh_anh_1'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                             </div>
                         </div>
                         <!-- End .product-single-gallery -->
 
                         <div class="col-lg-7 col-md-6 product-single-details">
-                            <h1 class="product-title">Men Black Sports Shoes</h1>
+                            <h1 class="product-title"><?= $product['ten_san_pham']?></h1>
 
                             <div class="product-nav">
                                 <div class="product-prev">
@@ -79,7 +79,7 @@
                                         <span class="product-popup">
 											<span class="box-content">
 												<img alt="product" width="150" height="150"
-													src="assets/images/products/product-3.jpg"
+													src="<?= $product['hinh_anh_1']?>"
 													style="padding-top: 0px;">
 
 												<span>Circled Ultimate 3D Speaker</span>
@@ -120,8 +120,8 @@
                             <hr class="short-divider">
 
                             <div class="price-box">
-                                <span class="old-price">$1,999.00</span>
-                                <span class="new-price">$1,699.00</span>
+                                <span class="old-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> VND</span>
+                                <span class="new-price"><?= number_format($product['gia_san_pham'] - $product['gia_san_pham'] * ($product['khuyen_mai'] / 100), 0, ',', '.') ?> VND</span>
                             </div>
                             <!-- End .price-box -->
 
@@ -131,11 +131,11 @@
                             <ul class="single-info-list">
 
                                 <li>
-                                    Mã sản phẩm: <strong>654613612</strong>
+                                    Mã sản phẩm: <strong><?= $product['ma_san_pham']?></strong>
                                 </li>
 
                                 <li>
-                                    hãng: <strong><a href="#" class="product-category">SHOES</a></strong>
+                                    hãng: <strong><a href="#" class="product-category"><?= $product['ten_danh_muc']?></a></strong>
                                 </li>
 
                                 

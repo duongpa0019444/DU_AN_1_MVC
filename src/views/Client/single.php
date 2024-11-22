@@ -1,6 +1,4 @@
-
-
-		<main class="main">
+<main class="main">
 			<nav aria-label="breadcrumb" class="breadcrumb-nav">
 				<div class="container">
 					<ol class="breadcrumb">
@@ -15,7 +13,7 @@
 					<div class="col-lg-9">
 						<article class="post single">
 							<div class="post-media">
-								<img src="assets/images/blog/post-1.jpg" alt="Post">
+								<img src="<?=$baivietchitiet['hinh_anh']?>" alt="Post">
 							</div><!-- End .post-media -->
 
 							<div class="post-body">
@@ -24,40 +22,22 @@
 									<span class="month">Jun</span>
 								</div><!-- End .post-date -->
 
-								<h2 class="post-title">Top New Collection</h2>
+								<h2 class="post-title"><?=$baivietchitiet['tieu_de']?></h2>
 
 								<div class="post-meta">
 									<a href="#" class="hash-scroll">0 Comments</a>
 								</div><!-- End .post-meta -->
 
 								<div class="post-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non placerat mi.
-										Etiam non tellus sem. Aenean pretium convallis lorem, sit amet dapibus ante
-										mollis a. Integer bibendum interdum sem, eget volutpat purus pulvinar in. Sed
-										tristique augue vitae sagittis porta. Phasellus ullamcorper, dolor suscipit
-										mattis viverra, sapien elit condimentum odio, ut imperdiet nisi risus sit amet
-										ante. Sed sem lorem, laoreet et facilisis quis, tincidunt non lorem. Etiam
-										tempus, dolor in sollicitudin faucibus, sem massa accumsan erat.
+									<p><?=$baivietchitiet['noi_dung']?>
 									</p>
-
-									<h3>“ Many
-										desktop publishing packages and web page editors now use Lorem Ipsum as their
-										default model search for evolved over sometimes by accident, sometimes on
-										purpose ”
-									</h3>
-
-									<p>Aenean lorem diam, venenatis nec venenatis id, adipiscing ac massa. Nam vel dui
-										eget justo dictum pretium a rhoncus ipsum. Donec venenatis erat tincidunt nunc
-										suscipit, sit amet bibendum lacus posuere. Sed scelerisque, dolor a pharetra
-										sodales, mi augue consequat sapien, et interdum tellus leo et nunc. Nunc
-										imperdiet eu libero ut imperdiet.
 									</p>
 								</div><!-- End .post-content -->
 
 								<div class="post-share">
 									<h3 class="d-flex align-items-center">
 										<i class="fas fa-share"></i>
-										Share this post
+										Chia sẻ bài đăng này
 									</h3>
 
 									<div class="social-icons">
@@ -82,28 +62,27 @@
 								</div><!-- End .post-share -->
 
 								<div class="post-author">
-									<h3><i class="far fa-user"></i>Author</h3>
+									<h3><i class="far fa-user"></i>Tác Giả</h3>
 
 									<figure>
 										<a href="#">
-											<img src="assets/images/blog/author.jpg" alt="author">
+											<img src="https://www.studytienganh.vn/upload/2022/10/115689.jpg" alt="author">
 										</a>
 									</figure>
 
 									<div class="author-content">
-										<h4><a href="#">John Doe</a></h4>
+										<h4><a href="#">Tuấn Kiệt</a></h4>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
 											odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in
 											adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
 											placerat, felis enim ornare nisi, vitae mattis nulla ante id dui.</p>
 									</div><!-- End .author.content -->
 								</div><!-- End .post-author -->
-
 								<div class="comment-respond">
-									<h3>Leave a Reply</h3>
+									<h3>Để Lại Một Câu Trả Lời</h3>
 
 									<form action="#">
-										<p>Your email address will not be published. Required fields are marked *</p>
+										<p>Địa chỉ email của bạn sẽ không được công bố. Các trường bắt buộc được đánh dấu *</p>
 
 										<div class="form-group">
 											<label>Comment</label>
@@ -128,8 +107,7 @@
 										<div class="form-group-custom-control mb-2">
 											<div class="custom-control custom-checkbox">
 												<input type="checkbox" class="custom-control-input" id="save-name">
-												<label class="custom-control-label" for="save-name">Save my name, email,
-													and website in this browser for the next time I comment.</label>
+												<label class="custom-control-label" for="save-name">Lưu tên, email và trang web của tôi trong trình duyệt này cho lần bình luận tiếp theo.</label>
 											</div><!-- End .custom-checkbox -->
 										</div><!-- End .form-group-custom-control -->
 
@@ -143,122 +121,6 @@
 						</article><!-- End .post -->
 
 						<hr class="mt-2 mb-1">
-
-						<div class="related-posts">
-							<h4>Related <strong>Posts</strong></h4>
-
-							<div class="owl-carousel owl-theme related-posts-carousel" data-owl-options="{
-								'dots': false
-							}">
-								<article class="post">
-									<div class="post-media zoom-effect">
-										<a href="single.html">
-											<img src="assets/images/blog/related/post-1.jpg" alt="Post">
-										</a>
-									</div><!-- End .post-media -->
-
-									<div class="post-body">
-										<div class="post-date">
-											<span class="day">29</span>
-											<span class="month">Jun</span>
-										</div><!-- End .post-date -->
-
-										<h2 class="post-title">
-											<a href="single.html">Post Format - Image</a>
-										</h2>
-
-										<div class="post-content">
-											<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu
-												ad litora torquent per conubia nostra, per incep tos himens.</p>
-
-											<a href="single.html" class="read-more">read more <i
-													class="fas fa-angle-right"></i></a>
-										</div><!-- End .post-content -->
-									</div><!-- End .post-body -->
-								</article>
-
-								<article class="post">
-									<div class="post-media zoom-effect">
-										<a href="single.html">
-											<img src="assets/images/blog/related/post-2.jpg" alt="Post">
-										</a>
-									</div><!-- End .post-media -->
-
-									<div class="post-body">
-										<div class="post-date">
-											<span class="day">23</span>
-											<span class="month">Mar</span>
-										</div><!-- End .post-date -->
-
-										<h2 class="post-title">
-											<a href="single.html">Post Format - Image</a>
-										</h2>
-
-										<div class="post-content">
-											<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu
-												ad litora torquent per conubia nostra, per incep tos himens.</p>
-
-											<a href="single.html" class="read-more">read more <i
-													class="fas fa-angle-right"></i></a>
-										</div><!-- End .post-content -->
-									</div><!-- End .post-body -->
-								</article>
-
-								<article class="post">
-									<div class="post-media zoom-effect">
-										<a href="single.html">
-											<img src="assets/images/blog/related/post-3.jpg" alt="Post">
-										</a>
-									</div><!-- End .post-media -->
-
-									<div class="post-body">
-										<div class="post-date">
-											<span class="day">14</span>
-											<span class="month">May</span>
-										</div><!-- End .post-date -->
-
-										<h2 class="post-title">
-											<a href="single.html">Post Format - Image</a>
-										</h2>
-
-										<div class="post-content">
-											<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu
-												ad litora torquent per conubia nostra, per incep tos himens.</p>
-
-											<a href="single.html" class="read-more">read more <i
-													class="fas fa-angle-right"></i></a>
-										</div><!-- End .post-content -->
-									</div><!-- End .post-body -->
-								</article>
-
-								<article class="post">
-									<div class="post-media zoom-effect">
-										<a href="single.html">
-											<img src="assets/images/blog/related/post-1.jpg" alt="Post">
-										</a>
-									</div><!-- End .post-media -->
-
-									<div class="post-body">
-										<div class="post-date">
-											<span class="day">11</span>
-											<span class="month">Apr</span>
-										</div><!-- End .post-date -->
-
-										<h2 class="post-title">
-											<a href="single.html">Post Format - Image</a>
-										</h2>
-
-										<div class="post-content">
-											<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu
-												ad litora torquent per conubia nostra, per incep tos himens.</p>
-
-											<a href="single.html" class="read-more">read more <i
-													class="fas fa-angle-right"></i></a>
-										</div><!-- End .post-content -->
-									</div><!-- End .post-body -->
-								</article>
-							</div><!-- End .owl-carousel -->
-						</div><!-- End .related-posts -->
 					</div><!-- End .col-lg-9 -->
 
 					<div class="sidebar-toggle custom-sidebar-toggle">
@@ -268,56 +130,45 @@
 					<aside class="sidebar mobile-sidebar col-lg-3">
 						<div class="sidebar-wrapper" data-sticky-sidebar-options='{"offsetTop": 72}'>
 							<div class="widget widget-categories">
-								<h4 class="widget-title">Blog Categories</h4>
+								<h4 class="widget-title">DANH MỤC BLOG</h4>
 
 								<ul class="list">
 									<li>
-										<a href="#">All about clothing</a>
+										<a href="#">Tất cả về máy tính</a>
 
 										<ul class="list">
-											<li><a href="#">Dresses</a></li>
+											<li><a href="#">máy tính</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Make-up &amp; beauty</a></li>
-									<li><a href="#">Accessories</a></li>
-									<li><a href="#">Fashion trends</a></li>
-									<li><a href="#">Haircuts &amp; hairstyles</a></li>
+									<li><a href="#">máy tính</a></li>
+									<li><a href="#">máy tính</a></li>
+									<li><a href="#">máy tính</a></li>
+									<li><a href="#">máy tính</a></li>
 								</ul>
 							</div><!-- End .widget -->
+							
 
 							<div class="widget">
-								<h4 class="widget-title">Recent Posts</h4>
+							
+								<h4 class="widget-title">BÀI Viết Gần Đây</h4>
 
 								<ul class="simple-post-list">
 									<li>
 										<div class="post-media">
 											<a href="single.html">
-												<img src="assets/images/blog/widget/post-1.jpg" alt="Post">
+												<img src="<?=$baiviet['hinh_anh']?>" alt="Post">
 											</a>
 										</div><!-- End .post-media -->
 										<div class="post-info">
-											<a href="single.html">Post Format - Video</a>
-											<div class="post-meta">
-												April 08, 2018
-											</div><!-- End .post-meta -->
-										</div><!-- End .post-info -->
-									</li>
-
-									<li>
-										<div class="post-media">
-											<a href="single.html">
-												<img src="assets/images/blog/widget/post-2.jpg" alt="Post">
-											</a>
-										</div><!-- End .post-media -->
-										<div class="post-info">
-											<a href="single.html">Post Format - Image</a>
-											<div class="post-meta">
-												March 23, 2016
+										<a href="single.html"><?=$baiviet['tieu_de']?></a>
+											<div class="<?=$baiviet['ngay_dang']?>">
 											</div><!-- End .post-meta -->
 										</div><!-- End .post-info -->
 									</li>
 								</ul>
+
 							</div><!-- End .widget -->
+							
 
 							<div class="widget">
 								<h4 class="widget-title">Tags</h4>
@@ -332,5 +183,3 @@
 				</div><!-- End .row -->
 			</div><!-- End .container -->
 		</main><!-- End .main -->
-
-	

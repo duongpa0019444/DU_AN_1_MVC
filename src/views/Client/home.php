@@ -169,7 +169,7 @@
                 <?php foreach ($products as $product) : ?>
                     <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="<?= $product['hinh_anh_1'] ?>" width="280" height="280" alt="product">
                                 <img src="<?= $product['hinh_anh_2'] ?>" width="280" height="280" alt="product">
                             </a>
@@ -183,7 +183,7 @@
                                 <a href="category.html" class="product-category"><?= $product['ten_danh_muc'] ?></a>
                             </div>
                             <h3 class="product-title">
-                                <a href="<?= BASE_URL ?>/detailProduct"><?= $product['ten_san_pham'] ?></a>
+                                <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>"><?= $product['ten_san_pham'] ?></a>
                             </h3>
                             <div class="ratings-container">
                                 <div class="product-ratings">
@@ -233,7 +233,7 @@
                 <?php foreach ($productss as $product): ?>
                     <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="<?= $product['hinh_anh_1'] ?>" width="220" height="220" alt="product">
                                 <img src="<?= $product['hinh_anh_2'] ?>" width="220" height="220" alt="product">
                             </a>
@@ -246,7 +246,7 @@
                                 <a href="category.html" class="product-category"><?= $product['ten_danh_muc'] ?></a>
                             </div>
                             <h3 class="product-title">
-                                <a href="<?= BASE_URL ?>/detailProduct"><?= $product['ten_san_pham'] ?></a>
+                                <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>"><?= $product['ten_san_pham'] ?></a>
                             </h3>
                             <div class="ratings-container">
                                 <div class="product-ratings">
@@ -463,14 +463,14 @@
                     <?php foreach ($products as $product): ?>
                         <div class="product-default left-details product-widget">
                             <figure>
-                                <a href="<?= BASE_URL ?>/detailProduct">
+                                <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                     <img src="<?= $product['hinh_anh_1'] ?>" width="84" height="84" alt="product">
                                     <img src="<?= $product['hinh_anh_2'] ?>" width="84" height="84" alt="product">
                                 </a>
                             </figure>
 
                             <div class="product-details">
-                                <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct"><?= $product['ten_san_pham'] ?></a>
+                                <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>"><?= $product['ten_san_pham'] ?></a>
                                 </h3>
 
                                 <div class="ratings-container">
@@ -499,14 +499,14 @@
                     <h4 class="section-sub-title">SẢN PHẨM BÁN CHẠY NHẤT</h4>
                     <div class="product-default left-details product-widget">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="assets/Client/images/products/small/product-4.jpg" width="84" height="84" alt="product">
                                 <img src="assets/Client/images/products/small/product-4-2.jpg" width="84" height="84" alt="product">
                             </a>
                         </figure>
 
                         <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct">Blue Backpack for the Young -
+                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">Blue Backpack for the Young -
                                     S</a> </h3>
 
                             <div class="ratings-container">
@@ -529,14 +529,14 @@
 
                     <div class="product-default left-details product-widget">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="assets/Client/images/products/small/product-5.jpg" width="84" height="84" alt="product">
                                 <img src="assets/Client/images/products/small/product-5-2.jpg" width="84" height="84" alt="product">
                             </a>
                         </figure>
 
                         <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct">Casual Spring Blue Shoes</a> </h3>
+                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">Casual Spring Blue Shoes</a> </h3>
 
                             <div class="ratings-container">
                                 <div class="product-ratings">
@@ -558,14 +558,14 @@
 
                     <div class="product-default left-details product-widget">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="assets/Client/images/products/small/product-6.jpg" width="84" height="84" alt="product">
                                 <img src="assets/Client/images/products/small/product-6-2.jpg" width="84" height="84" alt="product">
                             </a>
                         </figure>
 
                         <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct">Men Black Gentle Belt</a> </h3>
+                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">Men Black Gentle Belt</a> </h3>
 
                             <div class="ratings-container">
                                 <div class="product-ratings">
@@ -591,14 +591,14 @@
                     <?php foreach ($productss as $product): ?>
                         <div class="product-default left-details product-widget">
                             <figure>
-                                <a href="<?= BASE_URL ?>/detailProduct">
+                                <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                     <img src="<?= $product['hinh_anh_1'] ?>" width="84" height="84" alt="product">
                                     <img src="<?= $product['hinh_anh_2'] ?>" width="84" height="84" alt="product">
                                 </a>
                             </figure>
 
                             <div class="product-details">
-                                <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct"><?= $product['ten_san_pham'] ?></a>
+                                <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>"><?= $product['ten_san_pham'] ?></a>
                                 </h3>
 
                                 <div class="ratings-container">
@@ -625,14 +625,14 @@
                     <h4 class="section-sub-title">ĐƯỢC ĐÁNH GIÁ CAO NHẤT</h4>
                     <div class="product-default left-details product-widget">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="assets/Client/images/products/small/product-10.jpg" width="84" height="84" alt="product">
                                 <img src="assets/Client/images/products/small/product-10-2.jpg" width="84" height="84" alt="product">
                             </a>
                         </figure>
 
                         <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct">Basketball Sports Blue Shoes</a>
+                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">Basketball Sports Blue Shoes</a>
                             </h3>
 
                             <div class="ratings-container">
@@ -655,14 +655,14 @@
 
                     <div class="product-default left-details product-widget">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="assets/Client/images/products/small/product-11.jpg" width="84" height="84" alt="product">
                                 <img src="assets/Client/images/products/small/product-11-2.jpg" width="84" height="84" alt="product">
                             </a>
                         </figure>
 
                         <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct">Men Sports Travel Bag</a> </h3>
+                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">Men Sports Travel Bag</a> </h3>
 
                             <div class="ratings-container">
                                 <div class="product-ratings">
@@ -684,14 +684,14 @@
 
                     <div class="product-default left-details product-widget">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="assets/Client/images/products/small/product-12.jpg" width="84" height="84" alt="product">
                                 <img src="assets/Client/images/products/small/product-12-2.jpg" width="84" height="84" alt="product">
                             </a>
                         </figure>
 
                         <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct">Brown HandBag</a> </h3>
+                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">Brown HandBag</a> </h3>
 
                             <div class="ratings-container">
                                 <div class="product-ratings">
