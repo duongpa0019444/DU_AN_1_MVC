@@ -1,6 +1,6 @@
 <?php 
     namespace controllers\client;
-    use models\client\blog;
+    use models\blog;
 
     class blogController{
         public function index(){

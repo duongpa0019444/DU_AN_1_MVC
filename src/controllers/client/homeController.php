@@ -2,7 +2,7 @@
 
 namespace controllers\client;
 
-use models\client\home;
+use models\home;
 
 class homeController
 {

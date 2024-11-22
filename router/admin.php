@@ -1,6 +1,6 @@
 <?php 
     autoloadFile('./src/controllers/admin/');
-    autoloadFile('./src/models/admin/');
+    autoloadFile('./src/models/');
 
     //trang chủ admin
     $router->add("GET", "admin", "/admin", "AdminController@repload");

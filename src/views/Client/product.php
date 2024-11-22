@@ -65,7 +65,7 @@
                                 <div class="col-6 col-sm-4">
                                     <div class="product-default">
                                         <figure>
-                                            <a href="<?=BASE_URL?>/detailProduct">
+                                            <a href="<?=BASE_URL?>/detailProduct?id=<?=$product['id_SP']?>">
                                                 <img src="<?=$product['hinh_anh_1']?>" width="280" height="280" alt="product" />
                                                 <img src="<?=$product['hinh_anh_2']?>" width="280" height="280" alt="product" />
                                             </a>
@@ -82,7 +82,7 @@
                                                 </div>
                                             </div>
 
-                                            <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct"><?=$product['ten_san_pham']?></a> </h3>
+                                            <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct?id=<?=$product['id_SP']?>"><?=$product['ten_san_pham']?></a> </h3>
 
                                             <div class="ratings-container">
                                                 <div class="product-ratings">
@@ -103,7 +103,7 @@
                                             <div class="product-action">
                                                 <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
                                                         class="icon-heart"></i></a>
-                                                <a href="<?=BASE_URL?>/detailProduct" class="btn-icon btn-add-cart"><i
+                                                <a href="<?=BASE_URL?>/detailProduct?id=<?=$product['id_SP']?>" class="btn-icon btn-add-cart"><i
                                                         class="fa fa-arrow-right"></i><span>Thêm Giỏ Hàng</span></a>
                                                 <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
                                             </div>
@@ -235,13 +235,13 @@
                                             <?php foreach($productNews as $productNew): ?>
                                                 <div class="product-default left-details product-widget">
                                                     <figure>
-                                                        <a href="<?=BASE_URL?>/detailProduct?id=<?=$productNew['id']?>">
+                                                        <a href="<?=BASE_URL?>/detailProduct?id=<?=$product['id_SP']?>?id=<?=$productNew['id']?>">
                                                             <img src="<?=$productNew['hinh_anh_1']?>" width="75" height="75" alt="product" />
                                                             <img src="<?=$productNew['hinh_anh_2']?>" width="75" height="75" alt="product" />
                                                         </a>
                                                     </figure>
                                                     <div class="product-details">
-                                                        <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct"><?=$productNew['ten_san_pham']?></a> </h3>
+                                                        <h3 class="product-title"> <a href="<?=BASE_URL?>/detailProduct?id=<?=$product['id_SP']?>"><?=$productNew['ten_san_pham']?></a> </h3>
                                                         <div class="ratings-container">
                                                             <div class="product-ratings">
                                                                 <span class="ratings" style="width:100%"></span>

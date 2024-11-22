@@ -1,5 +1,5 @@
 <?php 
-    namespace models\client;
+    namespace models;
     use commons\baseModel;
 
     class detailProduct extends baseModel {
@@ -10,6 +10,7 @@
             SP.ma_san_pham, 
             SP.gia_san_pham, 
             SP.khuyen_mai, 
+            SP.mo_ta,
             HA.hinh_anh_1, 
             HA.hinh_anh_2, 
             HA.hinh_anh_3, 

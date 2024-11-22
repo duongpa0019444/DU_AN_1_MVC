@@ -1,7 +1,7 @@
 <?php 
 
     namespace controllers\admin;
-use model\admin\homeAdmin;
+
     class AdminController {
         public $base_url = BASE_URL;
 
@@ -11,7 +11,7 @@ use model\admin\homeAdmin;
         }
         
         public function index() {
-            
+
             require_once "./src/views/Admin/home.php";
 
         }

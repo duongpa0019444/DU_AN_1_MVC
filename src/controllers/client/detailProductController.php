@@ -1,6 +1,6 @@
 <?php 
     namespace controllers\client;
-    use models\client\detailProduct;
+    use models\detailProduct;
     class detailProductController{
         
         public $modelObject;

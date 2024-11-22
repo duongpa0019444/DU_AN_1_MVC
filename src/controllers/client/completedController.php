@@ -1,12 +1,12 @@
 <?php 
     namespace controllers\client;
 
-use models\client\Product;
+use models\Product;
 
     class completedController{
         public $Base_url = BASE_URL;
         public function index(){
-            
+
             if($_SERVER['REQUEST_METHOD']=="POST"){
                header("location: $this->Base_url/acout"); 
             }

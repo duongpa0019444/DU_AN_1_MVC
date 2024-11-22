@@ -1,3 +1,10 @@
+<?php 
+     // use models\Product;
+
+     // $allCategoryHeader = (new Product())->allCategory([]);
+     // $allCategorySmallHeader = (new Product())-> allCategorySmall([]);
+?>
+
 
 <?php if(!isset($_SESSION['admin'])): ?>
     <!-- End .top-notice -->

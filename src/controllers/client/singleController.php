@@ -1,6 +1,6 @@
 <?php 
     namespace controllers\client;
-    use models\client\single;
+    use models\single;
 
     class singleController{
         public function index(){

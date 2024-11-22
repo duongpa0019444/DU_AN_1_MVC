@@ -1,8 +1,8 @@
 <?php 
     namespace controllers\client;
 
-use models\client\checkOut;
-use models\client\donHang;
+use models\checkOut;
+use models\donHang;
 
     class checkoutController{
         public $Base_url = BASE_URL;

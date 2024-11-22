@@ -1,6 +1,6 @@
 <?php
 
-namespace models\client;
+namespace models;
 
 use commons\baseModel;
 

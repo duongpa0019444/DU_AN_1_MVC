@@ -1,7 +1,7 @@
 <?php 
     namespace controllers\client;
 
-    use models\client\Product;
+    use models\Product;
 
     class productController{
 

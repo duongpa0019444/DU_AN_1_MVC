@@ -1,8 +1,8 @@
 <?php 
     namespace controllers\client;
 
-use models\client\acout;
-use models\client\donHang;
+use models\acout;
+use models\donHang;
 
     class acoutController{
         public $Base_url = BASE_URL;

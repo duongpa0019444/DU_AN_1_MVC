@@ -1,6 +1,6 @@
 <?php 
     autoloadFile('./src/controllers/client/');
-    autoloadFile('./src/models/client/');
+    autoloadFile('./src/models/');
 
     $router->add("GET", "client", "/", "homeController@index");
     $router->add("POST", "client", "/", "homeController@index");

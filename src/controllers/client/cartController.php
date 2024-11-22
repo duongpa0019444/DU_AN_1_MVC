@@ -1,7 +1,7 @@
 <?php 
     namespace controllers\client;
 
-use models\client\cart;
+use models\cart;
 
     class cartController{
         public function index(){
