@@ -20,6 +20,7 @@
     $router->add("GET", "client", "/cart", "cartController@index");
 
     $router->add("GET", "client", "/completedOrder", "completedController@index");
+    $router->add("POST", "client", "/completedOrder", "completedController@index");
 
     $router->add("GET", "client", "/checkout", "checkoutController@index");
     $router->add("POST", "client", "/checkout", "checkoutController@index");

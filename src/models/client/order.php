@@ -13,6 +13,10 @@
             parent::pdoQuery($sql , $data);
         }
         
+        public function allDonHang($data){
+            $sql = "SELECT * FROM don_hang  WHERE id_user = ?";
+            return parent::pdoQueryAll($sql, $data);
+        }
     }
 
 ?>

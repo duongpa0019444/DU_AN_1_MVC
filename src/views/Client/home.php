@@ -200,12 +200,9 @@
                             </div>
                             <!-- End .price-box -->
                             <div class="product-action">
-                                <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
-                                        class="icon-heart"></i></a>
-                                <a href="<?= BASE_URL ?>/detailProduct" class="btn-icon btn-add-cart"><i
-                                        class="fa fa-arrow-right"></i><span>Thêm Giỏ Hàng</span></a>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
-                                        class="fas fa-external-link-alt"></i></a>
+                                <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a>
+                                <a href="" class="btn-icon btn-add-cart"  onclick="addToCart()"><i class="fa fa-arrow-right"></i><span>Thêm Giỏ Hàng</span></a>
+                                <a href="#" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                         <!-- End .product-details -->
@@ -241,7 +238,7 @@
                                 <img src="<?= $product['hinh_anh_2'] ?>" width="220" height="220" alt="product">
                             </a>
                             <div class="label-group">
-                                <div class="product-label label-hot">HOT</div>  
+                                <div class="product-label label-hot">HOT</div>
                             </div>
                         </figure>
                         <div class="product-details">

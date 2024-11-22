@@ -132,24 +132,69 @@
 												<th class="order-status">Trạng thái</th>
 												<th class="order-status">ghi chú</th>
 												<th class="order-status">Phương thức</th>
-												<th class="order-status" colspan="2">Thao tác</th>
+												<th class="order-status" >Thao tác</th>
 
 
 												<!-- <th class="order-action">ACTIONS</th> -->
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td class="text-center p-2">#293</td>
-												<td class="text-center p-2">2024-11-21</td>
-												<td class="text-center p-2">30,000,000 VND</td>
-												<td class="text-center p-2"><span class="badge bg-light border border-secondary text-secondary  px-2 py-1 fs-7">Đang Chờ duyệt</span></td>
-												<td class="text-center p-2">Ghi chú 1</td>
-												<td class="text-center p-2"><span class="badge bg-success text-white  px-2 py-1 fs-7">Thanh toán khi nhận hàng</span></td>
-												<td class="text-center p-2"><button type="button" class="btn btn-light rounded">Hủy</button></td>
-												<td class="text-center p-2"><a href="#detailProduct" class="link-to-tab"><button type="button" class="btn btn-primary rounded">Chi tiết</button></a></td>
-												
-											</tr>
+											<?php foreach($orders as $order): ?>
+												<tr>
+													<td class="text-center p-2">#<?=$order['id']?></td>
+													<td class="text-center p-2"><?=$order['thoi_gian']?></td>
+													<td class="text-center p-2"><?= number_format($order['tong_tien'], 0, ',', '.') ?>VND</td>
+													<td class="text-center p-2">
+														<?php if($order['trang_thai']==1): ?>
+															
+															<span class="badge bg-light  border-secondary text-secondary  px-2 py-1 fs-7">Đang Chờ duyệt</span>
+														
+														<?php elseif($order['trang_thai']==2): ?>
+															
+															<span class="badge bg-info  border-secondary text-light  px-2 py-1 fs-7">Đã duyệt - Đang xử lý</span>
+														
+														<?php elseif($order['trang_thai']==3): ?>
+															
+															<span class="badge bg-primary  border-secondary text-light  px-2 py-1 fs-7">Đang giao hàng</span>
+														
+														<?php elseif($order['trang_thai']==4): ?>
+															
+															<span class="badge bg-success  border-secondary text-light  px-2 py-1 fs-7">Đã giao hàng</span>
+														
+														<?php elseif($order['trang_thai']==5): ?>
+															
+															<span class="badge bg-warning border-secondary text-light  px-2 py-1 fs-7">Đã hủy</span>
+														
+														<?php else: ?>
+															
+															<span class="badge bg-danger border-secondary text-light  px-2 py-1 fs-7">Đã hoàn hàng</span>
+														
+														<?php endif ?>
+
+													</td>
+													<td class="text-center p-2">Ghi chú 1</td>
+													<td class="text-center p-2">
+														<?php if($order['id_thanh_toan']==1): ?>
+															<span class="badge bg-success text-white  px-2 py-1 fs-7">Thanh toán khi nhận hàng</span>
+														<?php else: ?>
+															<span class="badge bg-primary text-white  px-2 py-1 fs-7">Thanh toán chuyển khoản</span>
+														<?php endif ?>
+													</td>
+
+													<td class="text-center p-2">
+														<?php if($order['trang_thai'] == 5 || $order['trang_thai'] == 6): ?>
+															<a href="#detailProduct" class="link-to-tab"><button type="button" class="btn btn-primary rounded">Chi tiết</button></a>
+
+														<?php else: ?>
+															
+															<button type="button" class="btn btn-light rounded">Hủy</button>
+															<a href="#detailProduct" class="link-to-tab"><button type="button" class="btn btn-primary rounded">Chi tiết</button></a>
+														
+														<?php endif ?>
+													</td>
+													
+												</tr>
+											<?php endforeach ?>
 										</tbody>
 									</table>
 									<hr class="mt-0 mb-3 pb-2" />
@@ -307,72 +352,42 @@
 							<div class="address account-content mt-0 pt-2">
 								<h4 class="title mb-3">Chi tiết đơn hàng</h4>
 
-								<form class="mb-2" action="#">
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label>First name <span class="required">*</span></label>
-												<input type="text" class="form-control" required />
-											</div>
-										</div>
-
-										<div class="col-md-6">
-											<div class="form-group">
-												<label>Last name <span class="required">*</span></label>
-												<input type="text" class="form-control" required />
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label>Company </label>
-										<input type="text" class="form-control">
-									</div>
-
-									<div class="select-custom">
-										<label>Country / Region <span class="required">*</span></label>
-										<select name="orderby" class="form-control">
-											<option value="" selected="selected">British Indian Ocean Territory
-											</option>
-											<option value="1">Brunei</option>
-											<option value="2">Bulgaria</option>
-											<option value="3">Burkina Faso</option>
-											<option value="4">Burundi</option>
-											<option value="5">Cameroon</option>
-										</select>
-									</div>
-
-									<div class="form-group">
-										<label>Street address <span class="required">*</span></label>
-										<input type="text" class="form-control"
-											placeholder="House number and street name" required />
-										<input type="text" class="form-control"
-											placeholder="Apartment, suite, unit, etc. (optional)" required />
-									</div>
-
-									<div class="form-group">
-										<label>Town / City <span class="required">*</span></label>
-										<input type="text" class="form-control" required />
-									</div>
-
-									<div class="form-group">
-										<label>State / Country <span class="required">*</span></label>
-										<input type="text" class="form-control" required />
-									</div>
-
-									<div class="form-group">
-										<label>Postcode / ZIP <span class="required">*</span></label>
-										<input type="text" class="form-control" required />
-									</div>
-
-									<div class="form-footer mb-0">
-										<div class="form-footer-right">
-											<button type="submit" class="btn btn-dark py-4">
-												Save Address
-											</button>
-										</div>
-									</div>
-								</form>
+								<table class="table table-order text-left">
+									<thead>
+										<tr style="text-align: center;">
+											<th class="order-id">Mã sản phẩm</th>
+											<th class="order-id">Hình ảnh</th>
+											<th class="order-date">Tên sản phẩm</th>
+											<th class="order-price">Giá</th>
+											<th class="order-status">Hành Động</th>
+											<!-- <th class="order-action">ACTIONS</th> -->
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center">SP001</td>
+											<td class="text-center"><img width="70px" src="assets/Client/images/banner_laptop/banner_1.jpg" alt=""></td>
+											<td class="text-center">Laptop Macbook Air 1</td>
+											<td class="text-center">18000000 VND</td>
+											<td class="text-center"><a href=""><button class="btn btn-dark">Thêm giỏ hàng</button></a></td>
+										</tr>
+										<tr>
+											<td class="text-center">SP001</td>
+											<td class="text-center"><img width="70px" src="assets/Client/images/banner_laptop/banner_1.jpg" alt=""></td>
+											<td class="text-center">Laptop Macbook Air 1</td>
+											<td class="text-center">18000000 VND</td>
+											<td class="text-center"><a href=""><button class="btn btn-dark">Thêm giỏ hàng</button></a></td>
+										</tr>
+										<tr>
+											<td class="text-center">SP001</td>
+											<td class="text-center"><img width="70px" src="assets/Client/images/banner_laptop/banner_1.jpg" alt=""></td>
+											<td class="text-center">Laptop Macbook Air 1</td>
+											<td class="text-center">18000000 VND</td>
+											<td class="text-center"><a href=""><button class="btn btn-dark">Thêm giỏ hàng</button></a></td>
+										</tr>
+									</tbody>
+								</table>
+								<hr class="mt-0 mb-3 pb-2" />
 							</div>
 						</div><!-- End .tab-pane -->
 
