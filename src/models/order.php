@@ -17,6 +17,12 @@
             $sql = "SELECT * FROM don_hang  WHERE id_user = ?";
             return parent::pdoQueryAll($sql, $data);
         }
+
+        public function findIdNow($data){
+            $sql = "SELECT LAST_INSERT_ID() AS id";
+            return parent::pdoQuery($sql, $data);
+
+        }
     }
 
 ?>

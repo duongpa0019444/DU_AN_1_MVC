@@ -26,14 +26,10 @@
             return parent::pdoQueryAll($sql , $data);
         }
 
-        public function allCategory($data){
-            $sql = "SELECT * FROM danh_muc";
+        public function allProduct($data){
+            $sql = "SELECT * FROM san_pham";
             return parent::pdoQueryAll($sql , $data);
-        }
 
-        public function allCategorySmall($data){
-            $sql = "SELECT * FROM danh_muc_small";
-            return parent::pdoQueryAll($sql , $data);
         }
 
         public function productNew($data)

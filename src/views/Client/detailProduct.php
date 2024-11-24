@@ -71,39 +71,7 @@
                         <div class="col-lg-7 col-md-6 product-single-details">
                             <h1 class="product-title"><?= $product['ten_san_pham']?></h1>
 
-                            <div class="product-nav">
-                                <div class="product-prev">
-                                    <a href="#">
-                                        <span class="product-link"></span>
-
-                                        <span class="product-popup">
-											<span class="box-content">
-												<img alt="product" width="150" height="150"
-													src="<?= $product['hinh_anh_1']?>"
-													style="padding-top: 0px;">
-
-												<span>Circled Ultimate 3D Speaker</span>
-                                        </span>
-                                        </span>
-                                    </a>
-                                </div>
-
-                                <div class="product-next">
-                                    <a href="#">
-                                        <span class="product-link"></span>
-
-                                        <span class="product-popup">
-											<span class="box-content">
-												<img alt="product" width="150" height="150"
-													src="assets/images/products/product-4.jpg"
-													style="padding-top: 0px;">
-
-												<span>Blue Backpack for the Young</span>
-                                        </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
+                           
 
                             <div class="ratings-container">
                                 <div class="product-ratings">
@@ -147,7 +115,7 @@
                                 </div>
                                 <!-- End .product-single-qty -->
 
-                                <a href="javascript:;" class="btn btn-dark add-cart ms-2" title="Add to Cart">Thêm giỏ hàng</a>
+                                <a href="#" class="btn btn-dark add-cart ms-2" title="Add to Cart">Thêm giỏ hàng</a>
 
                                 <a href="cart.html" class="btn btn-gray view-cart d-none">View cart</a>
                             </div>

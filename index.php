@@ -4,8 +4,16 @@
     require_once "./src/commons/baseModel.php";
     require_once "./src/commons/function.php";
     require_once "./src/commons/env.php";
+    autoloadFile('./src/models/');
     
-    
+?>
+
+<?php
+    use models\Category;
+
+    $allCategoryHeaders = (new Category())->allCategory([]);
+    $allCategorySmallHeaders = (new Category())->allCategorySmall([]);
+
 ?>
 
 
@@ -29,7 +37,6 @@
         ?>
         
     </div>
-
 
 
 

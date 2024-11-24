@@ -23,3 +23,5 @@ class homeController
         require_once "./src/views/Client/home.php";
     }
 }
+
+?>

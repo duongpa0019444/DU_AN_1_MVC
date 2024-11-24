@@ -5,6 +5,13 @@ use commons\baseModel;
 
     class acout extends baseModel{
 
+        //lấy user theo id
+        public function findUserId($data){
+            $sql = "SELECT * FROM `users` WHERE id = ?";
+            return parent::pdoQuery($sql, $data);
+
+        }
+
         //Đăng nhập
         public function logIn($data){
             $sql = "SELECT * FROM users WHERE so_dien_thoai = :so_dien_thoai AND mat_khau = :mat_khau";
@@ -34,6 +41,26 @@ use commons\baseModel;
         public function findAcout($data){
             $sql = "SELECT COUNT(1) AS sl FROM users WHERE so_dien_thoai = ? OR email = ?";
             return parent::pdoQuery($sql, $data);
+        }
+
+        //lấy tài khoản với id
+        public function finUserId($data){
+            $sql = "SELECT * FROM users WHERE id = ?";
+            
+            return parent::pdoQuery($sql, $data);
+        }
+
+        //cập nhật tài khoản
+        public function updateUser($data){
+            $columns = [];
+            foreach($data as $key => $value){
+                if($key != "id"){
+                    $columns[] = "$key = :$key";
+                }
+            }
+            $sql = "UPDATE users SET ".implode(',',$columns)." WHERE id = :id";
+            return parent::pdoQuery($sql,$data);
+
         }
     }
 

@@ -1,7 +1,8 @@
 <?php 
     namespace controllers\client;
 
-    use models\Product;
+use models\Category;
+use models\Product;
 
     class productController{
 
@@ -14,9 +15,11 @@
     
         public function index(){
             
-            $allCategory = $this->modelOject->allCategory([]);
+            $allCategory = (new Category())->allCategory([]);
+            $allCategorySmall = (new Category())->allCategorySmall([]);
+
             $productNews = $this->modelOject->productNew([]);
-            $allCategorySmall = $this->modelOject->allCategorySmall([]);
+
             if(isset($_GET['priceProduct'])){
                 $gia = $_GET['priceProduct'];
                 $products = $this->modelOject->findPrice([$gia,$gia]);

@@ -187,8 +187,8 @@
 
 														<?php else: ?>
 															
-															<button type="button" class="btn btn-light rounded">Hủy</button>
-															<a href="#detailProduct" class="link-to-tab"><button type="button" class="btn btn-primary rounded">Chi tiết</button></a>
+															<a href=""><button type="button" class="btn btn-light rounded">Hủy</button></a>
+															<a href="<?=BASE_URL?>/acout?id_DH=<?=$order['id']?>#detailProduct" class="link-to-tab"><button type="button" class="btn btn-primary rounded">Chi tiết</button></a>
 														
 														<?php endif ?>
 													</td>
@@ -237,13 +237,15 @@
 							<h3 class="account-sub-title d-none d-md-block mt-0 pt-1 ml-1"><i
 									class="icon-user-2 align-middle mr-3 pr-1"></i>Chi tiết tài khoản</h3>
 							<div class="account-content">
-								<form action="">
+								<form action="" method="post">
+									<input type="hidden" name="detailAccount">
+									
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="acc-name">Họ và tên<span class="required">*</span></label>
-												<input type="text" class="form-control" value="Name"
-													id="acc-name" name="acc-name" required />
+												<input type="text" class="form-control" value="<?=$user['ten_user']?>"
+													id="acc-name" name="ten_user" required />
 											</div>
 										</div>
 
@@ -254,15 +256,16 @@
 
 									<div class="form-group mb-4">
 										<label for="acc-email">Địa chỉ E-mail <span class="required">*</span></label>
-										<input type="email" class="form-control" id="acc-email" name="acc-email"
-											value="laptopdpk1314@gmail.com" required />
+										<input type="email" class="form-control" id="acc-email" name="email"
+											value="<?=$user['email']?>" required />
 									</div>
 
 									<div class="form-group mb-4">
 										<label for="acc-email">Số Điện Thoại<span class="required">*</span></label>
-										<input type="number" class="form-control" id="acc-email" name="acc-email"
-											value="0123456789" required />
+										<input type="number" class="form-control" id="acc-email" name="so_dien_thoai"
+											value="<?=$user['so_dien_thoai']?>" required />
 									</div>
+
 
 									<div class="change-password">
 										<h3 class="text-uppercase mb-2">Thay đổi mật khẩu</h3>
@@ -270,27 +273,29 @@
 										<div class="form-group">
 											<label for="acc-password">Mật Khẩu Cũ:</label>
 											<input type="password" class="form-control" id="acc-password"
-												name="acc-password" />
+												name="password-old" />
 										</div>
 
 										<div class="form-group">
 											<label for="acc-password">Mật Khẩu Mới</label>
 											<input type="password" class="form-control" id="acc-new-password"
-												name="acc-new-password" />
+												name="mat_khau" />
 										</div>
 
 										<div class="form-group">
 											<label for="acc-password">Xác Nhận Mật Khẩu mới</label>
 											<input type="password" class="form-control" id="acc-confirm-password"
-												name="acc-confirm-password" />
+												name="confirm-password" />
 										</div>
 									</div>
-
+									<p class="text-danger"><?=$mess??""?></p>
 									<div class="form-footer mt-3 mb-0">
 										<button type="submit" class="btn btn-dark mr-0">
 											Lưu Thay Đổi
 										</button>
 									</div>
+									<p class="text-success"><?=$mess2??""?></p>
+
 								</form>
 							</div>
 						</div><!-- End .tab-pane -->
@@ -350,41 +355,28 @@
 
 						<div class="tab-pane fade" id="detailProduct" role="tabpanel">
 							<div class="address account-content mt-0 pt-2">
-								<h4 class="title mb-3">Chi tiết đơn hàng</h4>
+								<h4 class="title mb-3">Chi tiết đơn hàng #1</h4>
 
 								<table class="table table-order text-left">
 									<thead>
 										<tr style="text-align: center;">
-											<th class="order-id">Mã sản phẩm</th>
 											<th class="order-id">Hình ảnh</th>
 											<th class="order-date">Tên sản phẩm</th>
-											<th class="order-price">Giá</th>
-											<th class="order-status">Hành Động</th>
-											<!-- <th class="order-action">ACTIONS</th> -->
+											<th class="order-price">Đơn giá</th>
+											<th class="order-price">Số lượng</th>
+											<th class="order-price">Thành tiền</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td class="text-center">SP001</td>
 											<td class="text-center"><img width="70px" src="assets/Client/images/banner_laptop/banner_1.jpg" alt=""></td>
 											<td class="text-center">Laptop Macbook Air 1</td>
 											<td class="text-center">18000000 VND</td>
-											<td class="text-center"><a href=""><button class="btn btn-dark">Thêm giỏ hàng</button></a></td>
+											<td class="text-center">2</td>
+											<td class="text-center">36000000 VND</td>
+
 										</tr>
-										<tr>
-											<td class="text-center">SP001</td>
-											<td class="text-center"><img width="70px" src="assets/Client/images/banner_laptop/banner_1.jpg" alt=""></td>
-											<td class="text-center">Laptop Macbook Air 1</td>
-											<td class="text-center">18000000 VND</td>
-											<td class="text-center"><a href=""><button class="btn btn-dark">Thêm giỏ hàng</button></a></td>
-										</tr>
-										<tr>
-											<td class="text-center">SP001</td>
-											<td class="text-center"><img width="70px" src="assets/Client/images/banner_laptop/banner_1.jpg" alt=""></td>
-											<td class="text-center">Laptop Macbook Air 1</td>
-											<td class="text-center">18000000 VND</td>
-											<td class="text-center"><a href=""><button class="btn btn-dark">Thêm giỏ hàng</button></a></td>
-										</tr>
+										
 									</tbody>
 								</table>
 								<hr class="mt-0 mb-3 pb-2" />
