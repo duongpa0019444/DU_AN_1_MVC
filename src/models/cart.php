@@ -2,6 +2,7 @@
     namespace models;
 
     use commons\baseModel;
+use PDO;
 
     class cart extends baseModel{
 
@@ -21,6 +22,14 @@
                     JOIN hinh_anh AS ha ON sp.id = ha.id_san_pham
                     WHERE gh.id_user = ?";
             return parent::pdoQueryAll($sql , $data);
+        }
+
+
+        public function create($data){
+            $sql = "INSERT INTO gio_hang(id, id_user, id_san_pham ,so_luong) 
+                    VALUES ('',? ,? ,?)";
+            
+            return parent::pdoQueryAll($sql,$data );
         }
         
     }

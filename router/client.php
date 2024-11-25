@@ -18,6 +18,7 @@
     $router->add("POST", "client", "/acout", "acoutController@index");
 
     $router->add("GET", "client", "/cart", "cartController@index");
+    $router->add("GET", "client", "/addCart", "addCartController@index");
 
     $router->add("GET", "client", "/completedOrder", "completedController@index");
     $router->add("POST", "client", "/completedOrder", "completedController@index");

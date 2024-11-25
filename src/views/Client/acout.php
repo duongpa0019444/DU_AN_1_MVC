@@ -515,6 +515,7 @@
 
 										
 									</div>
+										<p class="text-danger fs-3"><?=$messaddCart??""?></p>
 
 									
 										<button type="submit" name="logIn" class="btn btn-dark btn-md w-100">

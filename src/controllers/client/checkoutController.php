@@ -37,8 +37,9 @@ use models\donHang;
 
                 (new checkOut())->insertDiachi($diachi);
                 (new donHang())->insertDonHang($donhang); //đây là lệnh insert đơn hàng
+
+                // $id_order = (new donHang())->findIdNow([]); //đây là câu lệnh lấy id của đơn hàng
                 
-                $id_order = (new donHang())->findIdNow([]); //đây là câu lệnh lấy id của đơn  hàng
 
                 header("location: $this->Base_url/completedOrder");
             }

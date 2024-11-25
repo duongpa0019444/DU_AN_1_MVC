@@ -20,7 +20,11 @@ use models\donHang;
                     }
         
                     $user = (new acout())->logIn($data);
-                    
+
+                    if($user<1){
+                        $messaddCart = "Sai số điện thoại hoặc mật khẩu!";
+                        require_once "src/views/Client/acout.php";
+                    };
 
                 } elseif (isset($_POST['signIn'])) {
                     // Code xử lý cho phần đăng ký
@@ -120,7 +124,6 @@ use models\donHang;
                     require_once "../DU_AN_1_MVC/src/views/Client/acout.php";
                     // header("location: $this->Base_url/acout");
                 }
-
                 
 
                 

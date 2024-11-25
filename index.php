@@ -53,6 +53,8 @@
 
         <!-- Main JS File -->
         <script src="<?=BASE_URL?>/assets/Client/js/main.min.js"></script>
+
+        <?=$messAddCart??""?>
        
       
     <?php else: ?>
