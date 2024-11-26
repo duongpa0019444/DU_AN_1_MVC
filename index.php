@@ -9,10 +9,14 @@
 ?>
 
 <?php
-    use models\Category;
+
+use models\cart;
+use models\Category;
 
     $allCategoryHeaders = (new Category())->allCategory([]);
     $allCategorySmallHeaders = (new Category())->allCategorySmall([]);
+    $tong_product = (new cart())->tongProductCart([$_SESSION['user_id']]);
+
 
 ?>
 

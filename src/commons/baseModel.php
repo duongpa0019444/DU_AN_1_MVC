@@ -37,5 +37,11 @@ use PDO;
             $stmt = $this->conn->prepare($sql);
             $stmt->execute();
         }
+
+        public function pdoUpdateParam($sql, $param) {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($param);
+            return $this->conn->lastInsertId();
+        }
     }
 ?>

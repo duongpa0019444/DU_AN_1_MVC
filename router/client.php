@@ -7,6 +7,7 @@
     $router->add("GET", "client", "/dangxuat", "acoutController@dangxuat");
     
     $router->add("GET", "client", "/product", "productController@index");
+    $router->add("POST", "client", "/product", "productController@index");
 
     $router->add("GET", "client", "/blog", "blogController@index");
 

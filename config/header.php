@@ -58,7 +58,7 @@
                     <div class="dropdown cart-dropdown">
                         <a href="<?=BASE_URL?>/cart" title="Cart" class="dropdown-toggle dropdown-arrow cart-toggle">
                             <i class="minicart-icon"></i>
-                            <span class="cart-count badge-circle">3</span>
+                            <span class="cart-count badge-circle"><?=$tong_product['tong_product']?></span>
                         </a>
 
                     </div>

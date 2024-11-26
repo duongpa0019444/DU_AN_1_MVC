@@ -152,20 +152,25 @@
 							
 								<h4 class="widget-title">BÀI Viết Gần Đây</h4>
 
+								<?php foreach($baivietnew as $baiviet): ?>
+							<div class="widget widget-post">
+								
 								<ul class="simple-post-list">
 									<li>
 										<div class="post-media">
-											<a href="single.html">
+											<a href="<?=BASE_URL?>/single">
 												<img src="<?=$baiviet['hinh_anh']?>" alt="Post">
 											</a>
 										</div><!-- End .post-media -->
 										<div class="post-info">
-										<a href="single.html"><?=$baiviet['tieu_de']?></a>
-											<div class="<?=$baiviet['ngay_dang']?>">
-											</div><!-- End .post-meta -->
+											<a href="<?=BASE_URL?>/single"><?=$baiviet['tieu_de']?></a>
+											<div class="post-meta"><?=$baiviet['ngay_dang']?></div>
+											<!-- End .post-meta -->
 										</div><!-- End .post-info -->
 									</li>
 								</ul>
+							</div><!-- End .widget -->
+							<?php endforeach ?>
 
 							</div><!-- End .widget -->
 							

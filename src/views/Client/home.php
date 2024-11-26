@@ -132,7 +132,7 @@
                         <div class="row align-items-lg-center">
                             <div class="col-lg-7 text-lg-right">
                                 <h3 class="text-primary">LAPTOP DELL</h3>
-                                <h4 class="pb-4 pb-lg-0 mb-0 text-danger">Starting at $99</h4>
+                                <h4 class="pb-4 pb-lg-0 mb-0 text-danger">Starting at 30%</h4>
                             </div>
                             <div class="col-lg-5 text-lg-left px-0 px-xl-3">
                                 <a href="category.html" class="btn btn-sm btn-primary">Shop Now</a>
@@ -144,11 +144,11 @@
 
                 <div class="banner banner3 banner-sm-vw d-flex align-items-center appear-animate" style="background-color: #ccc;" data-animation-name="fadeInRightShorter" data-animation-delay="500">
                     <figure class="w-100">
-                        <img src="assets/Client/images/Banner_laptop/banner_sale_1.jpg" alt="banner" width="380" height="175" />
+                        <img src="assets/Client/images/Banner_laptop/banner_sale_3.jpg" alt="banner" width="380" height="175" />
                     </figure>
                     <div class="banner-layer text-right">
                         <h3 class="m-b-2 text-white">MACBOOK AIR</h3>
-                        <h4 class="m-b-2 text-danger text-uppercase">Starting at $99</h4>
+                        <h4 class="m-b-2 text-danger text-uppercase">Starting at $25%</h4>
                         <a href="category.html" class="btn btn-sm btn-primary">Shop Now</a>
                     </div>
                 </div>

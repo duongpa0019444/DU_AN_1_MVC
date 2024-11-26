@@ -101,7 +101,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Số Điện Thoại <abbr class="required" title="required">*</abbr></label>
-                                        <input type="tel" class="form-control" required name="so_dien_thoai" />
+                                        <input type="number" class="form-control" required name="so_dien_thoai" />
                                     </div>
                                         
                                     </div>
@@ -178,12 +178,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($checkOrders as $checkOrder): ?>
+                                    <?php foreach($checkOrders as $index => $checkOrder): ?>
                                         <tr>
                                             <td class="product-col">
                                                 <h3 class="product-title">
                                                     <?=$checkOrder['ten_san_pham']?> ×
                                                     <span class="product-qty"><?=$checkOrder['so_luong']?></span>
+
+                                                    <!-- thêm input hidden để thêm dữ liệu cho form để gửi đi -->
+                                                     <input type="hidden" name="id_san_pham<?=$index?>" value="<?=$checkOrder['id_san_pham']?>">
+                                                     <input type="hidden" name="sl_san_pham<?=$index?>" value="<?=$checkOrder['so_luong']?>">
                                                 </h3>
                                             </td>
 

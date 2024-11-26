@@ -32,6 +32,34 @@ use PDO;
             return parent::pdoQueryAll($sql,$data );
         }
         
+        public function deleteCartUser($data){
+            $sql = "DELETE FROM gio_hang WHERE id_user = ?";
+            parent::pdoQueryAll($sql,$data);
+        }
+
+        public function findCartUserId($data){
+            $sql = "SELECT * FROM gio_hang WHERE id_user = ? AND id_san_pham = ?";
+            return parent::pdoQuery($sql , $data);
+        }
+
+        public function updateSL($data){
+            $sql = "UPDATE gio_hang SET so_luong = so_luong + 1 
+                    WHERE id_user = ? AND id_san_pham = ?";
+            parent::pdoQuery($sql , $data);
+            
+        }   
+
+        public function tongProductCart($data){
+            $sql = "SELECT COUNT(so_luong) AS tong_product FROM gio_hang WHERE id_user = ?";
+            return parent::pdoQuery($sql , $data);
+
+        }
+
+        public function deleteProductCart($data){
+            $sql = "DELETE FROM gio_hang WHERE id_san_pham = ? AND id_user = ?";
+            return parent::pdoQuery($sql , $data);
+            
+        }
     }
 
 ?>

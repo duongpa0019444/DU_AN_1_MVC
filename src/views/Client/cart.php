@@ -36,7 +36,7 @@
 																<img src="<?=$productCart['hinh_anh_1']?>" alt="product">
 															</a>
 
-															<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+															<a href="<?=BASE_URL?>/cart?id_SP=<?=$productCart['id_san_pham']?>" class="btn-remove icon-cancel" title="Remove Product"></a>
 														</figure>
 													</td>
 													<td class="product-col">
@@ -57,31 +57,20 @@
 										
 									</tbody>
 
-
+									
 									<tfoot>
 										<tr>
 											<td colspan="5" class="clearfix">
-												<div class="float-left">
-													<div class="cart-discount">
-														<form action="#">
-															<div class="input-group">
-																<input type="text" class="form-control form-control-sm"
-																	placeholder="Coupon Code" required>
-																<div class="input-group-append">
-																	<button class="btn btn-sm" type="submit">Áp dụng Phiếu</button>
-																</div>
-															</div><!-- End .input-group -->
-														</form>
-													</div>
-												</div><!-- End .float-left -->
-
-												<div class="float-right">
-													<a href="<?=BASE_URL?>/checkout">
-														<button type="submit" class="btn btn-shop btn-update-cart">
-															Đặt Hàng
-														</button>
-													</a>
-												</div><!-- End .float-right -->
+												
+												<?php if(!empty($productCarts)): ?>
+													<div class="float-right">
+														<a href="<?=BASE_URL?>/checkout">
+															<button type="submit" class="btn btn-shop btn-update-cart">
+																Đặt Hàng
+															</button>
+														</a>
+													</div><!-- End .float-right -->
+												<?php endif ?>
 											</td>
 										</tr>
 									</tfoot>
