@@ -9,12 +9,17 @@
         public function index($data){
             $sql = "SELECT 
                     SP.id AS id_SP, 
-                    SP.ten_san_pham, 
+                    SP.ma_san_pham,
+                    SP.ten_san_pham,
                     SP.gia_san_pham, 
                     SP.khuyen_mai, 
+                    SP.luot_xem,
+                    SP.so_luong,
+                    SP.ngay_them,
                     HA.hinh_anh_1, 
                     HA.hinh_anh_2, 
                     DMSM.id_danh_muc,
+                    DMSM.ten_danh_muc AS ten_danh_muc_small,
                     (select dm.ten_danh_muc from danh_muc dm where dm.id = DMSM.id_danh_muc) as ten_danh_muc
                     
                 FROM 
@@ -116,6 +121,15 @@
                     
                 LIMIT 4";
             return parent::pdoQueryAll($sql , $data);
+        }
+
+        public function createProduct($data){
+            $colums = [];
+            foreach ($data as $key => $value){
+                $colums[] = ":$key";
+            }
+            $sql ="INSERT INTO san_pham(".implode(',',array_keys($data)).") VALUES (".implode(',',$colums).")";
+            return parent::pdoUpdateParam($sql, $data);
         }
     }
 

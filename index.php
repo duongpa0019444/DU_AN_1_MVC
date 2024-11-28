@@ -15,7 +15,10 @@ use models\Category;
 
     $allCategoryHeaders = (new Category())->allCategory([]);
     $allCategorySmallHeaders = (new Category())->allCategorySmall([]);
-    $tong_product = (new cart())->tongProductCart([$_SESSION['user_id']]);
+    if(isset($_SESSION['user_id'])){
+        $tong_product = (new cart())->tongProductCart([$_SESSION['user_id']]);
+
+    }
 
 
 ?>

@@ -58,7 +58,7 @@
                     <div class="dropdown cart-dropdown">
                         <a href="<?=BASE_URL?>/cart" title="Cart" class="dropdown-toggle dropdown-arrow cart-toggle">
                             <i class="minicart-icon"></i>
-                            <span class="cart-count badge-circle"><?=$tong_product['tong_product']?></span>
+                            <span class="cart-count badge-circle"><?=$tong_product['tong_product']??""?></span>
                         </a>
 
                     </div>
@@ -163,23 +163,18 @@
                          </button>
                     </div>
 
-                    <!-- Activity -->
-                    <div class="topbar-item d-none d-md-flex">
-                         <button type="button" class="topbar-button" id="theme-settings-btn" data-bs-toggle="offcanvas" data-bs-target="#theme-activity-offcanvas" aria-controls="theme-settings-offcanvas">
-                              <iconify-icon icon="solar:clock-circle-bold-duotone" class="fs-24 align-middle"></iconify-icon>
-                         </button>
-                    </div>
+      
 
                     <!-- User -->
                     <div class="dropdown topbar-item">
                          <a type="button" class="topbar-button" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <span class="d-flex align-items-center">
-                                   <img class="rounded-circle" width="32" src="assets/images/users/avatar-1.jpg" alt="avatar-3">
+                                   <img class="rounded-circle" width="32" src="<?=BASE_URL?>/assets/Client/images/clients/client-1.jpg" alt="avatar-3">
                               </span>
                          </a>
                          <div class="dropdown-menu dropdown-menu-end">
                               <!-- item-->
-                              <h6 class="dropdown-header">Welcome Gaston!</h6>
+                              <h6 class="dropdown-header">Welcome!</h6>
                               <a class="dropdown-item" href="pages-profile.html">
                                    <i class="bx bx-user-circle text-muted fs-18 align-middle me-1"></i><span class="align-middle">Hồ sơ</span>
                               </a>
@@ -439,7 +434,10 @@
                          <ul class="nav sub-navbar-nav">
 
                               <li class="sub-nav-item">
-                                   <a class="sub-nav-link" href="customer-list.html">Danh sách users</a>
+                                   <a class="sub-nav-link" href="<?=BASE_URL?>/admin/users-list">Danh sách Users</a>
+                              </li>
+                              <li class="sub-nav-item">
+                                   <a class="sub-nav-link" href="<?=BASE_URL?>/admin/users-create">Thêm Users</a>
                               </li>
                               
                          </ul>

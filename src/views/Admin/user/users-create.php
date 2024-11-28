@@ -12,7 +12,7 @@
                          
 
                          <div class="col-xl-12 col-lg-12 ">
-                              <form class="card" action="" method="post" enctype="multipart/form-data">
+                              <form class="card" action="" method="post" >
                                    <div class="card-header">
                                         <h4 class="card-title">Thêm hình ảnh</h4>
                                    </div>
@@ -20,7 +20,7 @@
                                         <!-- File Upload -->
                                         <div class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews" data-upload-preview-template="#uploadPreviewTemplate">
                                              <div class="fallback">
-                                                  <input name="hinh_anh[]" type="file" multiple />
+                                                  <input name="file" type="file" multiple />
                                              </div>
                                              <div class="dz-message needsclick">
                                                   <i class="bx bx-cloud-upload fs-48 text-primary"></i>
@@ -41,7 +41,7 @@
                                                   <div>
                                                        <div class="mb-3">
                                                             <label for="product-name" class="form-label">Mã sản phẩm</label>
-                                                            <input type="text" id="product-name" class="form-control" placeholder="Mời nhập mã sản phẩm*" name="ma_san_pham" required>
+                                                            <input type="text" id="product-name" class="form-control" placeholder="Mời nhập mã sản phẩm*" name="ma_san_pham">
                                                        </div>
                                                   </div>
                                              </div>
@@ -50,7 +50,7 @@
                                                   <div>
                                                        <div class="mb-3">
                                                             <label for="product-name" class="form-label">Tên sản phẩm</label>
-                                                            <input type="text" id="product-name" class="form-control" placeholder="Mời nhập tên sản phẩm*" name="ten_san_pham" required>
+                                                            <input type="text" id="product-name" class="form-control" placeholder="Mời nhập tên sản phẩm*" name="ma_san_pham">
                                                        </div>
                                                   </div>
                                              </div>
@@ -59,14 +59,18 @@
                                         <div class="row">
                                              <div class="col-lg-6">
                                                   <div>
-                                                       <label  class="form-label">Danh mục</label>
-                                                       <select class="form-control" name="id_DM_small" required>
-                                                            <option selected hidden disabled>-Danh mục của sản phẩm-</option>
-                                                            <?php foreach($allCategorySmallHeaders as $allCategorySmallHeader): ?>
-                                                                      
-                                                                 <option value="<?=$allCategorySmallHeader['id']?>"><?=$allCategorySmallHeader['ten_danh_muc']?></option>
-                                                                      
-                                                            <?php endforeach ?>
+                                                       <label for="product-categories" class="form-label">Danh mục</label>
+                                                       <select class="form-control" id="product-categories" data-choices data-choices-groups data-placeholder="Select Categories" name="choices-single-groups">
+                                                            <option value="" selected hidden disabled>-Danh mục của sản phẩm-</option>
+                                                            <option value="Fashion">Fashion</option>
+                                                            <option value="Electronics">Electronics</option>
+                                                            <option value="Footwear">Footwear</option>
+                                                            <option value="Sportswear">Sportswear</option>
+                                                            <option value="Watches">Watches</option>
+                                                            <option value="Furniture">Furniture</option>
+                                                            <option value="Appliances">Appliances</option>
+                                                            <option value="Headphones">Headphones</option>
+                                                            <option value="Other Accessories">Other Accessories</option>
                                                        </select>
                                                   </div>
                                              </div>
@@ -76,7 +80,7 @@
                                                   <div>
                                                        <div class="mb-3">
                                                             <label for="product-weight" class="form-label">Số lượng sản phẩm</label>
-                                                            <input type="number" id="product-weight" class="form-control" name="so_luong" placeholder="Mời nhập số lượng sản phẩm*" required>
+                                                            <input type="number" id="product-weight" class="form-control" placeholder="Mời nhập số lượng sản phẩm*">
                                                        </div>
                                                   </div>
                                              </div>
@@ -87,7 +91,7 @@
                                              <div class="col-lg-12">
                                                   <div class="mb-3">
                                                        <label for="description" class="form-label">Mô tả sản phẩn</label>
-                                                       <textarea class="form-control bg-light-subtle" id="description" rows="7" name="mo_ta" placeholder="Mô tả thông tin chi tiết về sản phẩm" required></textarea>
+                                                       <textarea class="form-control bg-light-subtle" id="description" rows="7" placeholder="Mô tả thông tin chi tiết về sản phẩm"></textarea>
                                                   </div>
                                              </div>
                                         </div>
@@ -104,7 +108,7 @@
                                                        <label for="product-price" class="form-label">Giá sản phẩm</label>
                                                        <div class="input-group mb-3">
                                                             <span class="input-group-text fs-20">VND</span>
-                                                            <input type="number" id="product-price" class="form-control" name="gia_san_pham" placeholder="mời nhập giá*" required>
+                                                            <input type="number" id="product-price" class="form-control" placeholder="mời nhập giá*">
                                                        </div>
                                                   </div>
                                              </div>
@@ -113,7 +117,7 @@
                                                        <label for="product-discount" class="form-label">Khuyến mãi</label>
                                                        <div class="input-group mb-3">
                                                             <span class="input-group-text fs-20"><i class='bx bxs-discount'></i></span>
-                                                            <input type="number" id="product-discount" name="khuyen_mai" max="100" class="form-control" placeholder="%" required>
+                                                            <input type="number" id="product-discount" class="form-control" placeholder="%">
                                                        </div>
                                                   </div>
                                              </div>
@@ -124,10 +128,10 @@
                                    <div class="p-3 bg-light mb-3 rounded">
                                    <div class="row justify-content-end g-2">
                                         <div class="col-lg-2">
-                                             <button  class="btn btn-primary w-100">Thêm</button>
+                                             <a href="#!" class="btn btn-primary w-100">Thêm</a>
                                         </div>
                                         <div class="col-lg-2">
-                                             <a href="" class="btn btn-outline-secondary w-100">Thoát</a>
+                                             <a href="#!" class="btn btn-outline-secondary w-100">Thoát</a>
                                         </div>
                                         
                                    </div>

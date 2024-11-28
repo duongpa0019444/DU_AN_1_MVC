@@ -9,6 +9,7 @@
     //Trang sản phẩm
     $router->add("GET", "admin", "/admin/product-list", "productController@index");
     $router->add("GET", "admin", "/admin/product-add", "productController@create");
+    $router->add("POST", "admin", "/admin/product-add", "productController@create");
     $router->add("GET", "admin", "/admin/product-edit", "productController@edit");
     
     //Trang danh mục
@@ -21,7 +22,11 @@
     //Trang quản lý đơn hàng
     $router->add("GET", "admin", "/admin/orders-list", "ordersController@index");
 
+    //Trang quản lý Users
+    $router->add("GET", "admin", "/admin/users-list", "usersController@index");
+    $router->add("GET", "admin", "/admin/users-create", "usersController@create");
 
+    
     // đăng xuất
     $router->add("GET", "admin", "/admin/dangxuat", "AdminController@dangxuat");
 
