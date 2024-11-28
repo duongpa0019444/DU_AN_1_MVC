@@ -11,6 +11,8 @@
     $router->add("GET", "admin", "/admin/product-add", "productController@create");
     $router->add("POST", "admin", "/admin/product-add", "productController@create");
     $router->add("GET", "admin", "/admin/product-edit", "productController@edit");
+    $router->add("POST", "admin", "/admin/product-edit", "productController@edit");
+    $router->add("GET", "admin", "/admin/product-delete", "productController@delete");
     
     //Trang danh mục
     $router->add("GET", "admin", "/admin/category-list", "categoryController@index");

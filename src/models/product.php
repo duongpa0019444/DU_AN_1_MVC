@@ -73,7 +73,7 @@
                     WHERE gia_san_pham BETWEEN 
                         ? - 1000000 + ((khuyen_mai)/100 * gia_san_pham) 
                         AND 
-                        ? + 1000000 + ((khuyen_mai)/100 * gia_san_pham);
+                        ? + 1000000 + ((khuyen_mai)/100 * gia_san_pham)
                     ";
             return parent::pdoQueryAll($sql, $data);
         }
@@ -131,6 +131,31 @@
             $sql ="INSERT INTO san_pham(".implode(',',array_keys($data)).") VALUES (".implode(',',$colums).")";
             return parent::pdoUpdateParam($sql, $data);
         }
+
+        public function delete($data){
+            $sql = "DELETE FROM san_pham WHERE id = ?";
+            parent::pdoQuery($sql , $data);
+        }
+
+        public function finProductId($data){
+            $sql = "SELECT * FROM san_pham WHERE id = ?";
+            return parent::pdoQuery($sql , $data);
+            
+        }
+
+        public function update($data){
+            $columns = [];
+            foreach($data as $key => $value){
+                if($key != "id"){
+                    $columns[] = "$key = :$key";
+                }
+            }
+            $sql = "UPDATE san_pham SET ".implode(',',$columns)." WHERE id = :id";
+            
+            parent::pdoQuery($sql,$data);
+
+        }
+
     }
 
 ?>

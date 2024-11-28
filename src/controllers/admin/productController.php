@@ -70,8 +70,39 @@ use models\Product;
         }
 
         public function edit(){
+            $id = $_GET['id'];
+            $allCategoryHeaders = (new Category())->allCategory([]);
+            $allCategorySmallHeaders = (new Category())->allCategorySmall([]);
+            $product = (new Product())->finProductId([$id]);
+
+            if($_SERVER['REQUEST_METHOD'] == "POST"){
+                $_POST['id'] = $id;
+                (new Product())->update($_POST);
+                header("location:$this->base_url/admin/product-list");
+                
+            }
             require_once "./src/views/Admin/product/product-edit.php";
         }
+
+        public function delete(){
+            $id = $_GET['id'];
+
+            //xử lý xóa ảnh trong thư mục 
+            $files = (new image())->select([$id]);  // Lấy tất cả đường dẫn file trong thư mục trên database
+            
+            // Duyệt qua và xóa từng file
+            foreach ($files as $file) {
+                if (is_file($file)) { // Chỉ xóa nếu là file
+                    unlink($file); // Xóa file
+                }
+            }
+            (new image())->delete([$id]); //xóa ảnh trong database
+
+            (new Product())->delete([$id]); // xóa sản phẩm
+            header("location:$this->base_url/admin/product-list");
+            
+        }
+
     }
 
 ?>
