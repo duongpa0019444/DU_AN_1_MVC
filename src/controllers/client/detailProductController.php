@@ -16,7 +16,7 @@ use models\detailProduct;
                 $product = $this->modelObject->getProduct($id);
                 // debug($product);
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
-            
+                    
                     if(!isset($_SESSION['user_id'])){  //Đang sửa ở đây----------------------------------------------------------
                         $messaddCart = "Đăng nhập để thêm sản phẩm vào giỏ hàng của bạn!";
                         require_once "src/views/Client/acout.php";
@@ -24,7 +24,7 @@ use models\detailProduct;
                         if(isset($_POST['addCart'])){
                             // đi kiểm tra xem trong giỏ hàng của user có sản phẩm đấy chưa, nếu chưa thì thêm , còn nếu rồi thì update số lượng
                             $productCart = (new cart())->findCartUserId([$_SESSION['user_id'],$_POST['addCart']]);
-                                
+                            
                             if($productCart>0){
                                 //update số lượng sản phẩm 
                                 (new cart())->updateSL([$_SESSION['user_id'],$_POST['addCart']]);
@@ -32,7 +32,7 @@ use models\detailProduct;
         
                             }else{
                                 //thêm sản phẩm mới vào giỏ hàng
-                                (new cart())->create([$_SESSION['user_id'] , $_POST['addCart'] , 1]);
+                                (new cart())->create([$_SESSION['user_id'] , $_POST['addCart'] , $_POST['so_luong']]);
                                 header("location: $this->Base_url/product");
         
                             }

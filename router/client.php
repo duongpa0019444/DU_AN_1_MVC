@@ -19,7 +19,9 @@
     $router->add("POST", "client", "/acout", "acoutController@index");
 
     $router->add("GET", "client", "/cart", "cartController@index");
+    $router->add("GET", "client", "/cart/delete", "cartController@delete");
     $router->add("GET", "client", "/addCart", "addCartController@index");
+    
 
     $router->add("GET", "client", "/completedOrder", "completedController@index");
     $router->add("POST", "client", "/completedOrder", "completedController@index");
@@ -28,7 +30,10 @@
     $router->add("POST", "client", "/checkout", "checkoutController@index");
 
     $router->add("POST", "client", "/checkout", "checkoutController@index");
+
     $router->add("GET", "client", "/detailProduct", "detailProductController@index");
+    $router->add("POST", "client", "/detailProduct", "detailProductController@index");
+
     $router->add("GET", "client", "/single", "singleController@index");
 
 

@@ -116,7 +116,7 @@
                                 <!-- End .product-single-qty -->
                                 <input type="hidden" name="addCart" value="<?= $product['id_SP']?>">
 
-                                <button class="btn btn-dark add-cart mx-3" title="Add to Cart">Thêm giỏ hàng</button>
+                                <button class="btn btn-dark mx-3" title="Add to Cart">Thêm giỏ hàng</button>
 
                                
                             </form>
