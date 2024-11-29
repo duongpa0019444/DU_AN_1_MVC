@@ -17,9 +17,19 @@
     //Trang danh mục
     $router->add("GET", "admin", "/admin/category-list", "categoryController@index");
     $router->add("GET", "admin", "/admin/category-add", "categoryController@create");
+    $router->add("POST", "admin", "/admin/category-add", "categoryController@create");
     $router->add("GET", "admin", "/admin/category-edit", "categoryController@edit");
+    $router->add("POST", "admin", "/admin/category-edit", "categoryController@edit");
+    $router->add("GET", "admin", "/admin/category-delete", "categoryController@delete");
+
+    //Trang danh mục con
     $router->add("GET", "admin", "/admin/category-detail", "categoryController@detail");
+    $router->add("GET", "admin", "/admin/category-smallcreate", "categoryController@createSmall");
+    $router->add("POST", "admin", "/admin/category-smallcreate", "categoryController@createSmall");
+    $router->add("GET", "admin", "/admin/category-smalldelete", "categoryController@deleteSmall");
     $router->add("GET", "admin", "/admin/category-smalledit", "categoryController@editSmall");
+    $router->add("POST", "admin", "/admin/category-smalledit", "categoryController@editSmall");
+    
        
     //Trang quản lý đơn hàng
     $router->add("GET", "admin", "/admin/orders-list", "ordersController@index");

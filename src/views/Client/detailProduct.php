@@ -109,16 +109,17 @@
                                 
                             </ul>
 
-                            <div class="product-action">
+                            <form class="product-action" method="post">
                                 <div class="product-single-qty">
-                                    <input class="horizontal-quantity form-control" type="text">
+                                    <input class="horizontal-quantity form-control" type="text" name="so_luong">
                                 </div>
                                 <!-- End .product-single-qty -->
+                                <input type="hidden" name="addCart" value="<?= $product['id_SP']?>">
 
-                                <a href="#" class="btn btn-dark add-cart ms-2" title="Add to Cart">Thêm giỏ hàng</a>
+                                <button class="btn btn-dark add-cart mx-3" title="Add to Cart">Thêm giỏ hàng</button>
 
-                                <a href="cart.html" class="btn btn-gray view-cart d-none">View cart</a>
-                            </div>
+                               
+                            </form>
                             <!-- End .product-action -->
 
                             <hr class="divider mb-0 mt-0">

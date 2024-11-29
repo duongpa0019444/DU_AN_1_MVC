@@ -37,6 +37,7 @@
                                                        </tr>
                                                   </thead>
                                                   <tbody>
+                                                      <?php foreach($categories as $category) :?>
                                                        <tr>
                                                             <td>
                                                                  <div class="form-check">
@@ -47,110 +48,27 @@
                                                             <td>
                                                                  <div class="d-flex align-items-center gap-2">
                                                                       <div class="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
-                                                                           <img src="<?=BASE_URL?>/assets/Client/images/brands/apple.jpg" alt="" class="avatar-md">
+                                                                           <img src="<?=BASE_URL.'/'.$category['hinh_anh']?>" alt="lỗi hình ảnh" class="avatar-md">
                                                                       </div>
                                                                       
                                                                  </div>
 
                                                             </td>
                                                             
-                                                            <td>Mackbook</td>
+                                                            <td><?= $category['ten_danh_muc']?></td>
                                                           
-                                                            <td>6</td>
+                                                            <td><?= $category['soLuongDMSM']?></td>
                                                             <td>
                                                                  <div class="d-flex gap-2">
-                                                                      <a href="<?=BASE_URL?>/admin/category-detail" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                      <a href="<?=BASE_URL?>/admin/category-edit" class="btn btn-soft-primary btn-sm"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                      <a href="<?=BASE_URL?>/admin/category-delete" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                                      <?php if($category['soLuongDMSM']>0): ?>
+                                                                           <a href="<?=BASE_URL?>/admin/category-detail?id=<?=$category['id']?>&name=<?=$category['ten_danh_muc']?>" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                                      <?php endif ?>
+                                                                      <a href="<?=BASE_URL?>/admin/category-edit?id=<?=$category['id']?>" class="btn btn-soft-primary btn-sm"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                                      <a href="<?=BASE_URL?>/admin/category-delete?id=<?=$category['id']?>" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
                                                                  </div>
                                                             </td>
                                                        </tr>
-                                                       <tr>
-                                                            <td>
-                                                                 <div class="form-check">
-                                                                      <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                                      <label class="form-check-label" for="customCheck2"></label>
-                                                                 </div>
-                                                            </td>
-                                                            <td>
-                                                                 <div class="d-flex align-items-center gap-2">
-                                                                      <div class="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
-                                                                           <img src="<?=BASE_URL?>/assets/Client/images/brands/apple.jpg" alt="" class="avatar-md">
-                                                                      </div>
-                                                                      
-                                                                 </div>
-
-                                                            </td>
-                                                            
-                                                            <td>Mackbook</td>
-                                                          
-                                                            <td>6</td>
-                                                            <td>
-                                                                 <div class="d-flex gap-2">
-                                                                      <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                      <a href="#!" class="btn btn-soft-primary btn-sm"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                      <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                 </div>
-                                                            </td>
-                                                       </tr>
-                                                       <tr>
-                                                            <td>
-                                                                 <div class="form-check">
-                                                                      <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                                      <label class="form-check-label" for="customCheck2"></label>
-                                                                 </div>
-                                                            </td>
-                                                            <td>
-                                                                 <div class="d-flex align-items-center gap-2">
-                                                                      <div class="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
-                                                                           <img src="<?=BASE_URL?>/assets/Client/images/brands/apple.jpg" alt="" class="avatar-md">
-                                                                      </div>
-                                                                      
-                                                                 </div>
-
-                                                            </td>
-                                                            
-                                                            <td>Mackbook</td>
-                                                          
-                                                            <td>6</td>
-                                                            <td>
-                                                                 <div class="d-flex gap-2">
-                                                                      <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                      <a href="#!" class="btn btn-soft-primary btn-sm"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                      <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                 </div>
-                                                            </td>
-                                                       </tr>
-                                                       <tr>
-                                                            <td>
-                                                                 <div class="form-check">
-                                                                      <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                                      <label class="form-check-label" for="customCheck2"></label>
-                                                                 </div>
-                                                            </td>
-                                                            <td>
-                                                                 <div class="d-flex align-items-center gap-2">
-                                                                      <div class="rounded bg-light avatar-md d-flex align-items-center justify-content-center">
-                                                                           <img src="<?=BASE_URL?>/assets/Client/images/brands/apple.jpg" alt="" class="avatar-md">
-                                                                      </div>
-                                                                      
-                                                                 </div>
-
-                                                            </td>
-                                                            
-                                                            <td>Mackbook</td>
-                                                          
-                                                            <td>6</td>
-                                                            <td>
-                                                                 <div class="d-flex gap-2">
-                                                                      <a href="#!" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                      <a href="#!" class="btn btn-soft-primary btn-sm"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                      <a href="#!" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                 </div>
-                                                            </td>
-                                                       </tr>
-
-                                                       
+                                                       <?php endforeach; ?>
                                                   </tbody>
                                              </table>
                                         </div>

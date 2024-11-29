@@ -1,3 +1,7 @@
+<?php
+
+use models\Category;
+?>
 
 
           <!-- ==================================================== -->
@@ -12,7 +16,7 @@
                          
 
                          <div class="col-xl-12 col-lg-12 ">
-                              <form class="card">
+                              <form class="card" method="post" enctype="multipart/form-data">
                                    <div class="card-header">
                                         <h4 class="card-title">Thêm hình ảnh</h4>
                                    </div>
@@ -20,7 +24,7 @@
                                         <!-- File Upload -->
                                         <div action="" method="post" class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews" data-upload-preview-template="#uploadPreviewTemplate">
                                              <div class="fallback">
-                                                  <input name="file" type="file" multiple />
+                                                  <input name="hinh_anh" type="file" multiple />
                                              </div>
                                              <div class="dz-message needsclick">
                                                   <i class="bx bx-cloud-upload fs-48 text-primary"></i>
@@ -39,7 +43,7 @@
                                                   <div>
                                                        <div class="mb-3">
                                                             <label for="product-name" class="form-label">Tên danh mục</label>
-                                                            <input type="text" id="product-name" class="form-control" placeholder="Mời nhập tên danh mục*" name="ma_san_pham">
+                                                            <input type="text" id="ten_danh_muc" class="form-control" value="<?= $categories['ten_danh_muc']?>"  name="ten_danh_muc">
                                                        </div>
                                                   </div>
                                              </div>
@@ -55,7 +59,8 @@
                                    <div class="p-3 bg-light mb-3 rounded">
                                    <div class="row justify-content-end g-2">
                                         <div class="col-lg-2">
-                                             <a href="#!" class="btn btn-primary w-100">Sửa</a>
+                                             <button type="submit" class="btn btn-primary w-100">Sửa</button>
+                                             <!-- <a href="#!" class="btn btn-primary w-100">Sửa</a> -->
                                         </div>
                                         <div class="col-lg-2">
                                              <a href="#!" class="btn btn-outline-secondary w-100">reset</a>
