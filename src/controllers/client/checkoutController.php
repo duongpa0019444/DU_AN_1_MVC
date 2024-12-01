@@ -41,8 +41,8 @@ use models\donHang;
                 $diachi['id_user'] = $id_user;
                 $donhang['id_user']  = $id_user;
                 $donhang['tong_tien'] = $tong_tien;
-                (new checkOut())->insertDiachi($diachi); //insert địa chỉ
-
+                $id_dia_chi = (new checkOut())->insertDiachi($diachi); //insert địa chỉ
+                $donhang['id_dia_chi'] = $id_dia_chi;
                 $id_don_hang = (new donHang())->insertDonHang($donhang); //đây là lệnh insert đơn hàng
                 
                 $chi_tiet_dh = [];

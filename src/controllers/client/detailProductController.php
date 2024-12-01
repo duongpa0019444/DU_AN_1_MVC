@@ -32,8 +32,9 @@ use models\detailProduct;
         
                             }else{
                                 //thêm sản phẩm mới vào giỏ hàng
+                                
                                 (new cart())->create([$_SESSION['user_id'] , $_POST['addCart'] , $_POST['so_luong']]);
-                                header("location: $this->Base_url/product");
+                                header("location: $this->Base_url/detailProduct?id=".$id);
         
                             }
                             

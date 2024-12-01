@@ -27,7 +27,7 @@
                 $column[] = ":$key";
             }
             $sql = "INSERT INTO dia_chi(".implode(',', array_keys($data)).") VALUES (".implode(',', $column).")";
-            parent::pdoQuery($sql , $data);
+            return parent::pdoUpdateParam($sql , $data);
         }
         
     }

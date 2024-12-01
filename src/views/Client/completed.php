@@ -20,7 +20,7 @@
                 <?php foreach ($products as $product) : ?>
                     <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?=$product['id_SP']?>">
                                 <img src="<?= $product['hinh_anh_1'] ?>" width="280" height="280" alt="product">
                                 <img src="<?= $product['hinh_anh_2'] ?>" width="280" height="280" alt="product">
                             </a>

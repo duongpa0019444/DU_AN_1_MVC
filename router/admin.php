@@ -33,6 +33,10 @@
        
     //Trang quản lý đơn hàng
     $router->add("GET", "admin", "/admin/orders-list", "ordersController@index");
+    $router->add("GET", "admin", "/admin/orders-detail", "ordersController@detail");
+    $router->add("POST", "admin", "/admin/orders-detail", "ordersController@detail");
+    $router->add("GET", "admin", "/admin/orders-delete", "ordersController@deleteOrder");
+    
 
     //Trang quản lý Users
     $router->add("GET", "admin", "/admin/users-list", "usersController@index");
