@@ -20,9 +20,9 @@
                 <div class="header-right w-lg-max">
                     <div class="header-icon header-search header-search-inline header-search-category w-lg-max text-right mt-0">
                         <a href="#" class="search-toggle" role="button"><i class="icon-search-3"></i></a>
-                        <form action="" method="get">
+                        <form action="<?=BASE_URL?>/product" method="get">
                             <div class="header-search-wrapper">
-                                <input type="search" class="form-control" name="" id="q" placeholder="Search...">
+                                <input type="search" class="form-control" name="key_word" id="q" placeholder="Search...">
                                 <div class="select-custom">
                                     <select id="cat" name="idSM">
                                         <option value="" disabled selected hidden>Danh Mục</option>

@@ -75,9 +75,41 @@ use models\Product;
             $allCategorySmallHeaders = (new Category())->allCategorySmall([]);
             $product = (new Product())->finProductId([$id]);
 
+
             if($_SERVER['REQUEST_METHOD'] == "POST"){
                 $_POST['id'] = $id;
+                //nếu có hình ảnh thì thêm vào bảng hình ảnh 
+                if(isset($_FILES['hinh_anh']) && $_FILES['hinh_anh']["size"]>0){
+
+                    $arrayNames = $_FILES['hinh_anh']['name'];
+                    $arrayTmpNames = $_FILES['hinh_anh']['tmp_name'];
+                    $hinh_anh['id_san_pham'] = $id;
+
+                    //xử lý logic để thêm từng sản phẩm vào file lưu trữ product
+
+                    if(count($arrayNames)<=4){
+
+                        for ($i = 0; $i < count($arrayNames); $i++) {
+
+                            $uniqueName = uniqid() . "_" . basename($arrayNames[$i]);
+                            $dir = "assets/Client/images/products/" . $uniqueName;
+
+                            $tmp_name = $arrayTmpNames[$i];
+                        
+                            move_uploaded_file($tmp_name, $dir);
+                            $index = $i+1;
+                            $hinh_anh["hinh_anh_$index"] = $dir;
+                        }
+                        //update vào bảng hình ảnh
+                        (new Product())->updateImage($hinh_anh);
+                    }
+
+
+
+                }
                 (new Product())->update($_POST);
+
+            
                 header("location:$this->base_url/admin/product-list");
                 
             }

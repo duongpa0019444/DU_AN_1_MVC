@@ -26,9 +26,18 @@ use models\Product;
                 $gia = $_GET['priceProduct'];
                 $products = $this->modelOject->findPrice([$gia,$gia]);
                 
+            }elseif(isset($_GET['key_word'])){
+                $keyWord = $_GET['key_word'];
+                $products = $this->modelOject->findKeyWord($keyWord);
+
             }elseif(isset($_GET['idSM'])){
                 $idSM = $_GET['idSM'];
                 $products = $this->modelOject->findProductCategorySM([$idSM]);
+
+            }elseif(isset($_GET['id_DM_home'])){
+                $id = $_GET['id_DM_home'];
+                $products = $this->modelOject->findProductCategory([$id]);
+                
             }else{
                 $products = $this->modelOject->index([]);
             }

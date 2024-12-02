@@ -37,10 +37,13 @@
     $router->add("POST", "admin", "/admin/orders-detail", "ordersController@detail");
     $router->add("GET", "admin", "/admin/orders-delete", "ordersController@deleteOrder");
     
-
     //Trang quản lý Users
     $router->add("GET", "admin", "/admin/users-list", "usersController@index");
-    $router->add("GET", "admin", "/admin/users-create", "usersController@create");
+    $router->add("GET", "admin", "/admin/users-add", "usersController@create");
+    $router->add("POST", "admin", "/admin/users-add", "usersController@create");
+    $router->add("GET", "admin", "/admin/users-edit", "usersController@update");
+    $router->add("POST", "admin", "/admin/users-edit", "usersController@update");
+    $router->add("GET", "admin", "/admin/users-delete", "usersController@delete");
 
     
     // đăng xuất

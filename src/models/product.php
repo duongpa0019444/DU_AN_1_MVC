@@ -156,6 +156,79 @@
 
         }
 
+        
+        public function updateImage($data){
+            $columns = [];
+            foreach($data as $key => $value){
+                if($key != "id"){
+                    $columns[] = "$key = :$key";
+                }
+            }
+            $sql = "UPDATE hinh_anh SET ".implode(',',$columns)." WHERE id_san_pham = :id_san_pham";
+            
+            parent::pdoQuery($sql,$data);
+
+        }
+
+        public function findProductCategory($data){
+            $sql = "SELECT 
+                        SP.id AS id_SP, 
+                        SP.ma_san_pham,
+                        SP.ten_san_pham,
+                        SP.gia_san_pham, 
+                        SP.khuyen_mai, 
+                        SP.luot_xem,
+                        SP.so_luong,
+                        SP.ngay_them,
+                        HA.hinh_anh_1, 
+                        HA.hinh_anh_2, 
+                        DMSM.id_danh_muc,
+                        DMSM.ten_danh_muc AS ten_danh_muc_small,
+                        (select dm.ten_danh_muc from danh_muc dm where dm.id = DMSM.id_danh_muc) as ten_danh_muc
+                        
+                    FROM 
+                        san_pham AS SP 
+                    JOIN 
+                        hinh_anh AS HA ON SP.id = HA.id_san_pham 
+                    JOIN 
+                        danh_muc_small AS DMSM ON SP.id_DM_small = DMSM.id
+        
+                WHERE id_DM_small IN(SELECT id FROM danh_muc_small WHERE id_danh_muc = ?)";
+            return parent::pdoQueryAll($sql, $data);
+        }
+
+        public function findKeyWord($data){
+            $sql = "SELECT 
+                        
+                        SP.id AS id_SP, 
+                        SP.ma_san_pham,
+                        SP.ten_san_pham,
+                        SP.gia_san_pham, 
+                        SP.khuyen_mai, 
+                        SP.luot_xem,
+                        SP.so_luong,
+                        SP.ngay_them,
+                        HA.hinh_anh_1, 
+                        HA.hinh_anh_2, 
+                        DMSM.id_danh_muc,
+                        DMSM.ten_danh_muc AS ten_danh_muc_small,
+                        (select dm.ten_danh_muc from danh_muc dm where dm.id = DMSM.id_danh_muc) as ten_danh_muc
+                        
+                    FROM 
+                        san_pham AS SP 
+                    JOIN 
+                        hinh_anh AS HA ON SP.id = HA.id_san_pham 
+                    JOIN 
+                        danh_muc_small AS DMSM ON SP.id_DM_small = DMSM.id
+            
+                    WHERE ten_san_pham LIKE ?";
+            $search = "%".$data."%";
+            
+            return parent::pdoQueryAll($sql,[$search]);
+        }
+
     }
+
+    
 
 ?>

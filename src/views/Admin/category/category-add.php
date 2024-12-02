@@ -58,7 +58,7 @@
                                              <button type="submit" class="btn btn-primary w-100">Thêm</button>
                                         </div>
                                         <div class="col-lg-2">
-                                             <a href="#!" class="btn btn-outline-secondary w-100">Thoát</a>
+                                             <a href="<?= BASE_URL ?>/admin/category-list" class="btn btn-outline-secondary w-100">Thoát</a>
                                         </div>
                                         
                                    </div>

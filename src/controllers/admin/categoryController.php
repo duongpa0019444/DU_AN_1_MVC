@@ -23,9 +23,7 @@
                 // debug($_FILES);
                 $dir = "assets/Admin/images/categories/".$_FILES['hinh_anh']['name'];
                 move_uploaded_file($tmp_name, $dir);
-                $category = $this->modelObject->createCate($_POST);
-                // debug($_POST);
-
+                $this->modelObject->createCate($_POST);
                header('location: '.BASE_URL.'/admin/category-list');
             } else {
                 require_once "./src/views/Admin/category/category-add.php";
@@ -33,7 +31,8 @@
         }
 
         public function delete() {
-            $this->modelObject->deleteCate($_GET);
+            $id = $_GET['id'];
+            $this->modelObject->deleteCate(['id' => $id]);
             header('location: '.BASE_URL.'/admin/category-list');
 
         }
@@ -46,13 +45,14 @@
                     $tmp_name = $_FILES['hinh_anh']['tmp_name'];
                     $dir = "assets/Admin/images/categories/".$_FILES['hinh_anh']['name'];
                     move_uploaded_file($tmp_name, $dir);
-                    $_POST['id'] = $_GET['id'];
-                    $category = $this->modelObject->update($_POST); 
+                    $data = $_POST;
+                    $data['id'] = $_GET['id'];
+                    $this->modelObject->update($data); 
                     header('location: '.BASE_URL.'/admin/category-list');
                 
             } else {
                $id = $_GET['id'];
-               $categories = $this->modelObject->getNameCate($id);
+               $categories = $this->modelObject->getNameCate(['id' => $id]);
 
                 require_once "./src/views/Admin/category/category-edit.php";
             }
@@ -61,7 +61,7 @@
 
         public function detail(){
             $id = $_GET['id'];
-            $categories = $this->modelObject->allCateAdminSmall($id);
+            $categories = $this->modelObject->allCateAdminSmall(['id' => $id]);
             // debug($categories);
             require_once "./src/views/Admin/category/category-detail.php";
         }
@@ -72,7 +72,7 @@
             $_POST['id_danh_muc'] = $_GET['id'];
             $id = $_GET['id'];
             $name = $_GET['name'];
-            $category = $this->modelObject->createCateSmall($_POST);
+            $this->modelObject->createCateSmall($_POST);
             header("location: ".BASE_URL."/admin/category-detail?id=" . $id."&name=".$name);
             } else {
                 require_once "./src/views/Admin/category/category-smallcreate.php";
@@ -83,17 +83,28 @@
         public function deleteSmall(){
             $id = $_GET['id'];
             $name = $_GET['name'];
-            $categories =   $this->modelObject->deleteCateSmall([$_GET['id_DMSM']]);
+            $id_DMSM = $_GET['id_DMSM'];
+            $this->modelObject->deleteCateSmall(['id' => $id_DMSM]);
             header('location: '.BASE_URL.'/admin/category-detail?id='.$id."&name=".$name);
         }
 
         public function editSmall(){
             if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    $id_DML = $_GET['id'];
+                    $name = $_GET['name']; 
+                    $id = $_GET['id_DMSM']; 
+                    $param = [
+                        "id" => $id,
+                        "ten_danh_muc" => $_POST['ten_danh_muc']
+                    ];
+                   
+                    $category = $this->modelObject->updateSmall($param);
+                   
+                    header('location: '.BASE_URL.'/admin/category-detail?id='.$id_DML."&name=".$name);
 
-
-                header('location: '.BASE_URL.'/admin/category-detail');
                 } else {
-
+                    $id = $_GET['id_DMSM']; 
+                    $categories = $this->modelObject->getNameDMSM(['id' => $id]);
                     require_once "./src/views/Admin/category/category-smalledit.php";
                 }
         }

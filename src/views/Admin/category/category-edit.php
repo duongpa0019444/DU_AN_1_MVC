@@ -63,7 +63,8 @@ use models\Category;
                                              <!-- <a href="#!" class="btn btn-primary w-100">Sửa</a> -->
                                         </div>
                                         <div class="col-lg-2">
-                                             <a href="#!" class="btn btn-outline-secondary w-100">reset</a>
+                                             <button type="reset" class="btn btn-primary w-100">Reset</button>
+
                                         </div>
                                         
                                    </div>

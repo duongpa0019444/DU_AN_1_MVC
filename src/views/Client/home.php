@@ -288,12 +288,12 @@
                 <div class="banner-content row align-items-center mx-0">
                     <div class="col-md-9 col-sm-8">
                         <h2 class="text-white text-uppercase text-center text-sm-left ls-n-20 mb-md-0 px-4">
-                            <b class="d-inline-block mr-3 mb-1 mb-md-0">Big Sale</b> Tất cả các mặt hàng thương hiệu thời trang mới giảm giá tới 70%
+                            <b class="d-inline-block mr-3 mb-1 mb-md-0">Big Sale</b> Tất cả các mặt hàng giảm giá tới 30%
                             <small class="text-transform-none align-middle">Chỉ mua hàng trực tuyến</small>
                         </h2>
                     </div>
                     <div class="col-md-3 col-sm-4 text-center text-sm-right">
-                        <a class="btn btn-light btn-white btn-lg" href="category.html">Xem Ngay</a>
+                        <a class="btn btn-light btn-white btn-lg" href="<?=BASE_URL?>/product">Xem Ngay</a>
                     </div>
                 </div>
             </div>
@@ -304,7 +304,7 @@
             <div class="categories-slider owl-carousel owl-theme show-nav-hover nav-outer">
                 <?php foreach ($categories as $category): ?>
                     <div class="product-category appear-animate" data-animation-name="fadeInUpShorter">
-                        <a href="category.html">
+                        <a href="<?=BASE_URL?>/product?id_DM_home=<?=$category['id']?>">
                             <figure>
                                 <img src="<?= $category['hinh_anh'] ?>" alt="category" width="280" height="240" />
                             </figure>
@@ -430,7 +430,7 @@
                 <?php foreach ($blogs as $blog): ?>
                     <article class="post">
                         <div class="post-media">
-                            <a href="single.html">
+                            <a href="<?=BASE_URL?>/single?id=<?=$blog['id']?>">
                                 <img src="<?= $blog['hinh_anh'] ?>" alt="Post" width="225" height="280">
                             </a>
                             <div class="post-date" style="width: 80px;">
@@ -442,13 +442,13 @@
 
                         <div class="post-body">
                             <h2 class="post-title">
-                                <a href="single.html"><?= $blog['tieu_de'] ?></a>
+                                <a href="<?=BASE_URL?>/single?id=<?=$blog['id']?>"><?= $blog['tieu_de'] ?></a>
                             </h2>
                             <div class="post-content">
                                 <p><?= $blog['mo_ta_ngan'] ?></p>
                             </div>
                             <!-- End .post-content -->
-                            <a href="single.html" class="post-comment">0 Comments</a>
+                            <a href="<?=BASE_URL?>/single?id=<?=$blog['id']?>" class="post-comment">0 Comments</a>
                         </div>
                         <!-- End .post-body -->
                     </article>
@@ -460,262 +460,8 @@
             <hr class="mt-0 m-b-5">
 
 
-            <div class="product-widgets-container row pb-2">
-                <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
-                    <h4 class="section-sub-title">SẢN PHẨM NỔI BẬT</h4>
-                    <?php foreach ($products as $product): ?>
-                        <div class="product-default left-details product-widget">
-                            <figure>
-                                <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
-                                    <img src="<?= $product['hinh_anh_1'] ?>" width="84" height="84" alt="product">
-                                    <img src="<?= $product['hinh_anh_2'] ?>" width="84" height="84" alt="product">
-                                </a>
-                            </figure>
-
-                            <div class="product-details">
-                                <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>"><?= $product['ten_san_pham'] ?></a>
-                                </h3>
-
-                                <div class="ratings-container">
-                                    <div class="product-ratings">
-                                        <span class="ratings" style="width:100%"></span>
-                                        <!-- End .ratings -->
-                                        <span class="tooltiptext tooltip-top"></span>
-                                    </div>
-                                    <!-- End .product-ratings -->
-                                </div>
-                                <!-- End .product-container -->
-
-                                <div class="price-box">
-                                    <span class="product-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> VND</span>
-                                </div>
-                                <!-- End .price-box -->
-                            </div>
-                            <!-- End .product-details -->
-                        </div>
-
-                    <?php endforeach; ?>
-
-                </div>
-
-                <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="500">
-                    <h4 class="section-sub-title">SẢN PHẨM BÁN CHẠY NHẤT</h4>
-                    <div class="product-default left-details product-widget">
-                        <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
-                                <img src="assets/Client/images/products/small/product-4.jpg" width="84" height="84" alt="product">
-                                <img src="assets/Client/images/products/small/product-4-2.jpg" width="84" height="84" alt="product">
-                            </a>
-                        </figure>
-
-                        <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">Blue Backpack for the Young -
-                                    S</a> </h3>
-
-                            <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <!-- End .ratings -->
-                                    <span class="tooltiptext tooltip-top">5.00</span>
-                                </div>
-                                <!-- End .product-ratings -->
-                            </div>
-                            <!-- End .product-container -->
-
-                            <div class="price-box">
-                                <span class="product-price">$49.00</span>
-                            </div>
-                            <!-- End .price-box -->
-                        </div>
-                        <!-- End .product-details -->
-                    </div>
-
-                    <div class="product-default left-details product-widget">
-                        <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
-                                <img src="assets/Client/images/products/small/product-5.jpg" width="84" height="84" alt="product">
-                                <img src="assets/Client/images/products/small/product-5-2.jpg" width="84" height="84" alt="product">
-                            </a>
-                        </figure>
-
-                        <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">Casual Spring Blue Shoes</a> </h3>
-
-                            <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <!-- End .ratings -->
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                                <!-- End .product-ratings -->
-                            </div>
-                            <!-- End .product-container -->
-
-                            <div class="price-box">
-                                <span class="product-price">$49.00</span>
-                            </div>
-                            <!-- End .price-box -->
-                        </div>
-                        <!-- End .product-details -->
-                    </div>
-
-                    <div class="product-default left-details product-widget">
-                        <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
-                                <img src="assets/Client/images/products/small/product-6.jpg" width="84" height="84" alt="product">
-                                <img src="assets/Client/images/products/small/product-6-2.jpg" width="84" height="84" alt="product">
-                            </a>
-                        </figure>
-
-                        <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">Men Black Gentle Belt</a> </h3>
-
-                            <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <!-- End .ratings -->
-                                    <span class="tooltiptext tooltip-top">5.00</span>
-                                </div>
-                                <!-- End .product-ratings -->
-                            </div>
-                            <!-- End .product-container -->
-
-                            <div class="price-box">
-                                <span class="product-price">$49.00</span>
-                            </div>
-                            <!-- End .price-box -->
-                        </div>
-                        <!-- End .product-details -->
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="800">
-                    <h4 class="section-sub-title">SẢN PHẨM MỚI NHẤT</h4>
-                    <?php foreach ($productss as $product): ?>
-                        <div class="product-default left-details product-widget">
-                            <figure>
-                                <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
-                                    <img src="<?= $product['hinh_anh_1'] ?>" width="84" height="84" alt="product">
-                                    <img src="<?= $product['hinh_anh_2'] ?>" width="84" height="84" alt="product">
-                                </a>
-                            </figure>
-
-                            <div class="product-details">
-                                <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>"><?= $product['ten_san_pham'] ?></a>
-                                </h3>
-
-                                <div class="ratings-container">
-                                    <div class="product-ratings">
-                                        <span class="ratings" style="width:100%"></span>
-                                        <!-- End .ratings -->
-                                        <span class="tooltiptext tooltip-top"></span>
-                                    </div>
-                                    <!-- End .product-ratings -->
-                                </div>
-                                <!-- End .product-container -->
-
-                                <div class="price-box">
-                                    <span class="product-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> VND</span>
-                                </div>
-                                <!-- End .price-box -->
-                            </div>
-                            <!-- End .product-details -->
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="1100">
-                    <h4 class="section-sub-title">ĐƯỢC ĐÁNH GIÁ CAO NHẤT</h4>
-                    <div class="product-default left-details product-widget">
-                        <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
-                                <img src="assets/Client/images/products/small/product-10.jpg" width="84" height="84" alt="product">
-                                <img src="assets/Client/images/products/small/product-10-2.jpg" width="84" height="84" alt="product">
-                            </a>
-                        </figure>
-
-                        <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">Basketball Sports Blue Shoes</a>
-                            </h3>
-
-                            <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <!-- End .ratings -->
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                                <!-- End .product-ratings -->
-                            </div>
-                            <!-- End .product-container -->
-
-                            <div class="price-box">
-                                <span class="product-price">$49.00</span>
-                            </div>
-                            <!-- End .price-box -->
-                        </div>
-                        <!-- End .product-details -->
-                    </div>
-
-                    <div class="product-default left-details product-widget">
-                        <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
-                                <img src="assets/Client/images/products/small/product-11.jpg" width="84" height="84" alt="product">
-                                <img src="assets/Client/images/products/small/product-11-2.jpg" width="84" height="84" alt="product">
-                            </a>
-                        </figure>
-
-                        <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">Men Sports Travel Bag</a> </h3>
-
-                            <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <!-- End .ratings -->
-                                    <span class="tooltiptext tooltip-top">5.00</span>
-                                </div>
-                                <!-- End .product-ratings -->
-                            </div>
-                            <!-- End .product-container -->
-
-                            <div class="price-box">
-                                <span class="product-price">$49.00</span>
-                            </div>
-                            <!-- End .price-box -->
-                        </div>
-                        <!-- End .product-details -->
-                    </div>
-
-                    <div class="product-default left-details product-widget">
-                        <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
-                                <img src="assets/Client/images/products/small/product-12.jpg" width="84" height="84" alt="product">
-                                <img src="assets/Client/images/products/small/product-12-2.jpg" width="84" height="84" alt="product">
-                            </a>
-                        </figure>
-
-                        <div class="product-details">
-                            <h3 class="product-title"> <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">Brown HandBag</a> </h3>
-
-                            <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <!-- End .ratings -->
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                                <!-- End .product-ratings -->
-                            </div>
-                            <!-- End .product-container -->
-
-                            <div class="price-box">
-                                <span class="product-price">$49.00</span>
-                            </div>
-                            <!-- End .price-box -->
-                        </div>
-                        <!-- End .product-details -->
-                    </div>
-                </div>
-            </div>
-            <!-- End .row -->
+            
+            
         </div>
     </section>
 </main>

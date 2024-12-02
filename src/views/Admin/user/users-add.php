@@ -1,10 +1,4 @@
-<?php
 
-use models\user;
-?>
-<!-- ==================================================== -->
-<!-- Start right Content here -->
-<!-- ==================================================== -->
 <div class="page-content">
 
      <!-- Start Container Fluid -->
@@ -16,7 +10,7 @@ use models\user;
                <div class="col-xl-12 col-lg-12 ">
                     <form class="card" method="post" enctype="multipart/form-data">
                          <div class="card-header">
-                              <h4 class="card-title">Thêm hình ảnh</h4>
+                              <h4 class="card-title">Thêm hình ảnh đại diện</h4>
                          </div>
                          <div class="card-body">
                               <!-- File Upload -->
@@ -25,9 +19,9 @@ use models\user;
                                         <input name="hinh_anh" type="file" multiple />
                                    </div>
                                    <div class="dz-message needsclick">
-                                        <i class="bx bx-cloud-upload fs-48 text-primary"></i>
-                                        <h3 class="mt-4">Thả hình ảnh của bạn ở đây hoặc <span class="text-primary">nhấp để duyệt</span></h3>
-                                        <span class="text-muted fs-13">
+                                        <i class="bx bx-cloud-upload fs-25 text-primary"></i>
+                                        <h3 class="mt-2">Thả hình ảnh của bạn ở đây hoặc <span class="text-primary">nhấp để duyệt</span></h3>
+                                        <span class="text-muted fs-6">
                                              Khuyến nghị (4:3). Các tệp PNG, JPG và GIF được phép
                                         </span>
                                    </div>
@@ -41,19 +35,19 @@ use models\user;
                                         <div>
                                              <div class="mb-3">
                                                   <label class="mt-1" for="product-name" class="form-label">Tên tài khoản</label>
-                                                  <input type="text" id="ten_user" class="form-control" value="<?= $user['ten_user']?>"  name="ten_user" required>
+                                                  <input type="text" id="ten_user" class="form-control" placeholder="Mời nhập tên tài khoản*" name="ten_user" required>
                                                   <label class="mt-1" for="product-name" class="form-label">Email</label>
-                                                  <input type="email" id="email" class="form-control" value="<?= $user['email']?>" name="email">
+                                                  <input type="email" id="email" class="form-control" placeholder="Mời nhập email*" name="email">
                                                   <label class="mt-1" for="product-name" class="form-label">Số điện thoại</label>
-                                                  <input type="tel" id="so_dien_thoai" class="form-control" value="<?= $user['so_dien_thoai']?>" name="so_dien_thoai" required>
+                                                  <input type="tel"  id="so_dien_thoai" class="form-control" placeholder="Mời nhập số điện thoại*" name="so_dien_thoai" required>
                                                   <label class="mt-1" for="product-name" class="form-label">Mật khẩu</label>
-                                                  <input type="tel" id="mat_khau" class="form-control" value="<?= $user['mat_khau']?>" name="mat_khau" required>
+                                                  <input type="password" id="mat_khau" class="form-control" placeholder="Mời nhập mật khẩu*" name="mat_khau" required>
                                                   <label class="mt-1" for="product-name" class="form-label">Vai trò</label>
                                                   <select id="vai_tro" name="vai_tro" class="form-select">
-                                                       <!-- <option value="" disabled selected>-- Chọn đối tượng --</option> -->
-                                                       <option value="admin" <?= $user['vai_tro'] === 'admin' ? 'selected' : '' ?>>Admin</option>
-                                                       <option value="client" <?= $user['vai_tro'] === 'client' ? 'selected' : '' ?>>Client</option>
-
+                                                       <option value="" disabled selected >-- Chọn đối tượng --</option>
+                                                       <option value="admin">Admin</option>
+                                                       <option value="client">Client</option>
+                                                
                                                   </select>
                                              </div>
                                         </div>
@@ -70,12 +64,10 @@ use models\user;
                          <div class="p-3 bg-light mb-3 rounded">
                               <div class="row justify-content-end g-2">
                                    <div class="col-lg-2">
-                                        <button type="submit" class="btn btn-primary w-100">Sửa</button>
-                                        <!-- <a href="#!" class="btn btn-primary w-100">Sửa</a> -->
+                                        <button type="submit" class="btn btn-primary w-100">Thêm</button>
                                    </div>
                                    <div class="col-lg-2">
-                                        <button type="reset" class="btn btn-primary w-100">Reset</button>
-
+                                        <a href="<?=BASE_URL?>/admin/users-list" class="btn btn-outline-secondary w-100">Thoát</a>
                                    </div>
 
                               </div>

@@ -1,7 +1,4 @@
-<?php
 
-use models\Category;
-?>
 
 
           <!-- ==================================================== -->
@@ -26,7 +23,7 @@ use models\Category;
                                                   <div>
                                                        <div class="mb-3">
                                                             <label for="product-name" class="form-label">Tên danh mục</label>
-                                                            <input type="text" id="ten_danh_muc" class="form-control" value=""  name="ten_danh_muc">
+                                                            <input type="text" id="ten_danh_muc" class="form-control" value="<?= $categories['ten_danh_muc'] ?>"  name="ten_danh_muc">
                                                        </div>
                                                   </div>
                                              </div>
@@ -42,11 +39,11 @@ use models\Category;
                                    <div class="p-3 bg-light mb-3 rounded">
                                    <div class="row justify-content-end g-2">
                                         <div class="col-lg-2">
+
                                              <button type="submit" class="btn btn-primary w-100">Sửa</button>
-                                             <!-- <a href="#!" class="btn btn-primary w-100">Sửa</a> -->
                                         </div>
                                         <div class="col-lg-2">
-                                             <a href="#!" class="btn btn-outline-secondary w-100">reset</a>
+                                             <button type="reset" class="btn btn-primary w-100">Reset</button>
                                         </div>
                                         
                                    </div>

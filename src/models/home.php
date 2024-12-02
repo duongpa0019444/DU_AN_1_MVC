@@ -59,6 +59,7 @@ LIMIT 10
     public function getAllCate()
     {
         $sql = "SELECT 
+        DM.id,
         DM.hinh_anh,
     DM.ten_danh_muc,
     COUNT(SP.id) AS total_san_pham
