@@ -364,6 +364,26 @@
                </li>
 
                <li class="nav-item">
+                    <a class="nav-link menu-arrow" href="#sidebarCategory" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCategory">
+                         <span class="nav-icon">
+                              <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                         </span>
+                         <span class="nav-text">Quản Lý Danh Mục</span>
+                    </a>
+                    <div class="collapse" id="sidebarCategory">
+                         <ul class="nav sub-navbar-nav">
+                              <li class="sub-nav-item">
+                                   <a class="sub-nav-link" href="<?=BASE_URL?>/admin/category-list">Danh sách danh mục</a>
+                              </li>                         
+                              
+                              <li class="sub-nav-item">
+                                   <a class="sub-nav-link" href="<?=BASE_URL?>/admin/category-add">Thêm danh mục</a>
+                              </li>
+                         </ul>
+                    </div>
+               </li>
+
+               <li class="nav-item">
                     <a class="nav-link menu-arrow" href="#sidebarProducts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProducts">
                          <span class="nav-icon">
                               <iconify-icon icon="iconoir:laptop"></iconify-icon>
@@ -383,25 +403,7 @@
                     </div>
                </li>
 
-               <li class="nav-item">
-                    <a class="nav-link menu-arrow" href="#sidebarCategory" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCategory">
-                         <span class="nav-icon">
-                              <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
-                         </span>
-                         <span class="nav-text">Quản Lý Danh Mục</span>
-                    </a>
-                    <div class="collapse" id="sidebarCategory">
-                         <ul class="nav sub-navbar-nav">
-                              <li class="sub-nav-item">
-                                   <a class="sub-nav-link" href="<?=BASE_URL?>/admin/category-list">Danh sách danh mục</a>
-                              </li>                         
-                              
-                              <li class="sub-nav-item">
-                                   <a class="sub-nav-link" href="<?=BASE_URL?>/admin/category-add">Thêm danh mục</a>
-                              </li>
-                         </ul>
-                    </div>
-               </li>
+               
 
 
                <li class="nav-item">

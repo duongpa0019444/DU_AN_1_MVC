@@ -57,8 +57,6 @@ use models\Product;
                         (new image())->create($hinh_anh);
                     }
                     
-
-
                 }
                 
                 
@@ -69,52 +67,49 @@ use models\Product;
             require_once "./src/views/Admin/product/product-add.php";
         }
 
-        public function edit(){
-            $id = $_GET['id'];
-            $allCategoryHeaders = (new Category())->allCategory([]);
-            $allCategorySmallHeaders = (new Category())->allCategorySmall([]);
-            $product = (new Product())->finProductId([$id]);
+    public function edit()
+    {
+        $id = $_GET['id'];
+        $allCategoryHeaders = (new Category())->allCategory([]);
+        $allCategorySmallHeaders = (new Category())->allCategorySmall([]);
+        $product = (new Product())->finProductId([$id]);
 
 
-            if($_SERVER['REQUEST_METHOD'] == "POST"){
-                $_POST['id'] = $id;
-                //nếu có hình ảnh thì thêm vào bảng hình ảnh 
-                if(isset($_FILES['hinh_anh']) && $_FILES['hinh_anh']["size"]>0){
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $_POST['id'] = $id;
+            //nếu có hình ảnh thì thêm vào bảng hình ảnh 
+            if (isset($_FILES['hinh_anh']) && $_FILES['hinh_anh']["size"] > 0) {
 
-                    $arrayNames = $_FILES['hinh_anh']['name'];
-                    $arrayTmpNames = $_FILES['hinh_anh']['tmp_name'];
-                    $hinh_anh['id_san_pham'] = $id;
+                $arrayNames = $_FILES['hinh_anh']['name'];
+                $arrayTmpNames = $_FILES['hinh_anh']['tmp_name'];
+                $hinh_anh['id_san_pham'] = $id;
 
-                    //xử lý logic để thêm từng sản phẩm vào file lưu trữ product
+                //xử lý logic để thêm từng sản phẩm vào file lưu trữ product
 
-                    if(count($arrayNames)<=4){
+                if (count($arrayNames) <= 4) {
 
-                        for ($i = 0; $i < count($arrayNames); $i++) {
+                    for ($i = 0; $i < count($arrayNames); $i++) {
 
-                            $uniqueName = uniqid() . "_" . basename($arrayNames[$i]);
-                            $dir = "assets/Client/images/products/" . $uniqueName;
+                        $uniqueName = uniqid() . "_" . basename($arrayNames[$i]);
+                        $dir = "assets/Client/images/products/" . $uniqueName;
 
-                            $tmp_name = $arrayTmpNames[$i];
-                        
-                            move_uploaded_file($tmp_name, $dir);
-                            $index = $i+1;
-                            $hinh_anh["hinh_anh_$index"] = $dir;
-                        }
-                        //update vào bảng hình ảnh
-                        (new Product())->updateImage($hinh_anh);
+                        $tmp_name = $arrayTmpNames[$i];
+
+                        move_uploaded_file($tmp_name, $dir);
+                        $index = $i + 1;
+                        $hinh_anh["hinh_anh_$index"] = $dir;
                     }
-
-
-
+                    //update vào bảng hình ảnh
+                    (new Product())->updateImage($hinh_anh); //cập nhật bảng hình ảnh
                 }
-                (new Product())->update($_POST);
-
-            
-                header("location:$this->base_url/admin/product-list");
-                
             }
-            require_once "./src/views/Admin/product/product-edit.php";
+            (new Product())->update($_POST); //cập nhật bảng product
+
+
+            header("location:$this->base_url/admin/product-list");
         }
+        require_once "./src/views/Admin/product/product-edit.php";
+    }
 
         public function delete(){
             $id = $_GET['id'];

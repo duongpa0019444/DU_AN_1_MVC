@@ -24,7 +24,7 @@
                                                             </div>
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
-                                                            <p class="text-muted mb-0 text-truncate">Total Orders</p>
+                                                            <p class="text-muted mb-0 text-truncate">Tổng Đơn Hàng</p>
                                                             <h3 class="text-dark mt-1 mb-0">13, 647</h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
@@ -32,14 +32,40 @@
                                              <div class="card-footer py-2 bg-light bg-opacity-50">
                                                   <div class="d-flex align-items-center justify-content-between">
                                                        <div>
-                                                            <span class="text-success"> <i class="bx bxs-up-arrow fs-12"></i> 2.3%</span>
-                                                            <span class="text-muted ms-1 fs-12">Last Week</span>
+                                                            
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">View More</a>
+                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->
                                    </div> <!-- end col -->
+
+                                   <div class="col-md-6">
+                                        <div class="card overflow-hidden">
+                                             <div class="card-body">
+                                                  <div class="row">
+                                                       <div class="col-6">
+                                                            <div class="avatar-md bg-soft-primary rounded">
+                                                                 <i class="bx bx-dollar-circle avatar-title text-primary fs-24"></i>
+                                                            </div>
+                                                       </div> <!-- end col -->
+                                                       <div class="col-6 text-end">
+                                                            <p class="text-muted mb-0 text-truncate">Doanh thu đã đặt</p>
+                                                            <h3 class="text-dark mt-1 mb-0">123.600.000 VNĐ</h3>
+                                                       </div> <!-- end col -->
+                                                  </div> <!-- end row-->
+                                             </div> <!-- end card body -->
+                                             <div class="card-footer py-2 bg-light bg-opacity-50">
+                                                  <div class="d-flex align-items-center justify-content-between">
+                                                       <div>
+                                                            
+                                                       </div>
+                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
+                                                  </div>
+                                             </div> <!-- end card body -->
+                                        </div> <!-- end card -->
+                                   </div> <!-- end col -->
+                                   
                                    <div class="col-md-6">
                                         <div class="card overflow-hidden">
                                              <div class="card-body">
@@ -50,7 +76,7 @@
                                                             </div>
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
-                                                            <p class="text-muted mb-0 text-truncate">New Leads</p>
+                                                            <p class="text-muted mb-0 text-truncate">Tổng Danh mục</p>
                                                             <h3 class="text-dark mt-1 mb-0">9, 526</h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
@@ -58,10 +84,9 @@
                                              <div class="card-footer py-2 bg-light bg-opacity-50">
                                                   <div class="d-flex align-items-center justify-content-between">
                                                        <div>
-                                                            <span class="text-success"> <i class="bx bxs-up-arrow fs-12"></i> 8.1%</span>
-                                                            <span class="text-muted ms-1 fs-12">Last Month</span>
+                                                            
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">View More</a>
+                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->
@@ -76,7 +101,7 @@
                                                             </div>
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
-                                                            <p class="text-muted mb-0 text-truncate">Deals</p>
+                                                            <p class="text-muted mb-0 text-truncate">Tổng sản phẩm</p>
                                                             <h3 class="text-dark mt-1 mb-0">976</h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
@@ -84,36 +109,36 @@
                                              <div class="card-footer py-2 bg-light bg-opacity-50">
                                                   <div class="d-flex align-items-center justify-content-between">
                                                        <div>
-                                                            <span class="text-danger"> <i class="bx bxs-down-arrow fs-12"></i> 0.3%</span>
-                                                            <span class="text-muted ms-1 fs-12">Last Month</span>
+                                                            
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">View More</a>
+                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->
                                    </div> <!-- end col -->
+                                   
+
                                    <div class="col-md-6">
                                         <div class="card overflow-hidden">
                                              <div class="card-body">
                                                   <div class="row">
                                                        <div class="col-6">
                                                             <div class="avatar-md bg-soft-primary rounded">
-                                                                 <i class="bx bx-dollar-circle avatar-title text-primary fs-24"></i>
+                                                                 <i class="bx bx-user avatar-title text-primary fs-24"></i>
                                                             </div>
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
-                                                            <p class="text-muted mb-0 text-truncate">Booked Revenue</p>
-                                                            <h3 class="text-dark mt-1 mb-0">$123.6k</h3>
+                                                            <p class="text-muted mb-0 text-truncate">Tài khoản Đăng Ký</p>
+                                                            <h3 class="text-dark mt-1 mb-0">123.600.000 VNĐ</h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
                                              </div> <!-- end card body -->
                                              <div class="card-footer py-2 bg-light bg-opacity-50">
                                                   <div class="d-flex align-items-center justify-content-between">
                                                        <div>
-                                                            <span class="text-danger"> <i class="bx bxs-down-arrow fs-12"></i> 10.6%</span>
-                                                            <span class="text-muted ms-1 fs-12">Last Month</span>
+                                                            
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">View More</a>
+                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->

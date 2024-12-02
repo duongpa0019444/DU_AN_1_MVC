@@ -93,19 +93,19 @@
                                     </div>
                                     <!-- End .product-container -->
 
-                                    <div class="price-box">
+                                    <div class="price-box d-flex justify-content-center align-items-center">
                                         <span class="old-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> </span>
                                         <span class="product-price"><?= number_format($product['gia_san_pham'] - $product['gia_san_pham'] * ($product['khuyen_mai'] / 100), 0, ',', '.') ?>VND</span>
                                     </div>
                                     <!-- End .price-box -->
 
                                     <div class="product-action">
-                                        <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a>
+                                        <!-- <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a> -->
                                         <form method="post">
                                             <input type="hidden" name="addCart" value="<?= $product['id_SP'] ?>">
                                             <button class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>Thêm Giỏ Hàng</span></button>
                                         </form>
-                                        <a href="#" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
+                                        <!-- <a href="#" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> -->
                                     </div>
                                 </div>
                                 <!-- End .product-details -->

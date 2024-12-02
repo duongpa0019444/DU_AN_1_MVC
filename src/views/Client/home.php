@@ -200,12 +200,12 @@
                             </div>
                             <!-- End .price-box -->
                             <div class="product-action">
-                                <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a>
+                                <!-- <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a> -->
                                 <form method="post" >
                                     <input type="hidden" name="addCart" value="<?=$product['id_SP']?>">
                                     <button class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>Thêm Giỏ Hàng</span></button>
                                 </form>
-                                <a href="#" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
+                                <!-- <a href="#" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> -->
                             </div>
                         </div>
                         <!-- End .product-details -->
@@ -269,12 +269,12 @@
                             </div>
                             <!-- End .price-box -->
                             <div class="product-action">
-                                <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a>
+                                <!-- <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a> -->
                                 <form method="post" >
                                     <input type="hidden" name="addCart" value="<?=$product['id_SP']?>">
                                     <button class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>Thêm Giỏ Hàng</span></button>
                                 </form>
-                                <a href="#" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
+                                <!-- <a href="#" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> -->
                             </div>
                         </div>
                         <!-- End .product-details -->

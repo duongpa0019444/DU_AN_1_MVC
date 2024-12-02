@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 29, 2024 lúc 02:39 AM
+-- Thời gian đã tạo: Th12 02, 2024 lúc 12:49 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -64,7 +64,8 @@ CREATE TABLE `chi_tiet_dh` (
 --
 
 INSERT INTO `chi_tiet_dh` (`id`, `id_don_hang`, `id_san_pham`, `sl_san_pham`) VALUES
-(17, 46, 1, 2);
+(48, 63, 1, 3),
+(49, 63, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -133,7 +134,7 @@ INSERT INTO `danh_muc_small` (`id`, `ten_danh_muc`, `id_danh_muc`) VALUES
 (9, 'Lenovo Ideapad', 2),
 (18, 'Acer Swift', 3),
 (19, 'Acer Nitro', 3),
-(20, 'Acer Aspire Gaming', 3),
+(20, 'Acer Aspire Gamingg', 3),
 (21, 'HP cơ bản', 4),
 (22, 'HP Pavilion', 4),
 (23, 'HP ProBook', 4),
@@ -161,63 +162,9 @@ CREATE TABLE `dia_chi` (
 --
 
 INSERT INTO `dia_chi` (`id`, `ho_va_ten`, `so_dien_thoai`, `chi_tiet_dia_chi`, `id_user`) VALUES
-(1, 'Đào Tùng Dương', 961469353, 'số nhà 246 - Định Tiến / Yên Định / Thanh Hóa', 1),
-(2, 'tùng dương', 2147483647, 'lang thôn định tiến', 1),
-(7, 'Đào Tùng Dương', 928283737, 'ndndndndnkw dbdjs cac sa ca s', 1),
-(8, 'Đào Tùng Dương', 928283737, 'ndndndndnkw dbdjs cac sa ca s', 1),
-(9, 'Đào Tùng Dương', 928283737, 'ndndndndnkw dbdjs cac sa ca s', 1),
-(10, 'Đào Tùng Dương', 928283737, 'ndndndndnkw dbdjs cac sa ca s', 1),
-(11, 'Đào Tùng Dương', 928283737, 'ndndndndnkw dbdjs cac sa ca s', 1),
-(12, 'Đào Tùng Dương', 928283737, 'ndndndndnkw dbdjs cac sa ca s', 1),
-(13, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(14, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(15, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(16, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(17, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(18, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(19, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(20, 'Dương đây', 2147483647, 'dndnnnđndndn', 3),
-(21, 'Dương đây', 2147483647, 'dndnnnđndndn', 3),
-(22, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(23, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(24, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(25, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(26, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(27, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(28, '', 0, '', 2),
-(29, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(30, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(31, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(32, 'Dương đây', 2147483647, 'dndnnnđndndn', 2),
-(33, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(34, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(35, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(36, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(37, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(38, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(39, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(40, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(41, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(42, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(43, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(44, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(45, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(46, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(47, 'Dương đây', 242422224, 'dndnnnđndndn', 1),
-(48, 'Dương đây', 939393939, 'dndnnnđndndn', 1),
-(49, 'Dương đây', 939393939, 'dndnnnđndndn', 1),
-(50, 'Đào Tùng Dương', 2147483647, '246 định tiến , Yên Định , Thanh Hóa', 1),
-(51, 'Đào Tùng Dương', 2147483647, '246 định tiến , Yên Định , Thanh Hóa', 1),
-(52, 'Đào Từng Dương', 2147483647, 'ndndndndndndndndndn', 1),
-(53, 'Đào Từng Dương', 2147483647, 'ndndndndndndndndndn', 1),
-(54, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(55, 'Dương đây', 2147483647, 'dndnnnđndndn', 1),
-(56, 'Dương đây', 2147483647, 'vvjvj', 1),
-(57, 'Dương đây', 2147483647, 'vvjvj', 1),
-(58, 'Dương đây', 2147483647, 'ndndndndnkw dbdjs cac sa ca s', 1),
-(59, 'Đào Tùng Dương', 2147483647, 'dndnnnđndndn', 1),
-(60, 'Dương đây', 2147483647, 'ndndndndnkw dbdjs cac sa ca s', 1),
-(61, 'Đào Tùng Dương', 928283737, 'ndndndndnkw dbdjs cac sa ca s', 1);
+(67, 'Dương đây', 2147483647, 'ngnknkdkdkn', 2),
+(68, 'Tùng Dương', 838982992, '246 Đông vệ Thanh hóa', 2),
+(69, 'Đào Tùng Dương', 2147483647, 'ndndndndnkw dbdjs cac sa ca s', 2);
 
 -- --------------------------------------------------------
 
@@ -232,15 +179,16 @@ CREATE TABLE `don_hang` (
   `trang_thai` int(225) DEFAULT NULL,
   `thoi_gian` date NOT NULL DEFAULT current_timestamp(),
   `ghi_chu` varchar(255) DEFAULT NULL,
-  `id_thanh_toan` int(225) NOT NULL
+  `id_thanh_toan` int(225) NOT NULL,
+  `id_dia_chi` int(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `don_hang`
 --
 
-INSERT INTO `don_hang` (`id`, `id_user`, `tong_tien`, `trang_thai`, `thoi_gian`, `ghi_chu`, `id_thanh_toan`) VALUES
-(46, 1, 38400000, 1, '2024-11-26', 'ghi chú 1', 1);
+INSERT INTO `don_hang` (`id`, `id_user`, `tong_tien`, `trang_thai`, `thoi_gian`, `ghi_chu`, `id_thanh_toan`, `id_dia_chi`) VALUES
+(63, 2, 88200000, 2, '2024-12-02', 'sfdfdffdfd', 1, 69);
 
 -- --------------------------------------------------------
 
@@ -261,10 +209,7 @@ CREATE TABLE `gio_hang` (
 
 INSERT INTO `gio_hang` (`id`, `id_user`, `id_san_pham`, `so_luong`) VALUES
 (5, 3, 2, 1),
-(9, 2, 1, 3),
-(15, 2, 2, 2),
-(32, 1, 1, 1),
-(33, 2, 3, 1);
+(32, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -289,7 +234,9 @@ INSERT INTO `hinh_anh` (`id`, `hinh_anh_1`, `hinh_anh_2`, `hinh_anh_3`, `hinh_an
 (1, 'assets/Client/images/products/product_macbook_1.png', 'assets/Client/images/products/product_macbook_1_1.png', 'assets/Client/images/products/product_macbook_1_2.png', 'assets/Client/images/products/product_macbook_1_3.png', 1),
 (2, 'assets/Client/images/products/Laptop_gaming_lenovo_1.png', 'assets/Client/images/products/Laptop_gaming_lenovo_1_1.jpg', 'assets/Client/images/products/Laptop_gaming_lenovo_1_2.jpg', 'assets/Client/images/products/Laptop_gaming_lenovo_1_3.jpg', 2),
 (3, 'assets/Client/images/products/Dell-Latitude-5420.jpg', 'assets/Client/images/products/Dell-Latitude-5420-2.jpg', 'assets/Client/images/products/Dell-Latitude-5420-3.jpg', 'assets/Client/images/products/Dell-Latitude-5420-4.jpg', 3),
-(4, 'assets/Client/images/products/Acer-Aspire 5.jpg', 'assets/Client/images/products/Acer-Aspire 5-2.jpg', 'assets/Client/images/products/Acer-Aspire 5-4.jpg', 'assets/Client/images/products/Acer-Aspire 5-3.jpg', 4);
+(4, 'assets/Client/images/products/Acer-Aspire 5.jpg', 'assets/Client/images/products/Acer-Aspire 5-2.jpg', 'assets/Client/images/products/Acer-Aspire 5-4.jpg', 'assets/Client/images/products/Acer-Aspire 5-3.jpg', 4),
+(16, 'assets/Client/images/products/674d6ebfa84a3_adidas shoe.jpeg', 'assets/Client/images/products/674d6ebfa8a24_Ảnh chụp màn hình 2024-10-06 210527.png', 'assets/Client/images/products/674d6ebfa8c36_apple-logo-24.png', 'assets/Client/images/products/674d6ebfa9001_apple-logo-25.png', 17),
+(17, 'assets/Client/images/products/674d5fbeb7da4_New Balance 550 - 44.jpeg', 'assets/Client/images/products/674d5fbeb821e_nike shoe.jpeg', 'assets/Client/images/products/674d5fbeb84cf_OIP.jpeg', 'assets/Client/images/products/674d5fbeb8681_Pódio Para Exposição De Produtos PNG , Pódio, Produtos, Exibição Imagem PNG e PSD Para Download Gratuito.jpg', 18);
 
 -- --------------------------------------------------------
 
@@ -337,7 +284,9 @@ INSERT INTO `san_pham` (`id`, `ma_san_pham`, `ten_san_pham`, `mo_ta`, `gia_san_p
 (1, 'SP001', 'Macbook Air 13 M2 2024 8CPU/8GPU/16GB/256GB', '<h3>Thông tin sản phẩm</h3>\n    <hr>\n\n    <div class=\"section\">\n        <h5>Bộ xử lý</h5>\n        <p class=\"item\"><strong>Hãng CPU:</strong> Apple</p>\n        <p class=\"item\"><strong>Công nghệ CPU:</strong> M2</p>\n        <p class=\"item\"><strong>Loại CPU:</strong> 8 - Core</p>\n        <p class=\"item\"><strong>Tốc độ CPU tối thiểu:</strong> 2.3 GHz</p>\n    </div>\n    <hr>\n\n    <div class=\"section\">\n        <h5>RAM</h5>\n        <p class=\"item\"><strong>Dung lượng RAM:</strong> 16 GB</p>\n        <p class=\"item\"><strong>Loại RAM:</strong> LPDDR4</p>\n        <p class=\"item\"><strong>Số RAM onboard:</strong> 1</p>\n        <p class=\"item\"><strong>Hỗ trợ RAM tối đa:</strong> 16 GB</p>\n    </div>\n    <hr>\n\n    <div class=\"section\">\n        <h5>Lưu trữ</h5>\n        <p class=\"item\"><strong>Kiểu ổ cứng:</strong> SSD</p>\n        <p class=\"item\"><strong>Loại SSD:</strong> Hãng không công bố</p>\n        <p class=\"item\"><strong>Dung lượng:</strong> 256 GB</p>\n    </div>\n    <hr>\n\n    <div class=\"section\">\n        <h5>Màn hình</h5>\n        <p class=\"item\"><strong>Kích thước màn hình:</strong> 13.6 inch</p>\n        <p class=\"item\"><strong>Công nghệ màn hình:</strong> Retina</p>\n        <p class=\"item\"><strong>Độ phân giải:</strong> 2560 x 1644 Pixels</p>\n        <p class=\"item\"><strong>Tần số quét:</strong> 60 Hz</p>\n        <p class=\"item\"><strong>Tấm nền:</strong> IPS</p>\n    </div>\n    <hr> \n\n    <div class=\"section\">\n        <h5>Giao tiếp và kết nối</h5>\n        <p class=\"item\"><strong>Cổng giao tiếp:</strong> 2 Type C</p>\n        <p class=\"item\"><strong>Wifi:</strong> 802.11 ax</p>\n        <p class=\"item\"><strong>Bluetooth:</strong> v5.0</p>\n        <p class=\"item\"><strong>Webcam:</strong> Full HD Webcam (1080p)</p>\n    </div>\n    <hr> \n\n    <div class=\"section\">\n        <h5>Hệ điều hành</h5>\n        <p class=\"item\"><strong>OS:</strong> macOS</p>\n        <p class=\"item\"><strong>Version:</strong> Ventura</p>\n    </div>\n    <hr> \n\n    <div class=\"section\">\n        <h5>Bảo mật</h5>\n        <p class=\"item\"><strong>Bảo mật:</strong> Mở khóa vân tay</p>\n    </div>\n    <hr>\n\n    <div class=\"section\">\n        <h5>Bàn phím & TouchPad</h5>\n        <p class=\"item\"><strong>Kiểu bàn phím:</strong> English International Backlit Keyboard</p>\n        <p class=\"item\"><strong>Bàn phím số:</strong> Không</p>\n        <p class=\"item\"><strong>Đèn bàn phím:</strong> LED</p>\n        <p class=\"item\"><strong>TouchPad:</strong> Multi-touch touchpad</p>\n    </div>\n    <hr> \n\n    <div class=\"section\">\n        <h5>Thông tin pin & sạc</h5>\n        <p class=\"item\"><strong>Loại PIN:</strong> Lithium polymer</p>\n        <p class=\"item\"><strong>Dung lượng pin:</strong> 22 Giờ</p>\n        <p class=\"item\"><strong>Power Supply:</strong> 70 W</p>\n    </div>\n    <hr>\n\n    <div class=\"section\">\n        <h5>Phụ kiện trong hộp</h5>\n        <p class=\"item\"><strong>Phụ kiện:</strong> Adapter, Dây cáp sạc</p>\n    </div>\n    <hr> \n\n    <div class=\"section\">\n        <h5>Thiết kế & Trọng lượng</h5>\n        <p class=\"item\"><strong>Kích thước:</strong> 30.41 x 21.5 x 1.13 cm</p>\n        <p class=\"item\"><strong>Trọng lượng sản phẩm:</strong> 1.24 kg</p>\n        <p class=\"item\"><strong>Chất liệu:</strong> Vỏ: Kim loại</p>\n    </div>\n    <hr>\n\n    <div class=\"section\">\n        <h5>Thông tin hàng hóa</h5>\n        <p class=\"item\"><strong>P/N:</strong> MC7U4SA/A</p>\n        <p class=\"item\"><strong>Xuất xứ:</strong> Trung Quốc</p>\n        <p class=\"item\"><strong>Thời điểm ra mắt:</strong> 2024</p>\n        <p class=\"item\"><strong>Thời gian bảo hành (tháng):</strong> 12</p>\n        <p class=\"item\"><strong>Hướng dẫn bảo quản:</strong> Để nơi khô ráo, nhẹ tay, dễ vỡ.</p>\n        <p class=\"item\"><strong>Hướng dẫn sử dụng:</strong> Xem trong sách hướng dẫn sử dụng</p>\n        <p class=\"item\"><strong>Màu sắc:</strong> Xám</p>\n    </div>', 24000000, 20, 2147483647, 20, '2024-11-15', 1),
 (2, 'SP002', 'Laptop Lenovo Gaming LOQ 15IAX9 i5 12450HX/AI/24GB/512GB/15.', '<h3>Thông tin sản phẩm</h3> <hr>\n\n    <div class=\"section\">\n        <h5>Bộ xử lý</h5>\n        <p class=\"item\"><strong>Hãng CPU:</strong> Intel</p>\n        <p class=\"item\"><strong>Công nghệ CPU:</strong> Core i5</p>\n        <p class=\"item\"><strong>Loại CPU:</strong> 12450HX</p>\n        <p class=\"item\"><strong>Tốc độ tối đa:</strong> 4.4 GHz</p>\n        <p class=\"item\"><strong>Số nhân:</strong> 8</p>\n        <p class=\"item\"><strong>Số luồng:</strong> 12</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Đồ họa</h5>\n        <p class=\"item\"><strong>Hãng (Card rời):</strong> NVIDIA</p>\n        <p class=\"item\"><strong>Model (Card rời):</strong> Geforce RTX 2050</p>\n        <p class=\"item\"><strong>Tên đầy đủ (Card rời):</strong> NVIDIA GeForce RTX 2050 4GB GDDR6</p>\n        <p class=\"item\"><strong>Bộ nhớ:</strong> 4 GB</p>\n        <p class=\"item\"><strong>Hiệu suất AI (TOPS):</strong> 104</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>RAM</h5>\n        <p class=\"item\"><strong>Dung lượng RAM:</strong> 24 GB (2 thanh 12GB)</p>\n        <p class=\"item\"><strong>Loại RAM:</strong> DDR5</p>\n        <p class=\"item\"><strong>Tốc độ RAM:</strong> 4800 MHz</p>\n        <p class=\"item\"><strong>Số khe cắm rời:</strong> 2</p>\n        <p class=\"item\"><strong>Hỗ trợ RAM tối đa:</strong> 32 GB</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Lưu trữ</h5>\n        <p class=\"item\"><strong>Kiểu ổ cứng:</strong> SSD</p>\n        <p class=\"item\"><strong>Loại SSD:</strong> 1 M2. PCIe</p>\n        <p class=\"item\"><strong>Dung lượng:</strong> 512 GB</p>\n        <p class=\"item\"><strong>Chuẩn M2:</strong> 2242</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Màn hình</h5>\n        <p class=\"item\"><strong>Kích thước màn hình:</strong> 15.6 inch</p>\n        <p class=\"item\"><strong>Công nghệ màn hình:</strong> IPS FHD</p>\n        <p class=\"item\"><strong>Độ phân giải:</strong> 1920 x 1080 Pixels</p>\n        <p class=\"item\"><strong>Loại màn hình:</strong> Màn hình phẳng</p>\n        <p class=\"item\"><strong>Tần số quét:</strong> 144 Hz</p>\n        <p class=\"item\"><strong>Tấm nền:</strong> IPS</p>\n        <p class=\"item\"><strong>Độ sáng:</strong> 300 nits</p>\n        <p class=\"item\"><strong>Độ phủ màu:</strong> 100% sRGB</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Giao tiếp và kết nối</h5>\n        <p class=\"item\"><strong>Cổng giao tiếp:</strong></p>\n        <ul class=\"item\">\n            <li>3 USB 3.2 Gen 1 Type-A</li>\n            <li>1 USB 3.2 Gen 2 Type-C</li>\n            <li>1 HDMI 2.1</li>\n            <li>1 Jack 3.5 mm</li>\n            <li>1 RJ45 Gigabit Ethernet</li>\n            <li>1 Power connector</li>\n        </ul>\n        <p class=\"item\"><strong>Wifi:</strong> Wifi 6</p>\n        <p class=\"item\"><strong>Bluetooth:</strong> v5.2</p>\n        <p class=\"item\"><strong>Webcam:</strong> HD Webcam (720p Webcam)</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Hệ điều hành</h5>\n        <p class=\"item\"><strong>OS:</strong> Windows</p>\n        <p class=\"item\"><strong>Version:</strong> Windows 11 Home Single Language</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Bảo mật</h5>\n        <p class=\"item\"><strong>Bảo mật:</strong> Mật khẩu</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Bàn phím & TouchPad</h5>\n        <p class=\"item\"><strong>Kiểu bàn phím:</strong> English International Backlit Keyboard</p>\n        <p class=\"item\"><strong>Bàn phím số:</strong> Có (NumberPad)</p>\n        <p class=\"item\"><strong>Đèn bàn phím:</strong> LED</p>\n        <p class=\"item\"><strong>Màu đèn LED:</strong> Trắng</p>\n        <p class=\"item\"><strong>TouchPad:</strong> Multi-touch touchpad</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Thông tin pin & sạc</h5>\n        <p class=\"item\"><strong>Dung lượng pin:</strong> 60 Wh</p>\n        <p class=\"item\"><strong>Power Supply:</strong> 135 W</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Phụ kiện trong hộp</h5>\n        <p class=\"item\"><strong>Phụ kiện:</strong> Bộ sạc điện</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Thiết kế & Trọng lượng</h5>\n        <p class=\"item\"><strong>Kích thước:</strong> 359.86 x 258.7 x 21.9-23.9 mm</p>\n        <p class=\"item\"><strong>Trọng lượng sản phẩm:</strong> 2.38 kg</p>\n        <p class=\"item\"><strong>Chất liệu:</strong> Nhựa ABS</p>\n    </div><hr>\n\n    <div class=\"section\">\n        <h5>Thông tin hàng hóa</h5>\n        <p class=\"item\"><strong>P/N:</strong> 83GS00DBVN</p>\n        <p class=\"item\"><strong>Xuất xứ:</strong> Trung Quốc</p>\n        <p class=\"item\"><strong>Thời điểm ra mắt:</strong> 04/2024</p>\n        <p class=\"item\"><strong>Thời gian bảo hành (tháng):</strong> 24</p>\n        <p class=\"item\"><strong>Hướng dẫn bảo quản:</strong> Để nơi khô ráo, nhẹ tay, dễ vỡ.</p>\n        <p class=\"item\"><strong>Hướng dẫn sử dụng:</strong> Xem trong sách hướng dẫn sử dụng</p>\n        <p class=\"item\"><strong>Màu sắc:</strong> Xám</p>\n    </div><hr>\n', 34000000, 45, 29, 10, '2024-11-15', 7),
 (3, 'SP003', 'Dell Latitude 5420 | i5-1145G7, RAM 8GB, SSD 256GB, 14.0\" FHD IPS )', '<h3>Thông tin sản phẩm</h3>\n<hr>\n<div class=\"section\">\n    <h5>Bộ xử lý</h5>\n    <p class=\"item\"><strong>Hãng CPU:</strong> Intel</p>\n    <p class=\"item\"><strong>Công nghệ CPU:</strong> Core i5</p>\n    <p class=\"item\"><strong>Loại CPU:</strong> Intel Core i5-1135G7</p>\n    <p class=\"item\"><strong>Tốc độ tối đa:</strong> 4.2 GHz</p>\n    <p class=\"item\"><strong>Số nhân:</strong> 4</p>\n    <p class=\"item\"><strong>Số luồng:</strong> 8</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Đồ họa</h5>\n    <p class=\"item\"><strong>Hãng (Card tích hợp):</strong> Intel</p>\n    <p class=\"item\"><strong>Model (Card tích hợp):</strong> Intel Iris Xe Graphics</p>\n    <p class=\"item\"><strong>Bộ nhớ đồ họa:</strong> Chia sẻ với bộ nhớ hệ thống</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>RAM</h5>\n    <p class=\"item\"><strong>Dung lượng RAM:</strong> 8 GB (có thể nâng cấp lên 16 GB)</p>\n    <p class=\"item\"><strong>Loại RAM:</strong> DDR4</p>\n    <p class=\"item\"><strong>Tốc độ RAM:</strong> 3200 MHz</p>\n    <p class=\"item\"><strong>Số khe cắm rời:</strong> 2</p>\n    <p class=\"item\"><strong>Hỗ trợ RAM tối đa:</strong> 32 GB</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Lưu trữ</h5>\n    <p class=\"item\"><strong>Kiểu ổ cứng:</strong> SSD</p>\n    <p class=\"item\"><strong>Dung lượng:</strong> 256 GB (có thể nâng cấp lên 512 GB hoặc 1 TB)</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Màn hình</h5>\n    <p class=\"item\"><strong>Kích thước màn hình:</strong> 14 inch</p>\n    <p class=\"item\"><strong>Công nghệ màn hình:</strong> Anti-glare FHD</p>\n    <p class=\"item\"><strong>Độ phân giải:</strong> 1920 x 1080 Pixels</p>\n    <p class=\"item\"><strong>Loại màn hình:</strong> Màn hình phẳng</p>\n    <p class=\"item\"><strong>Tấm nền:</strong> IPS</p>\n    <p class=\"item\"><strong>Độ sáng:</strong> 250 nits</p>\n    <p class=\"item\"><strong>Độ phủ màu:</strong> 45% NTSC</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Giao tiếp và kết nối</h5>\n    <p class=\"item\"><strong>Cổng giao tiếp:</strong></p>\n    <ul class=\"item\">\n        <li>2 x USB 3.2 Gen 1 Type-A</li>\n        <li>1 x USB 3.2 Gen 2 Type-C</li>\n        <li>1 x HDMI 2.0</li>\n        <li>1 x RJ45 Ethernet</li>\n        <li>1 x Jack 3.5 mm</li>\n        <li>1 x SD Card Reader</li>\n        <li>1 x Thunderbolt 4 (USB-C)</li>\n    </ul>\n    <p class=\"item\"><strong>Wifi:</strong> Wifi 6</p>\n    <p class=\"item\"><strong>Bluetooth:</strong> Bluetooth 5.1</p>\n    <p class=\"item\"><strong>Webcam:</strong> 720p HD Webcam</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Hệ điều hành</h5>\n    <p class=\"item\"><strong>OS:</strong> Windows</p>\n    <p class=\"item\"><strong>Version:</strong> Windows 11 Pro</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Bảo mật</h5>\n    <p class=\"item\"><strong>Bảo mật:</strong> Mật khẩu, vân tay, nhận diện khuôn mặt</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Bàn phím & TouchPad</h5>\n    <p class=\"item\"><strong>Kiểu bàn phím:</strong> Backlit Keyboard</p>\n    <p class=\"item\"><strong>Bàn phím số:</strong> Không có</p>\n    <p class=\"item\"><strong>Đèn bàn phím:</strong> Có đèn nền bàn phím</p>\n    <p class=\"item\"><strong>TouchPad:</strong> Multi-touch touchpad</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Thông tin pin & sạc</h5>\n    <p class=\"item\"><strong>Dung lượng pin:</strong> 54 Wh</p>\n    <p class=\"item\"><strong>Thời gian sử dụng:</strong> Lên đến 12 giờ</p>\n    <p class=\"item\"><strong>Power Supply:</strong> 65W AC Adapter</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Phụ kiện trong hộp</h5>\n    <p class=\"item\"><strong>Phụ kiện:</strong> Bộ sạc điện</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Thiết kế & Trọng lượng</h5>\n    <p class=\"item\"><strong>Kích thước:</strong> 319.4 x 219.7 x 20.8 mm</p>\n    <p class=\"item\"><strong>Trọng lượng sản phẩm:</strong> 1.41 kg</p>\n    <p class=\"item\"><strong>Chất liệu:</strong> Vỏ nhựa và hợp kim nhôm</p>\n</div><hr>\n\n<div class=\"section\">\n    <h5>Thông tin hàng hóa</h5>\n    <p class=\"item\"><strong>P/N:</strong> 7VXM4</p>\n    <p class=\"item\"><strong>Xuất xứ:</strong> Trung Quốc</p>\n    <p class=\"item\"><strong>Thời điểm ra mắt:</strong> 04/2021</p>\n    <p class=\"item\"><strong>Thời gian bảo hành (tháng):</strong> 24</p>\n    <p class=\"item\"><strong>Hướng dẫn bảo quản:</strong> Để nơi khô ráo, tránh nhiệt độ cao và độ ẩm.</p>\n    <p class=\"item\"><strong>Hướng dẫn sử dụng:</strong> Xem trong sách hướng dẫn sử dụng</p>\n    <p class=\"item\"><strong>Màu sắc:</strong> Đen</p>\n</div><hr>\n', 10000000, 68, 8556, 30, '2024-11-15', 26),
-(4, 'SP004', 'Acer Gaming Aspire 5 A515-58GM-53CM i5 13420H', '<h3>Thông tin sản phẩm</h3>\r\n<hr>\r\n<div class=\"section\">\r\n    <h5>Bộ xử lý</h5>\r\n    <p class=\"item\"><strong>Hãng CPU:</strong> Intel</p>\r\n    <p class=\"item\"><strong>Công nghệ CPU:</strong> Core i5</p>\r\n    <p class=\"item\"><strong>Loại CPU:</strong> Intel Core i5-1135G7</p>\r\n    <p class=\"item\"><strong>Tốc độ tối đa:</strong> 4.2 GHz</p>\r\n    <p class=\"item\"><strong>Số nhân:</strong> 4</p>\r\n    <p class=\"item\"><strong>Số luồng:</strong> 8</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Đồ họa</h5>\r\n    <p class=\"item\"><strong>Hãng (Card tích hợp):</strong> Intel</p>\r\n    <p class=\"item\"><strong>Model (Card tích hợp):</strong> Intel Iris Xe Graphics</p>\r\n    <p class=\"item\"><strong>Bộ nhớ đồ họa:</strong> Chia sẻ với bộ nhớ hệ thống</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>RAM</h5>\r\n    <p class=\"item\"><strong>Dung lượng RAM:</strong> 8 GB (có thể nâng cấp lên 16 GB)</p>\r\n    <p class=\"item\"><strong>Loại RAM:</strong> DDR4</p>\r\n    <p class=\"item\"><strong>Tốc độ RAM:</strong> 2666 MHz</p>\r\n    <p class=\"item\"><strong>Số khe cắm rời:</strong> 2</p>\r\n    <p class=\"item\"><strong>Hỗ trợ RAM tối đa:</strong> 32 GB</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Lưu trữ</h5>\r\n    <p class=\"item\"><strong>Kiểu ổ cứng:</strong> SSD</p>\r\n    <p class=\"item\"><strong>Dung lượng:</strong> 512 GB</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Màn hình</h5>\r\n    <p class=\"item\"><strong>Kích thước màn hình:</strong> 15.6 inch</p>\r\n    <p class=\"item\"><strong>Công nghệ màn hình:</strong> Full HD IPS</p>\r\n    <p class=\"item\"><strong>Độ phân giải:</strong> 1920 x 1080 Pixels</p>\r\n    <p class=\"item\"><strong>Loại màn hình:</strong> Màn hình phẳng</p>\r\n    <p class=\"item\"><strong>Tấm nền:</strong> IPS</p>\r\n    <p class=\"item\"><strong>Độ sáng:</strong> 250 nits</p>\r\n    <p class=\"item\"><strong>Độ phủ màu:</strong> 45% NTSC</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Giao tiếp và kết nối</h5>\r\n    <p class=\"item\"><strong>Cổng giao tiếp:</strong></p>\r\n    <ul class=\"item\">\r\n        <li>2 x USB 3.2 Gen 1 Type-A</li>\r\n        <li>1 x USB 3.2 Gen 1 Type-C</li>\r\n        <li>1 x HDMI 2.0</li>\r\n        <li>1 x RJ45 Ethernet</li>\r\n        <li>1 x Jack 3.5 mm</li>\r\n        <li>1 x SD Card Reader</li>\r\n    </ul>\r\n    <p class=\"item\"><strong>Wifi:</strong> Wifi 6</p>\r\n    <p class=\"item\"><strong>Bluetooth:</strong> Bluetooth 5.0</p>\r\n    <p class=\"item\"><strong>Webcam:</strong> 720p HD Webcam</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Hệ điều hành</h5>\r\n    <p class=\"item\"><strong>OS:</strong> Windows</p>\r\n    <p class=\"item\"><strong>Version:</strong> Windows 11 Home</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Bảo mật</h5>\r\n    <p class=\"item\"><strong>Bảo mật:</strong> Mật khẩu</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Bàn phím & TouchPad</h5>\r\n    <p class=\"item\"><strong>Kiểu bàn phím:</strong> Bàn phím Backlit</p>\r\n    <p class=\"item\"><strong>Bàn phím số:</strong> Có (NumberPad)</p>\r\n    <p class=\"item\"><strong>Đèn bàn phím:</strong> Có đèn nền bàn phím</p>\r\n    <p class=\"item\"><strong>TouchPad:</strong> Multi-touch touchpad</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Thông tin pin & sạc</h5>\r\n    <p class=\"item\"><strong>Dung lượng pin:</strong> 48 Wh</p>\r\n    <p class=\"item\"><strong>Thời gian sử dụng:</strong> Lên đến 10 giờ</p>\r\n    <p class=\"item\"><strong>Power Supply:</strong> 65W AC Adapter</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Phụ kiện trong hộp</h5>\r\n    <p class=\"item\"><strong>Phụ kiện:</strong> Bộ sạc điện</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Thiết kế & Trọng lượng</h5>\r\n    <p class=\"item\"><strong>Kích thước:</strong> 363.4 x 254.5 x 19.9 mm</p>\r\n    <p class=\"item\"><strong>Trọng lượng sản phẩm:</strong> 1.65 kg</p>\r\n    <p class=\"item\"><strong>Chất liệu:</strong> Nhựa và hợp kim nhôm</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Thông tin hàng hóa</h5>\r\n    <p class=\"item\"><strong>P/N:</strong> NX.A3QSV.001</p>\r\n    <p class=\"item\"><strong>Xuất xứ:</strong> Trung Quốc</p>\r\n    <p class=\"item\"><strong>Thời điểm ra mắt:</strong> 2021</p>\r\n    <p class=\"item\"><strong>Thời gian bảo hành (tháng):</strong> 24</p>\r\n    <p class=\"item\"><strong>Hướng dẫn bảo quản:</strong> Để nơi khô ráo, tránh nhiệt độ cao và độ ẩm.</p>\r\n    <p class=\"item\"><strong>Hướng dẫn sử dụng:</strong> Xem trong sách hướng dẫn sử dụng</p>\r\n    <p class=\"item\"><strong>Màu sắc:</strong> Xám</p>\r\n</div><hr>\r\n', 15900000, 40, 98, 10, '2024-11-15', 20);
+(4, 'SP004', 'Acer Gaming Aspire 5 A515-58GM-53CM i5 13420H', '<h3>Thông tin sản phẩm</h3>\r\n<hr>\r\n<div class=\"section\">\r\n    <h5>Bộ xử lý</h5>\r\n    <p class=\"item\"><strong>Hãng CPU:</strong> Intel</p>\r\n    <p class=\"item\"><strong>Công nghệ CPU:</strong> Core i5</p>\r\n    <p class=\"item\"><strong>Loại CPU:</strong> Intel Core i5-1135G7</p>\r\n    <p class=\"item\"><strong>Tốc độ tối đa:</strong> 4.2 GHz</p>\r\n    <p class=\"item\"><strong>Số nhân:</strong> 4</p>\r\n    <p class=\"item\"><strong>Số luồng:</strong> 8</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Đồ họa</h5>\r\n    <p class=\"item\"><strong>Hãng (Card tích hợp):</strong> Intel</p>\r\n    <p class=\"item\"><strong>Model (Card tích hợp):</strong> Intel Iris Xe Graphics</p>\r\n    <p class=\"item\"><strong>Bộ nhớ đồ họa:</strong> Chia sẻ với bộ nhớ hệ thống</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>RAM</h5>\r\n    <p class=\"item\"><strong>Dung lượng RAM:</strong> 8 GB (có thể nâng cấp lên 16 GB)</p>\r\n    <p class=\"item\"><strong>Loại RAM:</strong> DDR4</p>\r\n    <p class=\"item\"><strong>Tốc độ RAM:</strong> 2666 MHz</p>\r\n    <p class=\"item\"><strong>Số khe cắm rời:</strong> 2</p>\r\n    <p class=\"item\"><strong>Hỗ trợ RAM tối đa:</strong> 32 GB</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Lưu trữ</h5>\r\n    <p class=\"item\"><strong>Kiểu ổ cứng:</strong> SSD</p>\r\n    <p class=\"item\"><strong>Dung lượng:</strong> 512 GB</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Màn hình</h5>\r\n    <p class=\"item\"><strong>Kích thước màn hình:</strong> 15.6 inch</p>\r\n    <p class=\"item\"><strong>Công nghệ màn hình:</strong> Full HD IPS</p>\r\n    <p class=\"item\"><strong>Độ phân giải:</strong> 1920 x 1080 Pixels</p>\r\n    <p class=\"item\"><strong>Loại màn hình:</strong> Màn hình phẳng</p>\r\n    <p class=\"item\"><strong>Tấm nền:</strong> IPS</p>\r\n    <p class=\"item\"><strong>Độ sáng:</strong> 250 nits</p>\r\n    <p class=\"item\"><strong>Độ phủ màu:</strong> 45% NTSC</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Giao tiếp và kết nối</h5>\r\n    <p class=\"item\"><strong>Cổng giao tiếp:</strong></p>\r\n    <ul class=\"item\">\r\n        <li>2 x USB 3.2 Gen 1 Type-A</li>\r\n        <li>1 x USB 3.2 Gen 1 Type-C</li>\r\n        <li>1 x HDMI 2.0</li>\r\n        <li>1 x RJ45 Ethernet</li>\r\n        <li>1 x Jack 3.5 mm</li>\r\n        <li>1 x SD Card Reader</li>\r\n    </ul>\r\n    <p class=\"item\"><strong>Wifi:</strong> Wifi 6</p>\r\n    <p class=\"item\"><strong>Bluetooth:</strong> Bluetooth 5.0</p>\r\n    <p class=\"item\"><strong>Webcam:</strong> 720p HD Webcam</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Hệ điều hành</h5>\r\n    <p class=\"item\"><strong>OS:</strong> Windows</p>\r\n    <p class=\"item\"><strong>Version:</strong> Windows 11 Home</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Bảo mật</h5>\r\n    <p class=\"item\"><strong>Bảo mật:</strong> Mật khẩu</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Bàn phím & TouchPad</h5>\r\n    <p class=\"item\"><strong>Kiểu bàn phím:</strong> Bàn phím Backlit</p>\r\n    <p class=\"item\"><strong>Bàn phím số:</strong> Có (NumberPad)</p>\r\n    <p class=\"item\"><strong>Đèn bàn phím:</strong> Có đèn nền bàn phím</p>\r\n    <p class=\"item\"><strong>TouchPad:</strong> Multi-touch touchpad</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Thông tin pin & sạc</h5>\r\n    <p class=\"item\"><strong>Dung lượng pin:</strong> 48 Wh</p>\r\n    <p class=\"item\"><strong>Thời gian sử dụng:</strong> Lên đến 10 giờ</p>\r\n    <p class=\"item\"><strong>Power Supply:</strong> 65W AC Adapter</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Phụ kiện trong hộp</h5>\r\n    <p class=\"item\"><strong>Phụ kiện:</strong> Bộ sạc điện</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Thiết kế & Trọng lượng</h5>\r\n    <p class=\"item\"><strong>Kích thước:</strong> 363.4 x 254.5 x 19.9 mm</p>\r\n    <p class=\"item\"><strong>Trọng lượng sản phẩm:</strong> 1.65 kg</p>\r\n    <p class=\"item\"><strong>Chất liệu:</strong> Nhựa và hợp kim nhôm</p>\r\n</div><hr>\r\n\r\n<div class=\"section\">\r\n    <h5>Thông tin hàng hóa</h5>\r\n    <p class=\"item\"><strong>P/N:</strong> NX.A3QSV.001</p>\r\n    <p class=\"item\"><strong>Xuất xứ:</strong> Trung Quốc</p>\r\n    <p class=\"item\"><strong>Thời điểm ra mắt:</strong> 2021</p>\r\n    <p class=\"item\"><strong>Thời gian bảo hành (tháng):</strong> 24</p>\r\n    <p class=\"item\"><strong>Hướng dẫn bảo quản:</strong> Để nơi khô ráo, tránh nhiệt độ cao và độ ẩm.</p>\r\n    <p class=\"item\"><strong>Hướng dẫn sử dụng:</strong> Xem trong sách hướng dẫn sử dụng</p>\r\n    <p class=\"item\"><strong>Màu sắc:</strong> Xám</p>\r\n</div><hr>\r\n', 15900000, 40, 98, 10, '2024-11-15', 20),
+(17, 'sp000299', 'laptop dell', 'sdsdscs', 323232, 42, NULL, 22, '2024-12-02', 26),
+(18, 'sp000283', 'laptop dell', 'dcdcd', 312222222, 2, NULL, 23, '2024-12-02', 27);
 
 -- --------------------------------------------------------
 
@@ -384,9 +333,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ten_user`, `mat_khau`, `email`, `so_dien_thoai`, `hinh_anh`, `vai_tro`, `thoi_gian_tao`) VALUES
-(1, 'Tùng Dương', '12345678', 'duongdtpa00914@gmail.com', '0123456789', '', 'client', '2024-11-10 07:04:13'),
-(2, 'admin', 'admin12345', 'admin8386@gmail.com', '0987654321', '', 'admin', '2024-11-10 08:42:37'),
-(3, 'Tùng Dươngggg', '12345', 'duongdtpa009134@gmail.com', '01234456789', '', 'client', '2024-11-13 02:58:24');
+(1, 'Tùng Dương', '12345678', 'duongdtpa00914@gmail.com', '0123456789', 'assets/Admin/images/user/banthan.jpg', 'client', '2024-11-10 07:04:13'),
+(2, 'adminnn', 'admin12345', 'admin8386@gmail.com', '0987654321', 'assets/Admin/images/user/banthan2.jpg', 'admin', '2024-11-10 08:42:37'),
+(3, 'Tùng Dươngggg', '12345', 'duongdtpa009134@gmail.com', '01234456789', 'assets/Admin/images/user/tải xuống (1).jpg', 'client', '2024-11-13 02:58:24');
 
 -- --------------------------------------------------------
 
@@ -461,7 +410,8 @@ ALTER TABLE `don_hang`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_user` (`id_user`),
   ADD KEY `don_hang_ttfk_1` (`id_thanh_toan`),
-  ADD KEY `trang_thai_ttfk_1` (`trang_thai`);
+  ADD KEY `trang_thai_ttfk_1` (`trang_thai`),
+  ADD KEY `id_dia_chi` (`id_dia_chi`);
 
 --
 -- Chỉ mục cho bảng `gio_hang`
@@ -527,7 +477,7 @@ ALTER TABLE `bai_viet`
 -- AUTO_INCREMENT cho bảng `chi_tiet_dh`
 --
 ALTER TABLE `chi_tiet_dh`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT cho bảng `danh_gia`
@@ -539,37 +489,37 @@ ALTER TABLE `danh_gia`
 -- AUTO_INCREMENT cho bảng `danh_muc`
 --
 ALTER TABLE `danh_muc`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `danh_muc_small`
 --
 ALTER TABLE `danh_muc_small`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT cho bảng `dia_chi`
 --
 ALTER TABLE `dia_chi`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT cho bảng `don_hang`
 --
 ALTER TABLE `don_hang`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT cho bảng `gio_hang`
 --
 ALTER TABLE `gio_hang`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT cho bảng `hinh_anh`
 --
 ALTER TABLE `hinh_anh`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `pt_thanh_toan`
@@ -581,7 +531,7 @@ ALTER TABLE `pt_thanh_toan`
 -- AUTO_INCREMENT cho bảng `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `trang_thai_dh`
@@ -635,6 +585,7 @@ ALTER TABLE `dia_chi`
 -- Các ràng buộc cho bảng `don_hang`
 --
 ALTER TABLE `don_hang`
+  ADD CONSTRAINT `dia_chi_dcfk_1` FOREIGN KEY (`id_dia_chi`) REFERENCES `dia_chi` (`id`),
   ADD CONSTRAINT `don_hang_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `don_hang_ttfk_1` FOREIGN KEY (`id_thanh_toan`) REFERENCES `pt_thanh_toan` (`id`),
   ADD CONSTRAINT `trang_thai_ttfk_1` FOREIGN KEY (`trang_thai`) REFERENCES `trang_thai_dh` (`id`);

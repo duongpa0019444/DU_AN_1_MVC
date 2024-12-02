@@ -34,24 +34,21 @@
 							</li>
 
 							
-							<li class="nav-item">
-								<a class="nav-link" id="address-tab" data-toggle="tab" href="#address" role="tab"
-									aria-controls="address" aria-selected="false">Địa chỉ</a>
-							</li>
+							
 
 							<li class="nav-item">
 								<a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab"
 									aria-controls="edit" aria-selected="false">Chi tiết tài khoản</a>
 							</li>
 							
-							<li class="nav-item">
+							<!-- <li class="nav-item">
 								<a class="nav-link" id="edit-tab" data-toggle="tab" href="#wishlist" role="tab"
 									aria-controls="edit" aria-selected="false">Sản phẩm yêu thích</a>
-							</li>
+							</li> -->
 							
                             <?php if($_SESSION['vai_tro']=="admin"): ?>
                                 <li class="nav-item">
-							    	<a class="nav-link" href="<?=BASE_URL?>/admin">Quản Lý Website</a>
+							    	<a class="nav-link" href="<?=BASE_URL?>/admin"><p class="text-primary">Quản Lý Website</p></a>
 							    </li>
                             <?php endif ?>
 							<li class="nav-item">
@@ -69,8 +66,7 @@
 								<div class="row row-lg">
 									<div class="col-6 col-md-4">
 										<div class="feature-box text-center pb-4">
-											<a href="#order" class="link-to-tab"><i
-													class="sicon-social-dropbox"></i></a>
+											<a href="#order" class="link-to-tab"><i class="fa-solid fa-laptop"></i></a>
 											<div class="feature-box-content">
 												<h3>Đơn hàng</h3>
 											</div>
@@ -78,15 +74,7 @@
 									</div>
 
 
-									<div class="col-6 col-md-4">
-										<div class="feature-box text-center pb-4">
-											<a href="#address" class="link-to-tab"><i
-													class="sicon-location-pin"></i></a>
-											<div class="feature-box-content">
-												<h3>Địa chỉ</h3>
-											</div>
-										</div>
-									</div>
+									
 
 									<div class="col-6 col-md-4">
 										<div class="feature-box text-center pb-4">
@@ -97,18 +85,18 @@
 										</div>
 									</div>
 
-									<div class="col-6 col-md-4">
+									<!-- <div class="col-6 col-md-4">
 										<div class="feature-box text-center pb-4">
 											<a href="#wishlist"><i class="sicon-heart"></i></a>
 											<div class="feature-box-content">
 												<h3>Sản phẩm yêu thích</h3>
 											</div>
 										</div>
-									</div>
+									</div> -->
 
 									<div class="col-6 col-md-4">
 										<div class="feature-box text-center pb-4">
-											<a href="login.html"><i class="sicon-logout"></i></a>
+											<a href="<?=BASE_URL?>/dangxuat"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
 											<div class="feature-box-content">
 												<h3>Đăng xuất</h3>
 											</div>
@@ -182,15 +170,10 @@
 													</td>
 
 													<td class="text-center p-2">
-														<?php if($order['trang_thai'] == 5 || $order['trang_thai'] == 6): ?>
-															<a href="#detailProduct" class="link-to-tab"><button type="button" class="btn btn-primary rounded">Chi tiết</button></a>
-
-														<?php else: ?>
-															
+														<?php if($order['trang_thai']<1): ?>
 															<a href=""><button type="button" class="btn btn-light rounded">Hủy</button></a>
-															<a href="<?=BASE_URL?>/acout?id_DH=<?=$order['id']?>#detailProduct" class="link-to-tab"><button type="button" class="btn btn-primary rounded">Chi tiết</button></a>
-														
 														<?php endif ?>
+														
 													</td>
 													
 												</tr>
@@ -205,33 +188,7 @@
 						</div><!-- End .tab-pane -->
 
 						
-						<div class="tab-pane fade" id="address" role="tabpanel">
-							<h3 class="account-sub-title d-none d-md-block mb-1"><i
-									class="sicon-location-pin align-middle mr-3"></i>Địa chỉ</h3>
-							<div class="addresses-content">
-								<p class="mb-4">
-							
-								Các địa chỉ sau sẽ được sử dụng trên trang thanh toán theo mặc định.
-								</p>
-
-								<div class="row">
-									
-									<div class="address col-md-6 mt-5 mt-md-0">
-										<div class="heading d-flex">
-											<h4 class="text-dark mb-0">
-												Địa chỉ giao hàng
-											</h4>
-										</div>
-
-										<div class="address-box">
-										Bạn chưa thiết lập loại địa chỉ này?
-										</div>
-
-										<a href="#shipping" class="btn btn-default address-action link-to-tab">Thêm địa chỉ</a>
-									</div>
-								</div>
-							</div>
-						</div><!-- End .tab-pane -->
+						
 
 						<div class="tab-pane fade" id="edit" role="tabpanel">
 							<h3 class="account-sub-title d-none d-md-block mt-0 pt-1 ml-1"><i
