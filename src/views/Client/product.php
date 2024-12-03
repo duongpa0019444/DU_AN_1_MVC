@@ -93,7 +93,7 @@
                                     </div>
                                     <!-- End .product-container -->
 
-                                    <div class="price-box d-flex justify-content-center align-items-center">
+                                    <div class="price-box d-flex justify-content-center ">
                                         <span class="old-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> </span>
                                         <span class="product-price"><?= number_format($product['gia_san_pham'] - $product['gia_san_pham'] * ($product['khuyen_mai'] / 100), 0, ',', '.') ?>VND</span>
                                     </div>

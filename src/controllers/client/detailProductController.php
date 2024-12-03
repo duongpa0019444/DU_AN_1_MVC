@@ -1,50 +1,57 @@
 <?php 
-    namespace controllers\client;
+namespace controllers\client;
 
-use models\cart;
-use models\detailProduct;
-    class detailProductController{
-        
-        public $modelObject;
-        public $Base_url = BASE_URL;
-        public function __construct()
-        {
-            $this->modelObject = new detailProduct();
-        }
-        public function index(){    
-                $id = $_GET['id'];
-                $product = $this->modelObject->getProduct($id);
-                // debug($product);
-                if($_SERVER["REQUEST_METHOD"] == "POST"){
-                    
-                    if(!isset($_SESSION['user_id'])){  //Đang sửa ở đây----------------------------------------------------------
-                        $messaddCart = "Đăng nhập để thêm sản phẩm vào giỏ hàng của bạn!";
-                        require_once "src/views/Client/acout.php";
-                    }else{
-                        if(isset($_POST['addCart'])){
-                            // đi kiểm tra xem trong giỏ hàng của user có sản phẩm đấy chưa, nếu chưa thì thêm , còn nếu rồi thì update số lượng
-                            $productCart = (new cart())->findCartUserId([$_SESSION['user_id'],$_POST['addCart']]);
-                            
-                            if($productCart>0){
-                                //update số lượng sản phẩm 
-                                (new cart())->updateSL([$_SESSION['user_id'],$_POST['addCart']]);
-                                header("location: $this->Base_url/product");
-        
-                            }else{
-                                //thêm sản phẩm mới vào giỏ hàng
-                                
-                                (new cart())->create([$_SESSION['user_id'] , $_POST['addCart'] , $_POST['so_luong']]);
-                                header("location: $this->Base_url/detailProduct?id=".$id);
-        
-                            }
-                            
-            
-                        }
-                    }
-                   
-                }
+use models\cart; // Import model quản lý giỏ hàng
+use models\detailProduct; // Import model quản lý chi tiết sản phẩm
 
-                require_once "./src/views/Client/detailProduct.php";
-        }
+class detailProductController{
+    
+    public $modelObject; // Biến lưu trữ đối tượng model
+    public $Base_url = BASE_URL; // Đường dẫn cơ sở
+
+    public function __construct()
+    {
+        $this->modelObject = new detailProduct(); // Khởi tạo đối tượng detailProduct và gán vào modelObject
     }
+
+    public function index(){    
+        // Lấy ID sản phẩm từ query string
+        $id = $_GET['id'];
+        $product = $this->modelObject->getProduct($id); // Lấy thông tin chi tiết sản phẩm dựa vào ID
+
+        // Xử lý khi form được gửi bằng phương thức POST
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            
+            // Kiểm tra xem người dùng đã đăng nhập chưa
+            if(!isset($_SESSION['user_id'])){  
+                // Nếu chưa đăng nhập, đặt thông báo yêu cầu đăng nhập trong cookie
+                setcookie("mess", "Đăng nhập để thêm sản phẩm vào giỏ hàng của bạn!", time() + 10, "/");
+                // Chuyển hướng người dùng tới trang đăng nhập
+                header("location: $this->Base_url/acout"); 
+            } else {
+                // Nếu người dùng đã đăng nhập
+                if(isset($_POST['addCart'])){ 
+                    // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
+                    $productCart = (new cart())->findCartUserId([$_SESSION['user_id'], $_POST['addCart']]);
+                    
+                    if($productCart > 0){
+                        // Nếu đã có, cập nhật số lượng sản phẩm
+                        (new cart())->updateSL([$_SESSION['user_id'], $_POST['addCart']]);
+                        // Chuyển hướng về trang sản phẩm
+                        header("location: $this->Base_url/product");
+
+                    } else {
+                        // Nếu chưa có, thêm sản phẩm mới vào giỏ hàng với số lượng cụ thể
+                        (new cart())->create([$_SESSION['user_id'], $_POST['addCart'], $_POST['so_luong']]);
+                        // Chuyển hướng lại trang chi tiết sản phẩm
+                        header("location: $this->Base_url/detailProduct?id=".$id);
+                    }
+                }
+            }
+        }
+
+        // Gọi file view để hiển thị giao diện chi tiết sản phẩm
+        require_once "./src/views/Client/detailProduct.php";
+    }
+}
 ?>
