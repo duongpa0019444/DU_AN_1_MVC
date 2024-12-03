@@ -49,21 +49,27 @@
                             </div>
 
                             <div class="prod-thumbnail owl-dots">
-                                <div class="owl-dot">
-                                    <img src="<?= $product['hinh_anh_2'] ?>" width="110" height="110" alt="product-thumbnail" />
-                                </div>
-                                <div class="owl-dot">
-                                    <img src="<?= $product['hinh_anh_2'] ?>" width="110" height="110" alt="product-thumbnail" />
-                                </div>
-                                <div class="owl-dot">
-                                    <img src="<?= $product['hinh_anh_3'] ?>" width="110" height="110" alt="product-thumbnail" />
-                                </div>
-                                <div class="owl-dot">
-                                    <img src="<?= $product['hinh_anh_4'] ?>" width="110" height="110" alt="product-thumbnail" />
-                                </div>
-                                <div class="owl-dot">
-                                    <img src="<?= $product['hinh_anh_1'] ?>" width="110" height="110" alt="product-thumbnail" />
-                                </div>
+                                <?php if(!empty($product['hinh_anh_1'])): ?>
+                                    <div class="owl-dot">
+                                        <img src="<?= $product['hinh_anh_1'] ?>" width="110" height="110" alt="product-thumbnail" />
+                                    </div>
+                                <?php endif ?>
+                                <?php if(!empty($product['hinh_anh_2'])): ?>
+                                    <div class="owl-dot">
+                                        <img src="<?= $product['hinh_anh_2'] ?>" width="110" height="110" alt="product-thumbnail" />
+                                    </div>
+                                <?php endif ?>
+                                <?php if(!empty($product['hinh_anh_3'])): ?>
+                                    <div class="owl-dot">
+                                        <img src="<?= $product['hinh_anh_3'] ?>" width="110" height="110" alt="product-thumbnail" />
+                                    </div>
+                                <?php endif ?>
+                                <?php if(!empty($product['hinh_anh_4'])): ?>
+                                    <div class="owl-dot">
+                                        <img src="<?= $product['hinh_anh_4'] ?>" width="110" height="110" alt="product-thumbnail" />
+                                    </div>
+                                <?php endif?>
+                                
                             </div>
                         </div>
                         <!-- End .product-single-gallery -->

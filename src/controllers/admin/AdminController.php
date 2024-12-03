@@ -2,6 +2,8 @@
 
     namespace controllers\admin;
 
+use models\home;
+
     class AdminController {
         public $base_url = BASE_URL;
 
@@ -11,7 +13,7 @@
         }
         
         public function index() {
-
+            $data = (new home())->countAllDashboard([]);
             require_once "./src/views/Admin/home.php";
 
         }

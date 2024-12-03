@@ -55,12 +55,20 @@ use models\donHang;
                 }elseif(isset($_POST['detailAccount'])){
                     //phần cập nhật tài khoản
 
-                    
-                    $dataUpdate['id']= $_SESSION['user_id'];
-                    $data = [];
-
                     $mess = "";
                     $mess2 = "";
+                    $data = [];
+
+                    if (isset($_FILES['hinh_anh']) && $_FILES['hinh_anh']["size"] > 0) {
+
+                        $dir = "assets/Admin/images/user/" . basename($_FILES['hinh_anh']['name']);
+                        $tmp_name = $_FILES['hinh_anh']['tmp_name'];
+                        $_POST['hinh_anh'] = $dir;
+                        
+                        move_uploaded_file($tmp_name, $dir);
+                    }
+                    
+                    $dataUpdate['id']= $_SESSION['user_id'];
 
                     foreach($_POST as $key => $value){ //hàm này đi bỏ cái key detailAccount
                         if($key != 'detailAccount'){
@@ -111,6 +119,7 @@ use models\donHang;
                         //nếu như vào trang acout mà có user_id thì lấy dữ liệu của user đó ra và gắn vào form chi tiết tài khoản
                         $user = (new acout())->finUserId([$_SESSION['user_id']]);
                         $orders = (new donHang())->allDonHang([$_SESSION['user_id']]);
+                        $mess2 = "Bạn vừa cập nhật tài khoản!";
                         
                     }
                 }
@@ -119,6 +128,7 @@ use models\donHang;
                 if($user > 0){
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['vai_tro'] = $user['vai_tro'];
+                    $_SESSION['img_user'] = $user['hinh_anh'];
                     $orders = (new donHang())->allDonHang([$user['id']]);
                     
                     require_once "../DU_AN_1_MVC/src/views/Client/acout.php";
@@ -132,33 +142,23 @@ use models\donHang;
                 if(isset($_SESSION['user_id'])){ 
                     //nếu như vào trang acout mà có user_id thì lấy dữ liệu của user đó ra và gắn vào form chi tiết tài khoản
                     $user = (new acout())->finUserId([$_SESSION['user_id']]);
+                    $_SESSION['img_user'] = $user['hinh_anh'];
+
                     $orders = (new donHang())->allDonHang([$_SESSION['user_id']]);
                     
                 }
 
                 require_once "../DU_AN_1_MVC/src/views/Client/acout.php";
-
-                
+              
             } 
-            
-            
-            
-           
-            
-
 
         }
-
 
         
         public function dangxuat(){
             session_destroy();
             header("location: $this->Base_url/");
         }
-
-
-       
-
-        
+  
     }
 ?>

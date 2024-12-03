@@ -105,4 +105,17 @@ ORDER BY
         ";
         return parent::pdoQueryAll($sql, []);
     }
+
+
+    //tính tổng dữ liệu các bảng và tổng doanh thu
+    public function countAllDashboard($data){
+        $sql = "SELECT 
+                    (SELECT COUNT(1) FROM san_pham) AS sl_san_pham,
+                    (SELECT COUNT(1) FROM don_hang) AS sl_don_hang,
+                    (SELECT COUNT(1) FROM users) AS sl_users,
+                    (SELECT COUNT(1) FROM danh_muc) AS sl_danh_muc,
+                    (SELECT SUM(tong_tien)FROM don_hang WHERE trang_thai = 4) AS tong_doanh_thu
+                FROM DUAL";
+        return parent::pdoQuery($sql, $data);
+    }
 }

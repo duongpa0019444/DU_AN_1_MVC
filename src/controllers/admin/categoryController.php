@@ -32,6 +32,7 @@
 
         public function delete() {
             $id = $_GET['id'];
+                        
             $this->modelObject->deleteCate(['id' => $id]);
             header('location: '.BASE_URL.'/admin/category-list');
 

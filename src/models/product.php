@@ -5,7 +5,7 @@
 
     class Product extends baseModel{
 
-        
+        //Hiển thị thông tin sản phẩm
         public function index($data){
             $sql = "SELECT 
                     SP.id AS id_SP, 
@@ -31,12 +31,14 @@
             return parent::pdoQueryAll($sql , $data);
         }
 
+        //hiển thị tất cả sản phẩm
         public function allProduct($data){
             $sql = "SELECT * FROM san_pham";
             return parent::pdoQueryAll($sql , $data);
 
         }
 
+        
         public function productNew($data)
         {
             $sql = "SELECT 

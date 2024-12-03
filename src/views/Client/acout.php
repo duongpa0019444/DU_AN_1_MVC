@@ -7,7 +7,7 @@
 					<nav aria-label="breadcrumb" class="breadcrumb-nav">
 						<div class="container">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="<?=BASE_URL?>/home">Trang chủ</a></li>
+								<li class="breadcrumb-item"><a href="<?=BASE_URL?>/">Trang chủ</a></li>
 								<li class="breadcrumb-item"><a href="#">Tài khoản</a></li>
 								
 							</ol>
@@ -191,10 +191,12 @@
 						
 
 						<div class="tab-pane fade" id="edit" role="tabpanel">
-							<h3 class="account-sub-title d-none d-md-block mt-0 pt-1 ml-1"><i
-									class="icon-user-2 align-middle mr-3 pr-1"></i>Chi tiết tài khoản</h3>
+							<h3 class="account-sub-title d-none d-md-block mt-0 pt-1 ml-1">
+								<img style="width:60px; height:60px" class="rounded-circle" src="<?=BASE_URL?>/<?=$_SESSION['img_user']?>" alt="">
+								Chi tiết tài khoản
+							</h3>
 							<div class="account-content">
-								<form action="" method="post">
+								<form action="" method="post" enctype="multipart/form-data">
 									<input type="hidden" name="detailAccount">
 									
 									<div class="row">
@@ -205,7 +207,13 @@
 													id="acc-name" name="ten_user" required />
 											</div>
 										</div>
-
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="acc-name">Hình ảnh<span class="required">*</span></label>
+												<input type="file" class="form-control"
+													id="acc-name" name="hinh_anh"/>
+											</div>
+										</div>
 										
 									</div>
 

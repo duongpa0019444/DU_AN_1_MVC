@@ -81,7 +81,9 @@
                         </li>
 
                         <li>
+                         
                             <a href="<?=BASE_URL?>/product">Sản Phẩm</a>
+
                             <div class="megamenu megamenu-fixed-width">
                                 <div class="row">
                                    <?php foreach($allCategorySmallHeaders as $allCategorySmallHeader): ?>
@@ -169,25 +171,10 @@
                     <div class="dropdown topbar-item">
                          <a type="button" class="topbar-button" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <span class="d-flex align-items-center">
-                                   <img class="rounded-circle" width="32" src="<?=BASE_URL?>/assets/Client/images/clients/client-1.jpg" alt="avatar-3">
+                                   <img class="rounded-circle" width="40" height="40" src="<?=BASE_URL?>/<?=$_SESSION['img_user']?>" alt="avatar-3">
                               </span>
                          </a>
-                         <div class="dropdown-menu dropdown-menu-end">
-                              <!-- item-->
-                              <h6 class="dropdown-header">Welcome!</h6>
-                              <a class="dropdown-item" href="pages-profile.html">
-                                   <i class="bx bx-user-circle text-muted fs-18 align-middle me-1"></i><span class="align-middle">Hồ sơ</span>
-                              </a>
-                              <a class="dropdown-item" href="apps-chat.html">
-                                   <i class="bx bx-message-dots text-muted fs-18 align-middle me-1"></i><span class="align-middle">Tin nhắn</span>
-                              </a>
-
-                              <div class="dropdown-divider my-1"></div>
-
-                              <a class="dropdown-item text-danger" href="auth-signin.html">
-                                   <i class="bx bx-log-out fs-18 align-middle me-1"></i><span class="align-middle">Đăng xuất</span>
-                              </a>
-                         </div>
+                         
                     </div>
 
                     <!-- App Search-->

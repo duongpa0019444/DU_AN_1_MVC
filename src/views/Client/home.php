@@ -8,13 +8,13 @@
                 <div class="banner-layer appear-animate " data-animation-name="fadeInUpShorter">
 
                     <h2 class="text-transform-none mb-0 text-white">Summer Sale</h2>
-                    <h3 class="m-b-3 text-white">70% Off</h3>
+                    <h3 class="m-b-3 text-white">30% Off</h3>
                     <h5 class="d-inline-block mb-0">
 
                         <b class="coupon-sale-text text-white bg-secondary align-middle"><sup>VND</sup><em
                                 class="align-text-top">19000000</em></b>
                     </h5>
-                    <a href="category.html" class="btn btn-dark btn-lg">Mua Ngay</a>
+                    <a href="<?=BASE_URL?>/product?id_DM_home=1" class="btn btn-dark btn-lg">Xem Ngay</a>
                 </div>
                 <!-- End .banner-layer -->
             </div>
@@ -30,7 +30,7 @@
                         <h3 class="m-b-2 text-white">20% off</h3>
 
                         <h2 class="text-transform-none m-b-4 text-white">Summer Sale</h2>
-                        <a href="category.html" class="btn btn-block btn-dark">Mua Ngay</a>
+                        <a href="<?=BASE_URL?>/product?id_DM_home=3" class="btn btn-block btn-dark">Xem Ngay</a>
                     </div>
                 </div>
                 <!-- End .banner-layer -->
@@ -48,7 +48,7 @@
                         <h3 class="m-b-2 text-white">20% off</h3>
 
                         <h2 class="text-transform-none m-b-4 text-white">Summer Sale</h2>
-                        <a href="category.html" class="btn btn-block btn-dark">Mua Ngay</a>
+                        <a href="<?=BASE_URL?>/product?id_DM_home=6" class="btn btn-block btn-dark">Xem Ngay</a>
                     </div>
                 </div>
                 <!-- End .banner-layer -->
@@ -119,7 +119,7 @@
                     <div class="banner-layer">
                         <h3 class="m-b-2 text-white">LAPTOP GAMEMING</h3>
                         <h4 class="m-b-3 text-primary"><sup class="text-danger"><del>20%</del></sup>30%<sup>OFF</sup></h4>
-                        <a href="category.html" class="btn btn-sm btn-primary">Shop Now</a>
+                        <a href="<?=BASE_URL?>/product?id_DM_home=5" class="btn btn-sm btn-primary">Shop Now</a>
                     </div>
                 </div>
                 <!-- End .banner -->
@@ -135,7 +135,7 @@
                                 <h4 class="pb-4 pb-lg-0 mb-0 text-danger">Starting at 30%</h4>
                             </div>
                             <div class="col-lg-5 text-lg-left px-0 px-xl-3">
-                                <a href="category.html" class="btn btn-sm btn-primary">Shop Now</a>
+                                <a href="<?=BASE_URL?>/product?id_DM_home=6" class="btn btn-sm btn-primary">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                     <div class="banner-layer text-right">
                         <h3 class="m-b-2 text-white">MACBOOK AIR</h3>
                         <h4 class="m-b-2 text-danger text-uppercase">Starting at $25%</h4>
-                        <a href="category.html" class="btn btn-sm btn-primary">Shop Now</a>
+                        <a href="<?=BASE_URL?>/product?id_DM_home=1" class="btn btn-sm btn-primary">Shop Now</a>
                     </div>
                 </div>
                 <!-- End .banner -->

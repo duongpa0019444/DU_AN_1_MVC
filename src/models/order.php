@@ -40,6 +40,7 @@
             return parent::pdoQueryAll($sql, $data);
         }
 
+        //hiển thị danh sách đơn hàng
         public function ordersManage($data){
             $sql = "SELECT 
                         dh.id,
@@ -55,6 +56,25 @@
                     FROM don_hang as dh";
             return parent::pdoQueryAll($sql, $data);
 
+        }
+
+        //lọc đơn hàng theo id trạng thái
+        public function findOrdersTT($data){
+            $sql = "SELECT 
+                        dh.id,
+                        dh.thoi_gian,
+                        dh.tong_tien,
+                        dh.ghi_chu,
+                        dh.trang_thai AS id_tt,
+                        dh.id_thanh_toan AS id_pt,
+                        (SELECT ten_user FROM users WHERE id = dh.id_user) AS ten_user,
+                        (SELECT trang_thai FROM trang_thai_dh WHERE dh.trang_thai = id) AS trang_thai,
+                        (SELECT phuong_thuc FROM pt_thanh_toan WHERE id = dh.id_thanh_toan) AS phuong_thuc,
+                        (SELECT COUNT(*) FROM chi_tiet_dh WHERE id_don_hang = dh.id ) AS so_san_pham
+                    FROM don_hang as dh WHERE dh.trang_thai = ?";
+
+            return parent::pdoQueryAll($sql, $data);
+            
         }
 
 

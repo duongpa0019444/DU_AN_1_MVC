@@ -8,7 +8,13 @@
 
         public function index(){
             $data = (new donHang())->countStatusOrder([]);
-            $orders = (new donHang())->ordersManage([]);
+            if(isset($_GET['id_tt'])){
+                $idTT = $_GET['id_tt'];
+                $orders = (new donHang())->findOrdersTT([$idTT]);
+            }else{
+                $orders = (new donHang())->ordersManage([]);
+
+            }
             require_once "./src/views/Admin/oder/orders-list.php";
         }
 

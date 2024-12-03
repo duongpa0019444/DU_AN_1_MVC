@@ -25,7 +25,7 @@
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
                                                             <p class="text-muted mb-0 text-truncate">Tổng Đơn Hàng</p>
-                                                            <h3 class="text-dark mt-1 mb-0">13, 647</h3>
+                                                            <h3 class="text-dark mt-1 mb-0"><?=$data['sl_don_hang']?></h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
                                              </div> <!-- end card body -->
@@ -34,7 +34,7 @@
                                                        <div>
                                                             
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
+                                                       <a href="<?=BASE_URL?>/orders-list" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->
@@ -50,8 +50,8 @@
                                                             </div>
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
-                                                            <p class="text-muted mb-0 text-truncate">Doanh thu đã đặt</p>
-                                                            <h3 class="text-dark mt-1 mb-0">123.600.000 VNĐ</h3>
+                                                            <p class="text-muted mb-0 text-truncate">Doanh thu</p>
+                                                            <h3 class="text-dark mt-1 mb-0"><?= number_format($data['tong_doanh_thu'], 0, ',', '.') ?> VNĐ</h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
                                              </div> <!-- end card body -->
@@ -60,7 +60,7 @@
                                                        <div>
                                                             
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
+                                                       <a href="<?=BASE_URL?>/admin/orders-list?id_tt=4" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->
@@ -77,7 +77,7 @@
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
                                                             <p class="text-muted mb-0 text-truncate">Tổng Danh mục</p>
-                                                            <h3 class="text-dark mt-1 mb-0">9, 526</h3>
+                                                            <h3 class="text-dark mt-1 mb-0"><?=$data['sl_danh_muc']?></h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
                                              </div> <!-- end card body -->
@@ -86,7 +86,7 @@
                                                        <div>
                                                             
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
+                                                       <a href="<?=BASE_URL?>/admin/category-list" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->
@@ -102,7 +102,7 @@
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
                                                             <p class="text-muted mb-0 text-truncate">Tổng sản phẩm</p>
-                                                            <h3 class="text-dark mt-1 mb-0">976</h3>
+                                                            <h3 class="text-dark mt-1 mb-0"><?=$data['sl_san_pham']?></h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
                                              </div> <!-- end card body -->
@@ -111,7 +111,7 @@
                                                        <div>
                                                             
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
+                                                       <a href="<?=BASE_URL?>/admin/product-list" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->
@@ -129,7 +129,7 @@
                                                        </div> <!-- end col -->
                                                        <div class="col-6 text-end">
                                                             <p class="text-muted mb-0 text-truncate">Tài khoản Đăng Ký</p>
-                                                            <h3 class="text-dark mt-1 mb-0">123.600.000 VNĐ</h3>
+                                                            <h3 class="text-dark mt-1 mb-0"><?=$data['sl_users']?></h3>
                                                        </div> <!-- end col -->
                                                   </div> <!-- end row-->
                                              </div> <!-- end card body -->
@@ -138,7 +138,7 @@
                                                        <div>
                                                             
                                                        </div>
-                                                       <a href="#!" class="text-reset fw-semibold fs-12">Xem thêm</a>
+                                                       <a href="<?=BASE_URL?>/admin/users-list" class="text-reset fw-semibold fs-12">Xem thêm</a>
                                                   </div>
                                              </div> <!-- end card body -->
                                         </div> <!-- end card -->
