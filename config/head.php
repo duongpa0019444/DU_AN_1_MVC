@@ -24,6 +24,10 @@
         <link href="https://cdn.jsdelivr.net/npm/notyf/notyf.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/notyf/notyf.min.js"></script>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+    <!-- Izitoast JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+
     </head>
 <?php else: ?>
     <!-- Mirrored from techzaa.in/larkon/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 06:27:43 GMT -->

@@ -53,7 +53,7 @@
 
                     <a href="<?=BASE_URL?>/acout" class="header-icon" title="acout"><i class="icon-user-2"></i></a>
 
-                    <a href="#" class="header-icon" title="wishlist"><i class="icon-wishlist-2"></i></a>
+                    <!-- <a href="#" class="header-icon" title="wishlist"><i class="icon-wishlist-2"></i></a> -->
 
                     <div class="dropdown cart-dropdown">
                         <a href="<?=BASE_URL?>/cart" title="Cart" class="dropdown-toggle dropdown-arrow cart-toggle">

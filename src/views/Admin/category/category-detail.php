@@ -58,7 +58,7 @@
                                                        <td>
                                                             <div class="d-flex gap-2">
                                                                  <a href="<?= BASE_URL ?>/admin/category-smalledit?id_DMSM=<?= $category['idDMSM']?>&id=<?= $_GET['id']?>&name=<?= $_GET['name'] ?>" class="btn btn-soft-primary btn-sm"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                 <a href="<?= BASE_URL ?>/admin/category-smalldelete?id_DMSM=<?= $category['idDMSM']?>&id=<?=$_GET['id']?>&name=<?=$_GET['name']?>" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                                 <a href="<?= BASE_URL ?>/admin/category-smalldelete?id_DMSM=<?= $category['idDMSM']?>&id=<?=$_GET['id']?>&name=<?=$_GET['name']?>&soLuongSP=<?= $category['soLuongSP']?>" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
                                                             </div>
                                                        </td>
                                                   </tr>     

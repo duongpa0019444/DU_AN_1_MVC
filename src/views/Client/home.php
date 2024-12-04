@@ -217,7 +217,7 @@
         </div>
     </section>
 
-    <section class="new-products-section">
+    <section class="new-products-section" >
         <div class="container">
             <h2 class="section-title heading-border ls-20 border-0">Hàng mới về</h2>
 
@@ -244,7 +244,7 @@
                                 <div class="product-label label-hot">HOT</div>
                             </div>
                         </figure>
-                        <div class="product-details">
+                        <div class="product-details" >
                             <div class="category-list">
                                 <a href="category.html" class="product-category"><?= $product['ten_danh_muc'] ?></a>
                             </div>
@@ -388,7 +388,7 @@
                     <h2 class="mb-md-0 text-white">Top Siêu Phẩm<br>Laptop</h2>
                 </div>
                 <div class="col-md-4 col-xl-3 pb-4 pb-md-0 appear-animate" data-animation-name="fadeIn" data-animation-delay="300">
-                    <a href="category.html" class="btn btn-primary btn-black ls-10">Xem Ngay</a>
+                    <a href="<?=BASE_URL?>/product" class="btn btn-primary btn-black ls-10">Xem Ngay</a>
                 </div>
                 <div class="col-md-4 mr-xl-auto text-md-left appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="600">
                     <h4 class="mb-1 mt-1 font1 coupon-sale-text p-0 d-block ls-n-10 text-transform-none">
@@ -466,3 +466,17 @@
     </section>
 </main>
 <!-- End .main -->
+<?php 
+    if(isset($_GET['add'])){
+        echo("   <script>
+       
+        iziToast.success({
+            title: 'Thành công!',
+            message: 'Sản phẩm đã được thêm vào giỏ hàng.',
+            position: 'topRight',
+            timeout: 3000 // Thời gian tự động đóng (ms)
+        });
+      
+    </script>");
+    }
+?>

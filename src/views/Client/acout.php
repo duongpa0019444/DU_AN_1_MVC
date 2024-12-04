@@ -487,7 +487,10 @@
 										echo htmlspecialchars($_COOKIE['mess']);
 									} ?>
 								</p>
-
+								
+								<p class="text-danger fs-3">
+									<?=$messDN??""?>
+								</p>
 
 								<button type="submit" name="logIn" class="btn btn-dark btn-md w-100">
 									Đăng nhập
@@ -527,6 +530,9 @@
 								<input type="password" class="form-input form-wide" id="register-password" name="mat_khau" required />
 
 								<p class="text-danger"><?= $mess ?? ''; ?></p>
+								<p class="text-danger fs-3">
+									<?=$messDK??""?>
+								</p>
 
 
 								<div class="form-footer mb-2">

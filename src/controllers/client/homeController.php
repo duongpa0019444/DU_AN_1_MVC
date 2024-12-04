@@ -27,19 +27,20 @@ class homeController
             } else {
                 // Xử lý thêm sản phẩm vào giỏ hàng
                 if (isset($_POST['addCart'])) {
-
+                    
                     // Tìm kiếm sản phẩm trong giỏ hàng của người dùng
                     $productCart = (new cart())->findCartUserId([$_SESSION['user_id'], $_POST['addCart']]);
                     
                     if ($productCart > 0) {
                         // Nếu đã tồn tại, cập nhật số lượng sản phẩm
                         (new cart())->updateSL([$_SESSION['user_id'], $_POST['addCart']]);
-                        header("location: $this->Base_url/");
+                        header("location: $this->Base_url/?add");
                     } else {
                         // Nếu chưa có, thêm sản phẩm mới vào giỏ hàng
                         (new cart())->create([$_SESSION['user_id'], $_POST['addCart'], 1]);
-                        header("location: $this->Base_url/");
+                        header("location: $this->Base_url/?add");
                     }
+                    
                 }
             }
         }
@@ -55,3 +56,4 @@ class homeController
     }
 }
 ?>
+

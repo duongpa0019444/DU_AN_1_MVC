@@ -61,7 +61,7 @@
                                                             <div class="d-flex gap-2">
                                                                  <a href="<?= BASE_URL ?>/admin/category-detail?id=<?= $category['id'] ?>&name=<?= $category['ten_danh_muc'] ?>" class="btn btn-light btn-sm"><iconify-icon icon="solar:eye-broken" class="align-middle fs-18"></iconify-icon></a>
                                                                  <a href="<?= BASE_URL ?>/admin/category-edit?id=<?= $category['id'] ?>" class="btn btn-soft-primary btn-sm"><iconify-icon icon="solar:pen-2-broken" class="align-middle fs-18"></iconify-icon></a>
-                                                                 <a href="<?= BASE_URL ?>/admin/category-delete?id=<?= $category['id'] ?>" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
+                                                                 <a href="<?= BASE_URL ?>/admin/category-delete?id=<?= $category['id'] ?>&soLuongDMSM=<?= $category['soLuongDMSM'] ?>" class="btn btn-soft-danger btn-sm"><iconify-icon icon="solar:trash-bin-minimalistic-2-broken" class="align-middle fs-18"></iconify-icon></a>
                                                             </div>
                                                        </td>
                                                   </tr>

@@ -501,3 +501,18 @@
         <!-- End .main -->
 
       
+
+        <?php 
+    if(isset($_GET['add'])){
+        echo("   <script>
+       
+        iziToast.success({
+            title: 'Thành công!',
+            message: 'Sản phẩm đã được thêm vào giỏ hàng.',
+            position: 'topRight',
+            timeout: 3000 // Thời gian tự động đóng (ms)
+        });
+      
+    </script>");
+    }
+?>

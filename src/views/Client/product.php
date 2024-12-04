@@ -33,7 +33,7 @@
                             <span>Filter</span>
                         </a>
 
-                        <div class="toolbox-item toolbox-sort">
+                        <!-- <div class="toolbox-item toolbox-sort">
                             <label>Sắp xếp theo:</label>
 
                             <div class="select-custom">
@@ -47,11 +47,10 @@
                                     <option value="">Nhiều lượt mua nhất</option>
                                 </select>
                             </div>
-                            <!-- End .select-custom -->
+                          
 
-
-                        </div>
-                        <!-- End .toolbox-item -->
+                        </div> -->
+                        
                     </div>
                     <!-- End .toolbox-left -->
 
@@ -287,3 +286,19 @@
     <!-- margin -->
 </main>
 <!-- End .main -->
+
+
+<?php 
+    if(isset($_GET['add'])){
+        echo("   <script>
+       
+        iziToast.success({
+            title: 'Thành công!',
+            message: 'Sản phẩm đã được thêm vào giỏ hàng.',
+            position: 'topRight',
+            timeout: 3000 // Thời gian tự động đóng (ms)
+        });
+      
+    </script>");
+    }
+?>

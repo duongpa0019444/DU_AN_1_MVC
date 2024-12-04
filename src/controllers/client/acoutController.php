@@ -23,8 +23,9 @@ class acoutController {
                 $user = (new acout())->logIn($data); // Gọi phương thức đăng nhập từ model
 
                 if ($user < 1) {
+                    
                     // Nếu đăng nhập thất bại
-                    $messaddCart = "Sai số điện thoại hoặc mật khẩu!";
+                    $messDN = "Sai số điện thoại hoặc mật khẩu!";
                     require_once "src/views/Client/acout.php"; // Hiển thị thông báo lỗi
                 }
             } 
@@ -35,7 +36,7 @@ class acoutController {
                 $find = (new acout())->findAcout([$_POST['so_dien_thoai'], $_POST['email']]); // Kiểm tra số điện thoại và email đã được đăng ký hay chưa
                 
                 if ($find['sl'] > 0) {  // Nếu đã tồn tại tài khoản
-                    $mess = "Số điện thoại hoặc Email đã tồn tại!";
+                    $messDK = "Số điện thoại hoặc Email đã tồn tại!";
                     require_once "../DU_AN_1_MVC/src/views/Client/acout.php"; // Hiển thị thông báo lỗi
                 } else { 
                     // Nếu chưa tồn tại thì thêm tài khoản vào database

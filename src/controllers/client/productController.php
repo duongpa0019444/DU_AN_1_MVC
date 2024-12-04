@@ -31,11 +31,11 @@ class productController
             $gia = $_GET['priceProduct'];
             // Tìm sản phẩm theo mức giá
             $products = $this->modelOject->findPrice([$gia, $gia]);
-        } elseif (isset($_GET['key_word'])) {
+        } elseif (!empty($_GET['key_word'])) {
             $keyWord = $_GET['key_word'];
             // Tìm sản phẩm theo từ khóa tìm kiếm
             $products = $this->modelOject->findKeyWord($keyWord);
-        } elseif (isset($_GET['idSM'])) {
+        } elseif (!empty($_GET['idSM'])) {
             $idSM = $_GET['idSM'];
             // Tìm sản phẩm theo danh mục nhỏ
             $products = $this->modelOject->findProductCategorySM([$idSM]);
@@ -63,11 +63,11 @@ class productController
                     if ($productCart > 0) {
                         // Nếu có, cập nhật số lượng sản phẩm
                         (new cart())->updateSL([$_SESSION['user_id'], $_POST['addCart']]);
-                        header("location: $this->Base_url/product"); // Chuyển hướng về trang sản phẩm
+                        header("location: $this->Base_url/product?add"); // Chuyển hướng về trang sản phẩm
                     } else {
                         // Nếu không có, thêm sản phẩm mới vào giỏ hàng
                         (new cart())->create([$_SESSION['user_id'], $_POST['addCart'], 1]);
-                        header("location: $this->Base_url/product"); // Chuyển hướng về trang sản phẩm
+                        header("location: $this->Base_url/product?add"); // Chuyển hướng về trang sản phẩm
                     }
                 }
             }

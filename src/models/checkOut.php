@@ -5,7 +5,7 @@
 
     class checkOut extends baseModel{
 
-        
+        //kiểm tra thông tin giỏ hàng của người dùng
         public function check($data){
             $sql = "SELECT
                         gh.id,
@@ -21,6 +21,8 @@
             return parent::pdoQueryAll($sql , $data);
         }
 
+
+        //Thêm thông tin địa chỉ vào cơ sở dữ liệu
         public function insertDiachi($data){
             $column = [];
             foreach($data as $key => $value){

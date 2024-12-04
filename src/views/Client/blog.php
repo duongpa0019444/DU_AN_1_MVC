@@ -47,17 +47,7 @@
 							
 					<aside class="sidebar mobile-sidebar col-lg-3">
 						<div class="sidebar-wrapper" data-sticky-sidebar-options='{"offsetTop": 72}'>
-							<div class="widget widget-categories">
-								<h4 class="widget-title">Danh mục bài viết</h4>
-
-								<ul class="list">
-									<li><a href="#">Tất cả bài viết</a></li>
-									<li><a href="#">Danh mục bài viết 1</a></li>
-									<li><a href="#">Danh mục bài viết 2</a></li>
-									<li><a href="#">Danh mục bài viết 3</a></li>
-									<li><a href="#">Danh mục bài viết 4</a></li>
-								</ul>
-							</div><!-- End .widget -->
+							
 							<h4 class="widget-title">Bài viết Mới</h4>
 							<?php foreach($baivietnew as $baiviet): ?>
 							<div class="widget widget-post">
@@ -65,12 +55,12 @@
 								<ul class="simple-post-list">
 									<li>
 										<div class="post-media">
-											<a href="<?=BASE_URL?>/single">
+											<a href="<?=BASE_URL?>/single?id=<?=$baiviet['id']?>">
 												<img src="<?=$baiviet['hinh_anh']?>" alt="Post">
 											</a>
 										</div><!-- End .post-media -->
 										<div class="post-info">
-											<a href="<?=BASE_URL?>/single"><?=$baiviet['tieu_de']?></a>
+											<a href="<?=BASE_URL?>/single?id=<?=$baiviet['id']?>"><?=$baiviet['tieu_de']?></a>
 											<div class="post-meta"><?=$baiviet['ngay_dang']?></div>
 											<!-- End .post-meta -->
 										</div><!-- End .post-info -->
