@@ -169,7 +169,7 @@
                 <?php foreach ($products as $product) : ?>
                     <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>&name=<?=$product['ten_danh_muc']?>">
                                 <img src="<?= $product['hinh_anh_1'] ?>" width="280" height="280" alt="product">
                                 <img src="<?= $product['hinh_anh_2'] ?>" width="280" height="280" alt="product">
                             </a>
@@ -183,7 +183,7 @@
                                 <a href="category.html" class="product-category"><?= $product['ten_danh_muc'] ?></a>
                             </div>
                             <h3 class="product-title">
-                                <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>"><?= $product['ten_san_pham'] ?></a>
+                                <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>&name=<?=$product['ten_danh_muc']?>"><?= $product['ten_san_pham'] ?></a>
                             </h3>
                             <div class="ratings-container">
                                 <div class="product-ratings">
@@ -236,7 +236,7 @@
                 <?php foreach ($productss as $product): ?>
                     <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
                         <figure>
-                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>">
+                            <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>&name=<?=$product['ten_danh_muc']?>">
                                 <img src="<?= $product['hinh_anh_1'] ?>" width="220" height="220" alt="product">
                                 <img src="<?= $product['hinh_anh_2'] ?>" width="220" height="220" alt="product">
                             </a>
@@ -249,7 +249,7 @@
                                 <a href="category.html" class="product-category"><?= $product['ten_danh_muc'] ?></a>
                             </div>
                             <h3 class="product-title">
-                                <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>"><?= $product['ten_san_pham'] ?></a>
+                                <a href="<?= BASE_URL ?>/detailProduct?id=<?= $product['id_SP'] ?>&name=<?=$product['ten_danh_muc']?>"><?= $product['ten_san_pham'] ?></a>
                             </h3>
                             <div class="ratings-container">
                                 <div class="product-ratings">

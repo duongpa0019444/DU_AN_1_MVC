@@ -22,8 +22,9 @@ class homeController
             // Kiểm tra người dùng đã đăng nhập hay chưa
             if (!isset($_SESSION['user_id'])) {
                 // Thông báo nếu chưa đăng nhập và chuyển đến trang đăng nhập
-                $messaddCart = "Đăng nhập để thêm sản phẩm vào giỏ hàng của bạn!";
-                require_once "src/views/Client/acout.php";
+                setcookie("mess", "Đăng nhập để thêm sản phẩm vào giỏ hàng của bạn!", time() + 10, "/");
+                header("location: $this->Base_url/acout"); // Chuyển hướng về trang sản phẩm
+
             } else {
                 // Xử lý thêm sản phẩm vào giỏ hàng
                 if (isset($_POST['addCart'])) {

@@ -48,7 +48,7 @@
 
                     <div class="header-contact d-none d-lg-flex pl-4 pr-4">
                         <img alt="phone" src="<?=BASE_URL?>/assets/Client/images/phone.png" width="30" height="30" class="pb-1">
-                        <h6><span>Gọi cho chúng tôi ngay</span><a href="tel:#" class="text-dark font1">+123 5678 890</a></h6>
+                        <h6><span>Gọi cho chúng tôi ngay</span><a href="tel:#" class="text-dark font1">0961.469.353</a></h6>
                     </div>
 
                     <a href="<?=BASE_URL?>/acout" class="header-icon" title="acout"><i class="icon-user-2"></i></a>
@@ -412,12 +412,31 @@
                     </div>
                </li>
 
+            
+
+               <li class="nav-item">
+                    <a class="nav-link menu-arrow" href="#sidebarComment" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComment">
+                         <span class="nav-icon">
+                          <iconify-icon icon="material-symbols:comment" width="24" height="24"></iconify-icon>
+                         </span>
+                         <span class="nav-text">Quản Lý bình luận </span>
+                    </a>
+                    <div class="collapse" id="sidebarComment">
+                         <ul class="nav sub-navbar-nav">
+
+                              <li class="sub-nav-item">
+                                   <a class="sub-nav-link" href="<?=BASE_URL?>/admin/comment-list">Danh sách bình luận</a>
+                              </li>
+                         </ul>
+                    </div>
+               </li>
+
                <li class="nav-item">
                     <a class="nav-link menu-arrow" href="#sidebarCustomers" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCustomers">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:users-group-two-rounded-bold-duotone"></iconify-icon>
                          </span>
-                         <span class="nav-text"> Quản Lý Users </span>
+                         <span class="nav-text">Quản Lý Users </span>
                     </a>
                     <div class="collapse" id="sidebarCustomers">
                          <ul class="nav sub-navbar-nav">

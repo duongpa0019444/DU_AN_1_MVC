@@ -126,5 +126,18 @@ class donHang extends baseModel {  // Lớp 'donHang' kế thừa từ lớp bas
         $sql = "DELETE FROM chi_tiet_dh WHERE id_don_hang = ?";
         parent::pdoQueryAll($sql, $data);  // Xóa chi tiết đơn hàng theo ID đơn hàng
     }
+
+    //phương thức lọc sản phẩm trong đơn hàng
+    public function findProductOrder($data){
+        $sql = "SELECT COUNT(1) FROM chi_tiet_dh WHERE id_san_pham = ?";
+        return parent::pdoQueryAll($sql, $data);
+    }
+
+     //phương thức hủy đơn hàng
+     public function cancel($data){
+        $sql = "UPDATE don_hang SET trang_thai = 5 WHERE id = ?";
+        return parent::pdoQueryAll($sql, $data);
+    }
+
 }
 ?>

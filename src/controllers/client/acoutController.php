@@ -136,9 +136,17 @@ class acoutController {
         }
     }
 
+    //Phương thức hủy đơn hàng
+    public function cancel(){
+        (new donHang())->cancel([$_GET['id']]);
+        header("location: $this->Base_url/acout");  
+    }
+
     public function dangxuat() {
         session_destroy(); // Xóa session khi đăng xuất
         header("location: $this->Base_url/"); // Chuyển hướng về trang chủ
     }
+
+   
 }
 ?>

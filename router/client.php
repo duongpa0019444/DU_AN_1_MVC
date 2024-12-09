@@ -24,6 +24,8 @@
     //Router của trang Tài khoản - client
     $router->add("GET", "client", "/acout", "acoutController@index");
     $router->add("POST", "client", "/acout", "acoutController@index");
+    $router->add("GET", "client", "/acout-cancel-order", "acoutController@cancel");
+    
 
     //Router của trang Giỏ hàng - client
     $router->add("GET", "client", "/cart", "cartController@index");

@@ -43,6 +43,11 @@
     $router->add("GET", "admin", "/admin/users-edit", "usersController@update");
     $router->add("POST", "admin", "/admin/users-edit", "usersController@update");
     $router->add("GET", "admin", "/admin/users-delete", "usersController@delete");
+
+
+    //Router của Trang quản lý bình luận
+    $router->add("GET", "admin", "/admin/comment-list", "commentController@index");
+    $router->add("GET", "admin", "/admin/comment-delete", "commentController@delete");
     
     // đăng xuất
     $router->add("GET", "admin", "/admin/dangxuat", "AdminController@dangxuat");

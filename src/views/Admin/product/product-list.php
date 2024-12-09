@@ -17,7 +17,7 @@
                                         <a href="<?=BASE_URL?>/admin/product-add" class="btn btn-sm btn-primary">
                                              Thêm sản phẩm
                                         </a>
-
+                                        <?=$mess??""?>
                                        
                                    </div>
                                    <div>

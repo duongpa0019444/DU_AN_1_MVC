@@ -50,7 +50,7 @@
 
                     FROM san_pham AS sp
                     JOIN hinh_anh AS ha ON sp.id = ha.id_san_pham
-                    ORDER BY ngay_them DESC LIMIT 8;";
+                    ORDER BY ngay_them DESC LIMIT 5;";
             return parent::pdoQueryAll($sql, $data);
         }
             
@@ -228,6 +228,8 @@
             
             return parent::pdoQueryAll($sql,[$search]);
         }
+
+      
 
     }
 

@@ -172,8 +172,10 @@
 												</td>
 
 												<td class="text-center p-2">
-													<?php if ($order['trang_thai'] < 1): ?>
-														<a href=""><button type="button" class="btn btn-light rounded">Hủy</button></a>
+													<?php if ($order['trang_thai'] < 2): ?>
+
+														<a href="<?=BASE_URL?>/acout-cancel-order?id=<?=$order['id']?>"><button type="button" class="btn btn-danger rounded">Hủy</button></a>
+													
 													<?php endif ?>
 
 												</td>
@@ -440,7 +442,7 @@
 				<nav aria-label="breadcrumb" class="breadcrumb-nav">
 					<div class="container">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="<? BASE_URL ?>/">Tang chủ</a></li>
+							<li class="breadcrumb-item"><a href="<?=BASE_URL?>/">Trang chủ</a></li>
 							<li class="breadcrumb-item active" aria-current="page">
 								Tài khoản
 							</li>
@@ -463,7 +465,7 @@
 
 							<form action="" method="post">
 								<label for="login-email">
-									số điện thoại đăng nhập
+									Số điện thoại đăng nhập
 									<span class="required">*</span>
 								</label>
 								<input type="number" min="" class="form-input form-wide" id="login-email" name="so_dien_thoai" required />
