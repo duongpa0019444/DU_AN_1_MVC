@@ -68,5 +68,13 @@ class cart extends baseModel {  // Lớp 'cart' kế thừa từ lớp baseModel
         $sql = "DELETE FROM gio_hang WHERE id_san_pham = ? AND id_user = ?";
         return parent::pdoQuery($sql , $data);  // Xóa sản phẩm khỏi giỏ hàng
     }
+
+     // Phương thức xóa sản phẩm khỏi giỏ hàng của người dùng
+     public function deleteAllProductCart($data){
+        // Câu lệnh SQL để xóa sản phẩm khỏi giỏ hàng theo id_san_pham 
+        $sql = "DELETE FROM gio_hang WHERE id_san_pham = ?";
+        return parent::pdoQuery($sql , $data);  // Xóa sản phẩm khỏi giỏ hàng
+    }
+
 }
 ?>

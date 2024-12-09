@@ -15,7 +15,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="cart-table-container">
-							<?php if(isset($productCarts)): ?>
+							<?php if(!empty($productCarts)): ?>
 								<table class="table table-cart">
 									<thead>
 										<tr>

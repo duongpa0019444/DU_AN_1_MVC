@@ -2,7 +2,8 @@
     namespace controllers\admin;
 
     use commons\baseModel;  // Lớp baseModel dùng làm cơ sở cho các controller khác
-    use models\Category;    // Lớp Category dùng để xử lý các dữ liệu liên quan đến danh mục sản phẩm
+use models\cart;
+use models\Category;    // Lớp Category dùng để xử lý các dữ liệu liên quan đến danh mục sản phẩm
 use models\donHang;
 use models\image;       // Lớp image dùng để xử lý các hình ảnh của sản phẩm
     use models\Product;     // Lớp Product dùng để xử lý các sản phẩm
@@ -144,7 +145,7 @@ use models\image;       // Lớp image dùng để xử lý các hình ảnh c�
 
             //kiểm tra xem trong bảng đơn hàng có sản phẩm đó hay không, nếu không thì mới cho xóa
             $spOrder = (new donHang())->findProductOrder([$id]);
-            if ($spOrder < 1) {
+            if (count($spOrder) < 1) {
                 // Lấy tất cả đường dẫn các file ảnh liên quan đến sản phẩm cần xóa từ cơ sở dữ liệu
                 $files = (new image())->select([$id]);
 
@@ -155,8 +156,13 @@ use models\image;       // Lớp image dùng để xử lý các hình ảnh c�
                     }
                 }
 
+                
                 // Xóa ảnh trong cơ sở dữ liệu
                 (new image())->delete([$id]);
+
+                
+                //xóa sản phẩm trong giỏ hàng
+                (new cart())->deleteAllProductCart([$id]);
 
                 // Xóa sản phẩm trong cơ sở dữ liệu
                 (new Product())->delete([$id]);
@@ -165,7 +171,7 @@ use models\image;       // Lớp image dùng để xử lý các hình ảnh c�
                 header("location:$this->base_url/admin/product-list");
             }else{
                 echo "<script>
-               alert('KHÔNG THỂ XOÁ sản phẩm này!');
+               alert('KHÔNG THỂ XOÁ sản phẩm này vì sản phẩm đang ở trong đơn hàng!');
                window.location.href = '".BASE_URL."/admin/product-list';
              </script>";
             }

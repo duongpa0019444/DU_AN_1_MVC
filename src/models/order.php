@@ -129,7 +129,7 @@ class donHang extends baseModel {  // Lớp 'donHang' kế thừa từ lớp bas
 
     //phương thức lọc sản phẩm trong đơn hàng
     public function findProductOrder($data){
-        $sql = "SELECT COUNT(1) FROM chi_tiet_dh WHERE id_san_pham = ?";
+        $sql = "SELECT * FROM chi_tiet_dh WHERE id_san_pham = ?";
         return parent::pdoQueryAll($sql, $data);
     }
 

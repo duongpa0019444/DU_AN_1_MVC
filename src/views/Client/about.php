@@ -5,7 +5,7 @@
 				<div class="container">
 					<h1><span>Về chúng tôi</span>
 						Về cửa hàng tôi</h1>
-					<a href="contact.html" class="btn btn-dark">Liên Hệ</a>
+					<a href="#ttLienHe" class="btn btn-dark">Liên Hệ</a>
 				</div><!-- End .container -->
 			</div><!-- End .page-header -->
 
@@ -93,7 +93,8 @@
 						<div class="testimonial">
 							<div class="testimonial-owner">
 								<figure>
-									<img src="assets/images/clients/client1.png" alt="client">
+								<img class="rounded" src="<?=BASE_URL?>/assets/Client/images/users/user_1.jpg" alt="client">
+
 								</figure>
 
 								<div>
@@ -111,7 +112,7 @@
 						<div class="testimonial">
 							<div class="testimonial-owner">
 								<figure>
-									<img src="assets/images/clients/client2.png" alt="client">
+									<img class="rounded" src="<?=BASE_URL?>/assets/Client/images/users/user_1.jpg" alt="client">
 								</figure>
 
 								<div>

@@ -80,13 +80,11 @@
 
                     <div class="ratings-container">
                         <div class="product-ratings">
-                            <span class="ratings" style="width:60%"></span>
+                            <span class="ratings" style="width:100%"></span>
                             <!-- End .ratings -->
                             <span class="tooltiptext tooltip-top"></span>
                         </div>
-                        <!-- End .product-ratings -->
-
-
+                                        <!-- End .product-ratings -->
                     </div>
                     <!-- End .ratings-container -->
 

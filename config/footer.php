@@ -1,7 +1,7 @@
 
 <?php if(!isset($_SESSION['admin'])): ?>
 
-    <footer class="footer bg-dark">
+    <footer class="footer bg-dark" id="ttLienHe">
             <div class="footer-middle">
                 <div class="container">
                     <div class="row">
