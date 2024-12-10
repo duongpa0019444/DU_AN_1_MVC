@@ -262,9 +262,8 @@
                             <!-- End .product-container -->
                             <div class="price-box">
                                 <div class="price-box">
-                                    <span class="product-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> VND</span>
-                                    <!-- <del class="old-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> VND</del>
-                                    <span class="product-price"><?= number_format($product['gia_san_pham'] - $product['gia_san_pham'] * ($product['khuyen_mai'] / 100), 0, ',', '.') ?> VND</span> -->
+                                    <del class="old-price"><?= number_format($product['gia_san_pham'], 0, ',', '.') ?> VND</del>
+                                    <span class="product-price"><?= number_format($product['gia_san_pham'] - $product['gia_san_pham'] * ($product['khuyen_mai'] / 100), 0, ',', '.') ?> VND</span>
                                 </div>
                             </div>
                             <!-- End .price-box -->

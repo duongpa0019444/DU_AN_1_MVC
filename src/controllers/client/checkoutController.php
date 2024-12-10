@@ -31,8 +31,7 @@ class checkoutController {
                     $diachi[$key] = $value; // Lấy thông tin địa chỉ từ form
                 } elseif ($key == 'ghi_chu' || $key == 'id_thanh_toan') {
                     $donhang[$key] = $value; // Lấy ghi chú và phương thức thanh toán
-                } elseif ($key != 'ho_va_ten' && $key != 'so_dien_thoai' && $key != 'chi_tiet_dia_chi' 
-                          && $key != 'ghi_chu' && $key != 'id_thanh_toan') {
+                } elseif ($key != 'ho_va_ten' && $key != 'so_dien_thoai' && $key != 'chi_tiet_dia_chi' && $key != 'ghi_chu' && $key != 'id_thanh_toan') {
                     $detailOrder[$key] = $value; // Lấy thông tin sản phẩm chi tiết
                 }
             }

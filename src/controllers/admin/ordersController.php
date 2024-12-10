@@ -13,9 +13,9 @@
             $data = (new donHang())->countStatusOrder([]); 
             
             // Kiểm tra xem có tham số 'id_tt' (trạng thái đơn hàng) trong URL không
-            if(isset($_GET['id_tt'])){
+            if(isset($_GET['id_TT'])){
                 // Nếu có, lọc các đơn hàng theo trạng thái
-                $idTT = $_GET['id_tt'];
+                $idTT = $_GET['id_TT'];
                 $orders = (new donHang())->findOrdersTT([$idTT]); 
             }else{
                 // Nếu không, lấy tất cả các đơn hàng quản lý

@@ -7,8 +7,8 @@
 
                          <div class="row">
                               <?php foreach($data as $trang_thai): ?>
-                                   <a href="<?=BASE_URL?>/admin/orders-list?id_TT=<?=$trang_thai['id_tt']?>">
-                                        <div class="col-md-6 col-xl-3">
+                                   <a  class="col-md-6 col-xl-3" href="<?=BASE_URL?>/admin/orders-list?id_TT=<?=$trang_thai['id_tt']?>">
+                                        <div>
                                              <div class="card">
                                                   <div class="card-body">
                                                        <div class="d-flex align-items-center justify-content-between">

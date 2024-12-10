@@ -51,7 +51,13 @@
                         <h6><span>Gọi cho chúng tôi ngay</span><a href="tel:#" class="text-dark font1">0961.469.353</a></h6>
                     </div>
 
-                    <a href="<?=BASE_URL?>/acout" class="header-icon" title="acout"><i class="icon-user-2"></i></a>
+                    <?php if(isset($_SESSION['user_id'])): ?>
+                     <a href="<?=BASE_URL?>/acout" class="header-icon" title="acout"><img src="<?=BASE_URL?>/<?=$_SESSION['img_user']?>" style="width:40px; height:40px"  class="rounded-circle" alt=""></a>
+
+                         
+                    <?php else: ?>
+                     <a href="<?=BASE_URL?>/acout" class="header-icon" title="acout"><i class="icon-user-2"></i></a>
+                    <?php endif ?>
 
                     <!-- <a href="#" class="header-icon" title="wishlist"><i class="icon-wishlist-2"></i></a> -->
 
